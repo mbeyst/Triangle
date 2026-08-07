@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle — Three people. One decision. Every voice heard.</title>
+    <meta name="description" content="Triangle is a decision architecture for significant choices. Triads with AI facilitation reach decisions that preserve both speed and integrity.">
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #0984e3;
+            --bg: #ffffff;
+            --text: #2d3436;
+            --muted: #636e72;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--muted);
+            font-weight: 300;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .cta {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .cta:hover {
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: var(--muted);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #e0e0e0;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Triangle</h1>
+            <p class="tagline">Three people. One decision. Every voice heard.</p>
+        </header>
+
+        <section>
+            <h2>The Problem</h2>
+            <p>Most organisations oscillate between two dysfunctional modes:</p>
+            <ul>
+                <li><strong>Speed over inclusion</strong> — one person decides, others resist during execution</li>
+                <li><strong>Inclusion over speed</strong> — everyone must agree, nothing moves</li>
+            </ul>
+            <p style="margin-top: 1rem;">Triangle offers a third way: structured triadic decision-making that moves on 2/3 agreement while recording (not blocking) dissent.</p>
+        </section>
+
+        <section>
+            <h2>Core Principles</h2>
+            
+            <h3>1. Triads for significant decisions only</h3>
+            <p><strong>Dyads (2 people)</strong> — collaboration, execution, low-stakes choices</p>
+            <p><strong>Triads (3 people)</strong> — strategic decisions, resource allocation, hiring, direction</p>
+            <blockquote>Threshold: If the decision affects more than the decider's own work, it's triad territory.</blockquote>
+
+            <h3>2. 2/3 moves, 1/3 records</h3>
+            <ul>
+                <li><strong>2 agree</strong> — decision moves forward</li>
+                <li><strong>1 dissents</strong> — objection is recorded, published, not blocked</li>
+            </ul>
+            <p style="margin-top: 1rem;">This prevents both tyranny of the majority and tyranny of the veto.</p>
+
+            <h3>3. AI facilitates, humans decide</h3>
+            <p>The AI facilitator records each voice separately, tracks speaking time, aggregates inputs, publishes consensus, and flags where disagreement remains.</p>
+            <p><strong>The AI does not make the decision.</strong> Authority morphs to competence, not algorithm.</p>
+        </section>
+
+        <section>
+            <h2>When to Use Triangle</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Situation</th>
+                        <th>Use Triad?</th>
+                        <th>Why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hiring a team member</td>
+                        <td>✓</td>
+                        <td>Affects team dynamics</td>
+                    </tr>
+                    <tr>
+                        <td>Choosing a tech stack</td>
+                        <td>✓</td>
+                        <td>Long-term architectural impact</td>
+                    </tr>
+                    <tr>
+                        <td>Daily standup decisions</td>
+                        <td>✗</td>
+                        <td>Dyad or individual suffices</td>
+                    </tr>
+                    <tr>
+                        <td>Budget allocation &gt;€10k</td>
+                        <td>✓</td>
+                        <td>Resource commitment</td>
+                    </tr>
+                    <tr>
+                        <td>Strategic pivot</td>
+                        <td>✓</td>
+                        <td>Directional, affects all</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Quick Start</h2>
+            <ol>
+                <li><strong>Identify the decision</strong> — is it significant enough for a triad?</li>
+                <li><strong>Gather three people</strong> — diverse perspectives, relevant competence</li>
+                <li><strong>Set a timebox</strong> — 30-60 minutes max for most decisions</li>
+                <li><strong>AI facilitator joins</strong> — records, tracks, summarizes</li>
+                <li><strong>Decision emerges</strong> — 2/3 agreement moves it forward</li>
+                <li><strong>Dissent published</strong> — objections documented, not suppressed</li>
+            </ol>
+            <a href="QUICKSTART.md" class="cta">Read Full Quick Start Guide →</a>
+        </section>
+
+        <section>
+            <h2>Documentation</h2>
+            <ul>
+                <li><a href="docs/concepts.md">Core Concepts</a> — dyads vs. triads, decision thresholds, the 2/3 rule</li>
+                <li><a href="docs/facilitator.md">Facilitator Guide</a> — human and AI facilitation scripts</li>
+                <li><a href="docs/ai-facilitator.md">AI Integration</a> — technical architecture, prompts, deployment</li>
+                <li><a href="docs/case-studies.md">Case Studies</a> — real-world patterns and outcomes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Get Started</h2>
+            <p>Triangle is open source and free to use. Start with the documentation, then build or integrate the AI facilitator.</p>
+            <a href="QUICKSTART.md" class="cta">Start Here →</a>
+        </section>
+
+        <footer>
+            <p>© 2026 Martin [Your Surname]. All rights reserved.</p>
+            <p><a href="LICENSE">MIT License</a> • <a href="https://github.com/[your-repo]/triangle">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
