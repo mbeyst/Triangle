@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+@charset "utf-8";
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif; line-height: 1.65; color: rgb(26, 26, 26); background: rgb(255, 255, 255); }
+
+.container { max-width: 900px; margin: 0px auto; padding: 60px 40px; }
+
+@media (max-width: 768px) {
+  .container { padding: 40px 20px; }
+}
+
+h1 { font-size: 2.2em; line-height: 1.3; margin-bottom: 15px; font-weight: 700; }
+
+.subtitle { font-size: 1.2em; color: rgb(85, 85, 85); margin-bottom: 30px; font-weight: 500; }
+
+h2 { font-size: 1.7em; margin-top: 50px; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgb(0, 0, 0); padding-bottom: 10px; }
+
+h3 { font-size: 1.25em; margin-top: 28px; margin-bottom: 12px; font-weight: 600; }
+
+p { margin-bottom: 15px; font-size: 1.05em; line-height: 1.7; }
+
+.hero { margin-bottom: 50px; }
+
+.section { margin-bottom: 45px; }
+
+.technical-box { background: rgb(249, 249, 249); padding: 25px; border-left: 3px solid rgb(0, 0, 0); margin: 25px 0px; font-size: 0.98em; line-height: 1.7; }
+
+.framework-item { margin: 30px 0px; padding-left: 20px; border-left: 2px solid rgb(221, 221, 221); }
+
+.framework-item strong { display: block; margin-bottom: 10px; font-size: 1.1em; }
+
+.metric-row { display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid rgb(238, 238, 238); font-size: 0.95em; }
+
+.metric-label { font-weight: 500; flex: 1 1 0%; }
+
+.metric-value { color: rgb(51, 51, 51); text-align: right; flex: 1 1 0%; }
+
+.formula { background: rgb(249, 249, 249); padding: 15px; margin: 15px 0px; font-family: "Courier New", monospace; font-size: 0.9em; overflow-x: auto; border-radius: 3px; }
+
+ul, ol { margin-left: 25px; margin-top: 10px; margin-bottom: 15px; }
+
+li { margin-bottom: 8px; line-height: 1.7; }
+
+.cta { display: inline-block; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 12px 28px; text-decoration: none; border-radius: 3px; font-weight: 600; margin-top: 20px; font-size: 0.95em; }
+
+.cta:hover { background: rgb(51, 51, 51); }
+
+.footer { border-top: 1px solid rgb(221, 221, 221); margin-top: 60px; padding-top: 30px; font-size: 0.9em; color: rgb(102, 102, 102); }
+
+.research-status { background: rgb(245, 245, 245); padding: 20px; border-radius: 3px; margin: 25px 0px; }
+
+code { background: rgb(240, 240, 240); padding: 2px 6px; border-radius: 2px; font-family: "Courier New", monospace; font-size: 0.9em; }
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Triangle: A mathematically optimized collective decision architecture using Condorcet's Jury Theorem, strictly proper scoring rules, and cryptographic ledgers for institutional judgment verification.">
+    <meta name="keywords" content="decision architecture, Condorcet Jury Theorem, Brier score, AI safety, judgment aggregation, collective intelligence, institutional governance">
+
+    <!-- Open Graph for AI/semantic indexing -->
+    <meta property="og:title" content="Triangle: The Ledger of Human Judgment">
+    <meta property="og:description" content="A framework for institutional decision-making based on outcome-verified competence and immutable judgment records.">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org Research Framework markup -->
+    
+
+    <title>Triangle: The Ledger of Human Judgment | Decision Architecture Research</title>
+    
+</head>
+<body>
+    <div class="container">
+        <!-- HERO -->
+        <div class="hero">
+            <h1>Triangle: The Ledger of Human Judgment</h1>
+            <p class="subtitle">A decision architecture for institutional credibility in the AI era</p>
+
+            <p>AI systems hallucinate because they aggregate data based on popularity and post-hoc filtering. If machine learning models are trained on human judgment data, that data must be credible, outcome-verified, and free from hierarchical contamination. Triangle solves this upstream problem by building an immutable ledger of human judgment sourced exclusively from individuals with demonstrable, outcome-based competence.</p>
+
+            <p>The framework combines three mathematical and cryptographic mechanisms: Condorcet's Jury Theorem for optimal group structure, strictly proper scoring rules (Brier scores) for competence measurement, and append-only cryptographic ledgers for judgment verification. The result is a decision architecture that neither concentrates authority in individuals nor disperses it into process paralysis.</p>
+        </div>
+
+        <!-- THE PROBLEM -->
+        <div class="section">
+            <h2>The Problem</h2>
+
+            <h3>Institutional Decision Failure</h3>
+            <p>Most organizations make consequential decisions via one of three mechanisms, each with fundamental structural flaws:</p>
+
+            <div class="technical-box">
+                <p><strong>Concentrated authority.</strong> A single decision-maker or a small executive group decides, supported by hierarchy and social deference. When decisions fail, minority views that could have prevented the failure remain unrecorded. The organization learns nothing.</p>
+            </div>
+
+            <div class="technical-box">
+                <p><strong>Consensus processes.</strong> Extended deliberation designed to flatten hierarchy and include diverse views. Protects against concentrated bias but creates severe administrative friction. No mechanism to measure predictive accuracy or build competence records. No incentive for honesty over coalition-building.</p>
+            </div>
+
+            <div class="technical-box">
+                <p><strong>Prediction markets.</strong> Theoretically optimal. Aggregates dispersed information through a pricing mechanism that forces participants to reveal true beliefs. Empirically proven effective (Good Judgment Project, PredictIt). Fails in practice due to cultural and political resistance: senior executives perceive internal markets as threats to hierarchical authority.</p>
+            </div>
+
+            <h3>Data Poisoning in AI Training</h3>
+            <p>Contemporary AI models are trained on human-generated text, judgment data, and behavioral records. If this training data is aggregated without credibility verification—if it treats all sources equally regardless of track record—then the model inherits all upstream biases. A prediction made by an executive with poor track record carries equal weight as one from a domain expert. Popular falsehoods outweigh rare truths. This is not a training data problem. It is a judgment verification problem.</p>
+
+            <h3>The UK Context</h3>
+            <p>UK enterprises face documented productivity losses due to excessive bureaucracy and inefficient meeting cultures. Simultaneously, the Office for National Statistics reports that organizational decision-making remains dominated by hierarchical authority rather than outcome-based competence. The UK enterprise software market is expanding at 10.02% CAGR to an estimated £65.3 billion by 2035, yet per-employee software spending (£119) remains 5.5× lower than in the United States, indicating high price sensitivity and demand for solutions that deliver immediate, measurable outcomes.</p>
+        </div>
+
+        <!-- THE FRAMEWORK -->
+        <div class="section">
+            <h2>The Framework</h2>
+
+            <h3>1. Optimal Group Size: The Triad</h3>
+            <p>Condorcet's Jury Theorem (1785) establishes that if individuals are independent and each has probability p &gt; 0.5 of making a correct decision, the probability that a majority vote reaches the correct decision increases monotonically with group size. This has historically been interpreted as justifying large democratic bodies.</p>
+
+            <p>However, in high-complexity organizational contexts requiring costly attention and deliberative effort, the empirical record contradicts this. Larger groups introduce free-rider effects, diffusion of accountability, and information cascades that degrade signal quality. In practice, accuracy peaks in smaller groups and declines as size increases beyond 3–5 members.</p>
+
+            <p>Triangle deploys the <strong>three-person triad</strong> as the fundamental decision unit. This structure:</p>
+            <ul>
+                <li>Maximizes accountability (no hiding in consensus or crowd)</li>
+                <li>Eliminates deadlock (odd number prevents 1-1 splits)</li>
+                <li>Minimizes communication channels (3 dyadic pairs vs. exponential growth in larger groups)</li>
+                <li>Maintains high deliberative quality (three people can engage with complex material; larger groups cannot)</li>
+            </ul>
+
+            <h3>2. Dissent Intelligence</h3>
+            <p>When 2-of-3 members proceed over a minority objection, Triangle records the dissent in an append-only cryptographic ledger. This serves two functions:</p>
+
+            <ul>
+                <li><strong>Prevents post-hoc filtering:</strong> Organizations systematically erase minority views after outcomes are known. If a dissenter's objection proves correct in hindsight, the erasure prevents institutional learning and repeats the same mistakes. The ledger makes erasure cryptographically impossible.</li>
+                <li><strong>Builds predictive history:</strong> Over time, the system reveals which individuals' minority positions prove correct most frequently. This becomes a measure of genuine contrarian insight vs. mere obstruction, independent of seniority or organizational title.</li>
+            </ul>
+
+            <h3>3. Strictly Proper Scoring Rules: Competence Measurement</h3>
+            <p>In each triad decision, members vote on a three-option matrix: Yes (proceed), No (reject), or Neutral (passive consent, no objection). These votes are recorded and later scored against the actual outcome using the Brier score, a strictly proper scoring rule formulated by Glenn W. Brier (1950) and analyzed in depth by Gneiting &amp; Raftery (2007).</p>
+
+            <p>The Brier score formula:</p>
+            <div class="formula">BS = (1/N) Σ(fₜ - oₜ)²</div>
+
+            <p>Where <code>fₜ</code> is the forecasted probability and <code>oₜ</code> is the observed outcome (0 or 1). A strictly proper scoring rule ensures that a forecaster maximizes expected reward exclusively by reporting their true beliefs. Overconfidence is mathematically penalized.</p>
+
+            <p>Triangle decomposes the Brier score using Allan Murphy's decomposition into three independent components:</p>
+
+            <ul>
+                <li><strong>Reliability (Calibration):</strong> The squared discrepancy between predicted probabilities and observed frequencies. Measures self-knowledge: how well does an individual know the limits of their own accuracy?</li>
+                <li><strong>Resolution (Discrimination):</strong> The ability to distinguish between events that occur and those that do not. Rewards genuine predictive skill over chance.</li>
+                <li><strong>Uncertainty:</strong> The inherent variance in the environment, independent of the forecaster. Establishes the theoretical ceiling for accuracy.</li>
+            </ul>
+
+            <p>This decomposition isolates genuine competence from environmental luck. An individual might score well due to calibration, resolution, or both. Over time, the system identifies domain-specific expertise independent of organizational title or seniority.</p>
+
+            <h3>4. Structural Topology and Fractal Scaling</h3>
+            <p>A single triad cannot manage institutional decision-making at scale. Triangle deploys lattice topologies from materials science to enable fractal scaling without hierarchical concentration.</p>
+
+            <p>Each individual is embedded in <strong>exactly three triads</strong> across different organizational units. Information flows horizontally through node overlap. This eliminates silos and prevents the bottleneck of centralized decision-making.</p>
+
+            <ul>
+                <li><strong>Graphene structure:</strong> Used in cross-functional operations. Infinite horizontal information flow via shared nodes.</li>
+                <li><strong>Kagome lattice:</strong> Resolves competing constraints (e.g., Speed vs. Cost vs. Quality). Ensures no single triad can optimize one metric without balancing others.</li>
+                <li><strong>Diamond lattice:</strong> Vertical stacking for deeply integrated mid-size organizations. Maintains unbroken alignment from C-suite to frontline execution.</li>
+                <li><strong>Buckyball configuration:</strong> Closed loop for executive teams and boards. Distributes high-stakes decision stress among a fixed set of vetted experts.</li>
+            </ul>
+
+            <h3>5. Anti-Gaming Architecture</h3>
+            <p>Any system measuring human competence will be subjected to tactical voting, collusion, and algorithmic exploitation. Triangle hardcodes structural defenses:</p>
+
+            <div class="framework-item">
+                <strong>Three-Option Consensus Matrix</strong>
+                <p>Votes are constrained to: Yes, No, or Neutral. This eliminates the "I told you so" political hedge, where an individual claims prescience only after outcomes are known. Neutral grants passive consent, preventing false claims of prior disagreement.</p>
+            </div>
+
+            <div class="framework-item">
+                <strong>Algorithmic Elasticity</strong>
+                <p>If a demographic cohort begins winning at statistically improbable rates, the baseline scoring function includes a dynamic difficulty modifier (δ). Payout scales down, instantly neutralizing arbitrage attempts.</p>
+            </div>
+
+            <div class="framework-item">
+                <strong>Adversarial Escrow Validation</strong>
+                <p>Resolution criteria are submitted in advance and stress-tested by a "Red Team" AI system. Criteria that guarantee a "Goal Met" outcome regardless of real-world failure are rejected. This prevents semantic gaming in the resolution layer.</p>
+            </div>
+
+            <div class="framework-item">
+                <strong>Cryptographic Salted Routing</strong>
+                <p>The independent triad selected to verify outcomes 30 days post-decision is chosen via cryptographic randomness, not organizational assignment. This makes collusion impossible.</p>
+            </div>
+
+            <div class="framework-item">
+                <strong>Zero-Knowledge Ledger Architecture</strong>
+                <p>All judgments are appended to an immutable cryptographic ledger. Past confidence scores cannot be retroactively altered without breaking the cryptographic hash chain. This prevents defensive executives from manipulating historical records.</p>
+            </div>
+        </div>
+
+        <!-- COMPETENCE DIMENSIONS -->
+        <div class="section">
+            <h2>Measuring Competence Across Ten Dimensions</h2>
+            <p>Because real-world outcomes emerge over 30–60 days, immediate feedback is limited. Triangle extracts ten dimensions of competence from anonymized metadata during the interim period. None individually measures competence; together, they reveal it.</p>
+
+            <div class="metric-row">
+                <span class="metric-label"><strong>Execution Accuracy</strong> (AI-derived)</span>
+                <span class="metric-value">Brier score baseline</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Epistemic Vigilance</strong> (AI-derived)</span>
+                <span class="metric-value">Active voting ratio vs. passive consent expiry</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Foresight Horizon</strong> (AI-derived)</span>
+                <span class="metric-value">Accuracy weighted by temporal distance from prediction to resolution</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Accountability Load</strong> (AI-derived)</span>
+                <span class="metric-value">Ratio of idea initiation to task assignment</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Algorithmic Intuition</strong> (AI-derived)</span>
+                <span class="metric-value">Frequency of successfully overriding AI recommendations</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Leadership Calibration</strong> (AI-derived)</span>
+                <span class="metric-value">Success rate of volunteered leadership roles</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Network Catalyst Score</strong> (Peer-derived)</span>
+                <span class="metric-value">Aggregate success of all triads a person sits on</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Dissent Efficacy</strong> (Peer-derived)</span>
+                <span class="metric-value">Frequency of minority position convincing the majority to revise</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Epistemic PageRank</strong> (Peer-derived)</span>
+                <span class="metric-value">Credibility points from voting identically to verified experts</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label"><strong>Auditor Integrity</strong> (Peer-derived)</span>
+                <span class="metric-value">Consistency as blind verifier; penalties for losing 2-1 splits</span>
+            </div>
+        </div>
+
+        <!-- UK OPPORTUNITY -->
+        <div class="section">
+            <h2>Market Context and Government Funding</h2>
+
+            <h3>Enterprise Software Market</h3>
+            <p>The UK enterprise software market is projected to reach £65.3 billion by 2035 from a 2024 baseline of £22.8 billion, representing 10.02% CAGR. This growth is the highest in Western Europe, driven by cloud adoption and OpEx model preference.</p>
+
+            <p>However, per-employee software spending in the UK (£119 annually) remains 5.5× lower than in the United States (£868). This indicates high price sensitivity and strong demand for solutions delivering immediate, measurable productivity improvement without heavy capital expenditure.</p>
+
+            <h3>UK Government Funding Environment</h3>
+            <p>The UK has positioned itself as the global leader in AI safety and governance. Key funding mechanisms include:</p>
+
+            <ul>
+                <li><strong>Small Business Research Initiative (SBRI):</strong> Pre-commercial procurement. Phase 1 (£50k–£100k) funds prototype development. Phase 2 (up to £1.5M) funds initial deployment. Applicant retains 100% IP ownership. Active solicitations for solutions addressing institutional decision quality and AI model training credibility.</li>
+                <li><strong>Advanced Research and Invention Agency (ARIA):</strong> Funds high-risk, high-reward research. "Safeguarded AI" program prioritizes safety-first architectures for large-scale AI systems.</li>
+                <li><strong>UK AI Security Institute:</strong> Manages alignment research programs. Seeking foundational infrastructure for evaluating AI model training data credibility.</li>
+            </ul>
+
+            <p>As of January 2025, Innovate UK's broad "Smart Grants" program was suspended due to overwhelmingly high application volume (2.8% success rate) and significant proportion of AI-generated applications. The funding landscape has sharply shifted toward targeted, domain-specific competitions aligned with UK government priorities in AI safety and alignment.</p>
+        </div>
+
+        <!-- RESEARCH STATUS -->
+        <div class="section">
+            <h2>Current Status and Next Phase</h2>
+
+            <div class="research-status">
+                <p><strong>Completed:</strong> Conceptual framework design based on social choice theory and strictly proper scoring rules. Strategic market analysis for UK enterprise deployment. Competitive landscape evaluation.</p>
+
+                <p><strong>In progress:</strong> SBRI Phase 1 application (£50k–£100k) for automated platform development, cryptographic ledger implementation, and initial UK organizational pilot.</p>
+
+                <p><strong>Seeking:</strong> Research collaborators with expertise in decision theory, social choice theory, or AI safety; advisors with experience in UK grant funding or institutional governance; government engagement on SBRI solicitations or ARIA research programs.</p>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section">
+            <h2>Engagement</h2>
+            <p>If you are a researcher, government official, advisor, or potential collaborator interested in this work:</p>
+            <a href="mailto:martin.beyst@gmail.com?subject=Triangle%20Framework%20-%20Research%20Inquiry" class="cta">Contact</a>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><strong>Triangle Framework</strong></p>
+            <p>Research grounded in Condorcet's Jury Theorem, strictly proper scoring rules (Brier score, Murphy decomposition), social choice theory (List &amp; Pettit on group agency), judgment aggregation literature, and materials science topologies.</p>
+            <p style="margin-top: 15px; color: #999;">© 2026. Published under research protocols.</p>
+        </div>
+    </div>
+
+</body></html>
