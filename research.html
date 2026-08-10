@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triangle — Theoretical grounding</title>
+<meta name="description" content="The theoretical grounding for Triangle: Condorcet's Jury Theorem, May's Theorem, judgment aggregation and group agency — including where each result argues against the design, and a full statement of known limitations.">
+<meta name="keywords" content="Condorcet Jury Theorem, judgment aggregation, List and Pettit, group agency, May's theorem, discursive dilemma, social choice theory, decision architecture">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Triangle — Theoretical grounding">
+<meta property="og:description" content="Every theorem stated as it actually is, including where it argues against us.">
+<meta property="og:url" content="https://triangle.ceo/research.html">
+<link rel="canonical" href="https://triangle.ceo/research.html">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#5a5a5a;
+    --rule:#e0ddd6;
+    --bg:#faf9f6;
+    --accent:#8a4b2a;
+    --warn:#7a2e2e;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-size:18px;line-height:1.65;
+  }
+  .wrap{max-width:44rem;margin:0 auto;padding:0 1.5rem}
+  header{padding:5rem 0 3rem;border-bottom:1px solid var(--rule)}
+  .mark{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin:0 0 1.25rem
+  }
+  .mark a{color:var(--accent);text-decoration:none}
+  h1{font-size:2.4rem;line-height:1.15;margin:0 0 1rem;font-weight:normal;letter-spacing:-.01em}
+  .sub{font-size:1.2rem;color:var(--muted);margin:0;line-height:1.45}
+  h2{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+    margin:4rem 0 1.5rem;padding-bottom:.6rem;border-bottom:1px solid var(--rule)
+  }
+  h2 .n{color:var(--accent);margin-right:.7rem}
+  p{margin:0 0 1.1rem}
+  strong{font-weight:600}
+  .claim{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+    color:var(--warn);display:block;margin:2rem 0 .4rem
+  }
+  .cap{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+    color:var(--ink);display:block;margin:2rem 0 .4rem
+  }
+  table{border-collapse:collapse;width:100%;margin:1.5rem 0;font-size:.95rem;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  th,td{text-align:left;padding:.5rem .8rem .5rem 0;border-bottom:1px solid var(--rule)}
+  th{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td.num{text-align:right;padding-right:0}
+  a{color:var(--accent)}
+  .mail{display:inline-block;margin-top:.5rem;font-size:1.1rem;
+    border-bottom:1px solid var(--accent);text-decoration:none}
+  .refs{font-size:.9rem;color:var(--muted);line-height:1.5}
+  .refs p{margin:0 0 .55rem}
+  footer{margin-top:5rem;padding:2.5rem 0 4rem;border-top:1px solid var(--rule);
+    color:var(--muted);font-size:.95rem}
+  @media(max-width:600px){
+    body{font-size:17px}
+    h1{font-size:1.9rem}
+    header{padding:3rem 0 2rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="mark"><a href="index.html">Triangle</a> — Research</p>
+  <h1>Theoretical grounding</h1>
+  <p class="sub">Every theorem stated as it actually is, including where it argues against the design.</p>
+</header>
+
+<h2>Position</h2>
+
+<p>Organisations produce decisions continuously and record almost nothing about how they were reached. The conclusion survives. The reasoning, the dissent, and the dependency structure do not.</p>
+
+<p>This is a problem for the organisation, which cannot learn from its own history. It is also a problem for machine learning: models trained on organisational text inherit conclusions without the judgment that produced them, and without any signal about which sources were reliably right.</p>
+
+<p>Triangle is an attempt to produce that missing artifact — a structured, outcome-verified record of human judgment — as a by-product of running normal meetings.</p>
+
+<p>We make no claim that this is solved. Below is the reasoning, the evidence, and an explicit statement of what remains open.</p>
+
+<h2><span class="n">1</span>Group size</h2>
+
+<p><strong>Condorcet's Jury Theorem</strong> (1785) states that where individuals judge independently and each is correct with probability <em>p</em>, the majority outperforms the individual if <em>p</em> &gt; 0.5, and improves as the group grows. The theorem is symmetrical: where <em>p</em> &lt; 0.5, larger groups converge on certainty of error.</p>
+
+<span class="claim">We do not claim Condorcet justifies a three-person group</span>
+<p>It does not. Taken at face value it argues for large groups. We deploy triads for three reasons, none of which is the theorem's headline result.</p>
+
+<p><strong>Marginal return.</strong> At an individual accuracy of 60%, moving from one decision-maker to three yields the largest single gain available. Returns diminish sharply while accountability, latency and attention all degrade.</p>
+
+<table>
+  <tr><th>Decision-makers</th><th class="num">Majority correct</th><th class="num">Gain</th></tr>
+  <tr><td>1</td><td class="num">60.0%</td><td class="num">—</td></tr>
+  <tr><td>3</td><td class="num">64.8%</td><td class="num">+4.8</td></tr>
+  <tr><td>5</td><td class="num">68.3%</td><td class="num">+3.5</td></tr>
+  <tr><td>9</td><td class="num">73.3%</td><td class="num">+2.3</td></tr>
+</table>
+
+<p><strong>The competence condition.</strong> The theorem's content is conditional on <em>p</em> &gt; 0.5. Below that line, group decision-making amplifies error. No organisation measures which side of that line its people are on; competence is inferred from seniority. This is the condition our measurement layer exists to establish. It is not an additional feature — it is what makes the theorem applicable at all.</p>
+
+<p><strong>Independence fails in organisations.</strong> Condorcet requires conditionally independent judgments. Colleagues share managers, briefings, incentives and information sources, and correlation degrades the result sharply (Ladha 1992; Boland 1989; Dietrich &amp; Spiekermann on the common-cause problem). Under correlation the asymptotic result does not merely weaken — it fails.</p>
+
+<p>We do not claim triads preserve independence. In a deliberative meeting everyone hears everyone before any position is recorded, so anchoring is substantial. We claim only that a triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost.</p>
+
+<p><strong>May's Theorem</strong> (1952) does the work Condorcet is often wrongly asked to do. For a binary choice, simple majority is the unique rule satisfying anonymity, neutrality and positive responsiveness. This justifies two-of-three directly, and shows that supermajority thresholds violate neutrality by privileging the status quo — which is why unanimity is preferred here but not required.</p>
+
+<p>Arrow's Impossibility Theorem does not apply: it concerns preference orderings over three or more options, and these decisions are binary.</p>
+
+<h2><span class="n">2</span>Aggregation</h2>
+
+<p><strong>The discursive dilemma.</strong> Where a decision rests on multiple conditions, aggregating over the conditions and aggregating over the conclusion can yield opposite results from the same individual judgments. Three judges, each internally consistent, can produce a majority for each premise and a majority against the conclusion (Kornhauser &amp; Sager 1986).</p>
+
+<p><strong>List &amp; Pettit</strong> (2002) generalise this to an impossibility result: no aggregation function satisfying universal domain, anonymity and systematicity guarantees a consistent collective judgment set on a non-trivial agenda. It is the judgment-aggregation analogue of Arrow.</p>
+
+<span class="claim">We do not escape this. Nothing does.</span>
+<p>Triangle's response is to make the choice explicit rather than accidental. Positions are recorded per condition rather than on the decision as a whole, which also corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.</p>
+
+<p>Which error is cheaper depends on reversibility. We treat it as a parameter rather than pretending there is a neutral default.</p>
+
+<p><strong>Related but distinct:</strong> aggregating verdicts across groups rather than individuals produces the referendum paradox, in which a minority of individuals can carry a majority of groups. This is why Triangle does not nest triads or aggregate their verdicts. See section 4.</p>
+
+<p><strong>Group agency.</strong> List &amp; Pettit's wider argument is that for a group to bear responsibility — for "the organisation decided" to be coherent — its judgments must be consistent and closed under entailment. The impossibility result shows that consistency is not free. Group agency has to be engineered. That is the claim underlying our interest in institutional accountability, and it is a design problem rather than a natural property of people in a room.</p>
+
+<h2><span class="n">3</span>Measurement</h2>
+
+<p>Positions are recorded as agree, disagree, neutral, or propose an alternative. Participants are not asked to state numerical confidence.</p>
+
+<span class="claim">We have deliberately given up calibration measurement</span>
+<p>Strictly proper scoring rules such as the Brier score require graded probability forecasts and cannot be applied to categorical positions. We do not apply them, and we do not claim to measure calibration or overconfidence. Earlier versions of this page did; that was an error and it has been removed.</p>
+
+<p>The reasoning for the trade is threefold. Self-reported confidence is an introspective judgment, and its error is systematic rather than random — it correlates with seniority, culture and personality, so it introduces bias that must then be modelled out. Untrained participants without feedback loops produce poor probability estimates. And a confidence field reintroduces the retrospective hedge — <em>I had doubts but went along with it</em> — that a categorical position record is designed to eliminate.</p>
+
+<p>We note the counter-argument honestly: trained forecasters produce genuinely informative probability estimates, and coarsening their forecasts measurably degrades accuracy. Our position is that this holds for trained, self-selected, feedback-supported forecasters and not for a general workforce in a Tuesday meeting. It is an empirical claim about our population, not a general dismissal of probability elicitation.</p>
+
+<span class="cap">What remains measurable is discrimination</span>
+<p>Over a sufficient number of resolved decisions, one can ask whether a person's agreement predicts a different outcome from their disagreement. Simulation indicates this separates a knowledgeable participant from a noisy one within roughly fifty resolved decisions — substantially fewer than calibration measurement would require.</p>
+
+<p>Discrimination is the component of forecasting skill that reflects genuine knowledge. Calibration, by contrast, is trainable within weeks. Giving up the trainable half to gain adoption is, we think, the right trade.</p>
+
+<p><strong>Known vulnerability:</strong> a participant who never disagrees has no comparison group and can appear to discriminate perfectly. A minimum number of resolved positions in both directions is required before any score is produced.</p>
+
+<p><strong>Delivery is recorded separately and never combined.</strong> Judgment and execution are distinct competences. Merging them into a single score would route decision authority toward the best operators, which is the failure mode the architecture exists to avoid.</p>
+
+<h2><span class="n">4</span>Scaling: decomposition, not aggregation</h2>
+
+<p>Triangle does not add people to decisions or aggregate verdicts across triads. It decomposes decisions.</p>
+
+<p>Each decision is a node. Edges record dependency: premise, constraint, or delegation. The structure is a directed acyclic graph.</p>
+
+<p>A triad ruling on a large question spawns the sub-decisions it does not own, each routed to its own triad, in parallel. A triad blocked for want of an input spawns the blocking question and routes it laterally to whoever owns it, rather than escalating to a less-informed authority.</p>
+
+<p><strong>Consequences.</strong> The referendum paradox cannot arise, because no question is ever decided by more than one triad — a dissolution rather than a fix. Revisiting becomes a graph query: each decision records what it rested on, and when a parent is re-decided, descendants are flagged. Circular dependencies become detectable, and can be broken by identifying which decision must be made on a stated assumption.</p>
+
+<span class="claim">This does not eliminate judgment aggregation — it relocates it</span>
+<p>Where triad C's decision depends on rulings by triads A and B, C is bound by them, which is premise-based aggregation distributed across groups. C may therefore be pushed toward a conclusion its own members would not independently reach. Our proposed resolution is that a bound triad may formally reopen a prior decision rather than override it: prior rulings cannot be ignored, but can be sent back to their owners. This is designed, not built, and not yet tested.</p>
+
+<p><strong>Known vulnerability:</strong> decomposition permits salami-slicing — splitting a decision until each part is individually approvable. Any decision spawning children should retain a closing decision reviewing the whole. This is specified and not yet implemented.</p>
+
+<p>The graph structure was reached from an interest in physical lattices, graphene in particular, as an analogy for three-coordinate social structures. We present that as the origin of the idea and not as a derivation. No claim in this document rests on materials science.</p>
+
+<h2><span class="n">5</span>The role of the system</h2>
+
+<p>The AI transcribes discussion, identifies decisions and their conditions, and infers each participant's position. Every inference is presented for human confirmation and can be overwritten.</p>
+
+<p>This is a substantial role, and it creates a genuine tension with the principle that machine systems should not hold decision authority. Whoever frames the question exercises real influence over the answer, and here the model does part of the framing.</p>
+
+<p>Our response is measurement rather than assertion. Explicit voting is available and optional. Where participants vote, those votes serve as ground truth for the inference, and the resulting accuracy figure is published to the organisation. An organisation can begin with explicit voting and move to inference when the accuracy justifies it.</p>
+
+<p>We note that participants who opt into explicit voting are not a random sample, so the accuracy estimate is biased. We report it as an indication, not a validated measure.</p>
+
+<h2><span class="n">6</span>Limitations and open problems</h2>
+
+<p>We would rather state these than have them found.</p>
+
+<span class="cap">The theory is an idealisation</span>
+<p>Condorcet concerns independent jurors answering binary factual questions with knowable answers. Most organisational decisions are multi-option, path-dependent, and their counterfactuals are never observed. The mathematics is a floor under the design, not the design's justification.</p>
+
+<span class="cap">Measurement requires time</span>
+<p>Meaningful competence signals need dozens of resolved decisions per participant. A thirty-day pilot produces a record and latency measurements. It does not produce validated competence scores.</p>
+
+<span class="cap">Correlation is unmeasured</span>
+<p>We assert that organisational judgments are substantially correlated. We cannot cite a measurement, because to our knowledge none exists. Triangle would generate the data required to make one — repeated individual positions on shared questions with verified outcomes. We regard this as a research opportunity rather than a settled claim.</p>
+
+<span class="cap">Transparency creates attack surface</span>
+<p>Three mechanisms by which the design undermines its own incentive properties: scores that affect standing give participants payoffs beyond accuracy; participants often control the outcomes they are assessed on; and where premises are recorded, they can be voted on strategically. Every mechanism that records more creates more that can be manipulated. Current defences are procedural rather than technical.</p>
+
+<span class="cap">Privacy claims are limited</span>
+<p>Small-group decision records are re-identifiable in principle. We describe visibility as a configured policy with an audit trail, not as anonymity, and not as a cryptographic guarantee.</p>
+
+<span class="cap">The public amendment window may under-serve quiet participants</span>
+<p>Amendment is public and reasoned, which prevents costless retrospective dissent. It may also deter exactly the participants whose views are hardest to capture. This is a live tension with the premise that small groups surface views large groups suppress. It is measurable in a pilot — who uses the window, and at what seniority — and we intend to measure it.</p>
+
+<h2><span class="n">7</span>Status</h2>
+
+<p><strong>Built:</strong> nothing beyond the protocol and record structure. A pilot runs on facilitated meetings and a structured record.</p>
+
+<p><strong>Designed, not built:</strong> dependency graph traversal and revisit alerts, bound-with-challenge, cryptographic ledger, automated anti-gaming measures.</p>
+
+<p><strong>Not claimed:</strong> validated competence measurement, calibration measurement, anonymity guarantees, any result derived from materials science.</p>
+
+<p>We are seeking pilot organisations, and collaborators with expertise in social choice theory, judgment aggregation, or the evaluation of AI-generated records of human deliberation.</p>
+
+<p><a class="mail" href="mailto:martin.beyst@gmail.com?subject=Triangle%20research">martin.beyst@gmail.com</a></p>
+
+<h2>References</h2>
+
+<div class="refs">
+<p>Condorcet (1785). <em>Essai sur l'application de l'analyse à la probabilité des décisions rendues à la pluralité des voix.</em></p>
+<p>May, K. (1952). A set of independent necessary and sufficient conditions for simple majority decision. <em>Econometrica.</em></p>
+<p>Kornhauser, L. &amp; Sager, L. (1986). Unpacking the court. <em>Yale Law Journal.</em></p>
+<p>List, C. &amp; Pettit, P. (2002). Aggregating sets of judgments: an impossibility result. <em>Economics and Philosophy.</em></p>
+<p>List, C. &amp; Pettit, P. (2011). <em>Group Agency.</em> Oxford University Press.</p>
+<p>Boland, P. (1989). Majority systems and the Condorcet jury theorem. <em>The Statistician.</em></p>
+<p>Ladha, K. (1992). The Condorcet jury theorem, free speech and correlated votes. <em>American Journal of Political Science.</em></p>
+<p>Dietrich, F. &amp; Spiekermann, K. Independent opinions? On the causal foundations of belief formation and jury theorems.</p>
+<p>Murphy, A. (1973). A new vector partition of the probability score. <em>Journal of Applied Meteorology.</em></p>
+<p>Gneiting, T. &amp; Raftery, A. (2007). Strictly proper scoring rules, prediction, and estimation. <em>JASA.</em></p>
+</div>
+
+<footer>
+  <p><a href="index.html">← Triangle for organisations</a></p>
+  <p>© 2026 Triangle</p>
+</footer>
+
+</div>
+</body>
+</html>
