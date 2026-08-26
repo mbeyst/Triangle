@@ -1,742 +1,373 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Triangle — A decision architecture for organisations</title>
-
-<meta name="description" content="Triangle is a decision architecture for organisations. Three-person triads, recorded dissent, and a decision record that shows what every decision depended on. Pilots scoped at twenty decisions, £5,000.">
-<meta name="keywords" content="decision architecture, decision making framework, board governance, recorded dissent, decision record, decision latency, institutional decision making, decision audit trail, board challenge">
-<link rel="canonical" href="https://triangle.ceo/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triangle — three decide, and the dissent is kept</title>
+<meta name="description" content="Three people decide, not nine. Each says where they stand, in their own words, and it is written down. The framework is free.">
 
 <meta property="og:type" content="website">
+<meta property="og:title" content="Triangle — three decide, and the dissent is kept">
+<meta property="og:description" content="Three people decide, not nine. Each says where they stand, in their own words, and it is written down.">
 <meta property="og:url" content="https://triangle.ceo/">
-<meta property="og:title" content="Triangle — A decision architecture for organisations">
-<meta property="og:description" content="Every organisation records what it decided. Almost none record why, who disagreed, or what it rested on.">
-<meta property="og:locale" content="en_GB">
+<meta property="og:video" content="https://www.youtube.com/watch?v=OSzXFAtV6CA">
+<meta property="og:image" content="https://i.ytimg.com/vi/OSzXFAtV6CA/maxresdefault.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Triangle — A decision architecture for organisations">
-<meta name="twitter:description" content="Every organisation records what it decided. Almost none record why, who disagreed, or what it rested on.">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Triangle",
-  "url": "https://triangle.ceo/",
-  "description": "A decision architecture for organisations. Three-person triads chosen per decision, recorded dissent, and a decision record where every decision links to what it depends on.",
-  "founder": { "@type": "Person", "name": "Martin Beyst" },
-  "email": "martin.beyst@gmail.com",
-  "areaServed": "GB",
-  "offers": {
-    "@type": "Offer",
-    "name": "Triangle pilot",
-    "description": "Twenty decisions. Fixed scope. Runs with your executive team.",
-    "price": "5000",
-    "priceCurrency": "GBP"
-  }
-}
-</script>
+<meta name="twitter:title" content="Triangle — three decide, and the dissent is kept">
+<meta name="twitter:description" content="Three people decide, not nine. Each says where they stand, in their own words, and it is written down.">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/OSzXFAtV6CA/maxresdefault.jpg">
 
 <style>
 :root{
-  --paper:#fbfaf8;
-  --ink:#16161a;
-  --muted:#5c5c66;
-  --faint:#84848e;
-  --rule:#e2ded6;
-  --rule-strong:#c9c4ba;
-  --accent:#1f3d5c;
-  --accent-soft:#eef1f5;
-  --measure:34rem;
-  --serif:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --bg:#fbfaf8; --fg:#16150f; --muted:#5d5a4e; --rule:#e0ddd2;
+  --accent:#8c2f16; --panel:#f4f1e9;
 }
-
 @media (prefers-color-scheme: dark){
   :root{
-    --paper:#14141a;
-    --ink:#e9e7e2;
-    --muted:#a3a1a8;
-    --faint:#82808a;
-    --rule:#2b2b33;
-    --rule-strong:#3d3d47;
-    --accent:#9db7d4;
-    --accent-soft:#1c2530;
+    --bg:#141412; --fg:#eeece4; --muted:#a09c8e; --rule:#2e2d28;
+    --accent:#e08060; --panel:#1d1c19;
   }
 }
-
-*,*::before,*::after{box-sizing:border-box}
-
+*{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-
 body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--serif);
-  font-size:1.0625rem;
-  line-height:1.62;
+  margin:0; background:var(--bg); color:var(--fg);
+  font:400 18px/1.6 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   -webkit-font-smoothing:antialiased;
 }
-
-.skip{
-  position:absolute;left:-9999px;top:0;
-  background:var(--ink);color:var(--paper);
-  padding:.6rem 1rem;z-index:100;font-family:var(--sans);
-}
-.skip:focus{left:0}
-
-.wrap{
-  max-width:46rem;
-  margin:0 auto;
-  padding:0 1.5rem;
-}
-
-/* ---------- masthead ---------- */
-
-.masthead{
-  border-bottom:1px solid var(--rule);
-  padding:1.4rem 0;
-  margin-bottom:4.5rem;
-}
-.masthead .wrap{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:1rem;
-}
-.wordmark{
-  font-family:var(--sans);
-  font-weight:600;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-size:.8rem;
-  color:var(--ink);
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-}
-.wordmark svg{display:block}
-.masthead nav a{
-  font-family:var(--sans);
-  font-size:.8rem;
-  color:var(--muted);
-  text-decoration:none;
-  border-bottom:1px solid var(--rule-strong);
-  padding-bottom:1px;
-}
-.masthead nav a:hover{color:var(--accent);border-color:var(--accent)}
-
-/* ---------- typography ---------- */
-
-h1{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(2.1rem,6vw,3.1rem);
-  line-height:1.13;
-  letter-spacing:-.015em;
-  margin:0 0 1.4rem;
-  max-width:20ch;
-}
-
-h2{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(1.5rem,3.6vw,1.95rem);
-  line-height:1.22;
-  letter-spacing:-.01em;
-  margin:0 0 1.5rem;
-}
-
-h3{
-  font-family:var(--serif);
-  font-weight:700;
-  font-size:1.075rem;
-  line-height:1.4;
-  margin:0 0 .5rem;
-}
-
-.eyebrow{
-  font-family:var(--sans);
-  font-size:.72rem;
-  font-weight:600;
-  letter-spacing:.17em;
-  text-transform:uppercase;
-  color:var(--faint);
-  margin:0 0 1.4rem;
-}
-
-p{margin:0 0 1.15rem;max-width:var(--measure)}
-p:last-child{margin-bottom:0}
-
-.lede{
-  font-size:1.28rem;
-  line-height:1.5;
-  color:var(--ink);
-  max-width:30rem;
-}
-
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.5rem}
 a{color:var(--accent)}
+a:hover{text-decoration:none}
 
-strong{font-weight:700}
+nav{border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1.1rem;padding-bottom:1.1rem}
+.mark{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.82rem;text-decoration:none;color:var(--fg)}
+nav a.link{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
 
-/* ---------- sections ---------- */
+.hero{padding:4.5rem 0 1rem}
+.opener{font-size:1.42rem;line-height:1.45;margin:0 0 2.4rem}
+.opener span{display:block}
+.opener span+span{margin-top:.9rem}
+h1{font-size:2.15rem;line-height:1.2;font-weight:600;margin:0 0 .9rem;letter-spacing:-.01em}
+.standfirst{font-size:1.1rem;color:var(--muted);margin:0 0 2.5rem}
 
-section{
-  padding:0 0 4.5rem;
+.video{margin:0 0 4rem}
+.video__frame{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
+@supports not (aspect-ratio:16/9){.video__frame{padding-top:56.25%;height:0}}
+.video__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+section{padding:3.2rem 0;border-top:1px solid var(--rule)}
+h2{font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 1.6rem}
+p{margin:0 0 1.1rem}
+p:last-child{margin-bottom:0}
+.lead{font-size:1.2rem;line-height:1.5}
+
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;position:relative;padding-left:2.6rem;margin-bottom:1.7rem}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{
+  content:counter(s);position:absolute;left:0;top:.15rem;
+  font-size:.8rem;font-weight:600;color:var(--accent);
+  border:1px solid var(--rule);width:1.7rem;height:1.7rem;
+  display:flex;align-items:center;justify-content:center;
 }
-section + section{
-  border-top:1px solid var(--rule);
-  padding-top:4rem;
+.steps strong{display:block;font-weight:600;margin-bottom:.2rem}
+.steps span{color:var(--muted);font-size:.98rem}
+
+.plain{list-style:none;margin:0;padding:0}
+.plain li{padding:.55rem 0 .55rem 1.4rem;position:relative;border-bottom:1px solid var(--rule);font-size:1rem}
+.plain li:last-child{border-bottom:0}
+.plain li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+
+blockquote{
+  margin:2rem 0;padding:1.3rem 1.5rem;background:var(--panel);
+  border-left:2px solid var(--accent);
 }
-
-.hero{padding-bottom:4rem}
-
-/* ---------- problem / plain blocks ---------- */
-
-.block{margin:0 0 2.2rem;max-width:var(--measure)}
-.block:last-child{margin-bottom:0}
-
-/* ---------- callout ---------- */
-
-.callout{
-  background:var(--accent-soft);
-  border-left:3px solid var(--accent);
-  padding:1.6rem 1.6rem 1.4rem;
-  margin:0 0 3rem;
-  max-width:var(--measure);
-}
-.callout h3{
-  font-family:var(--sans);
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-  color:var(--accent);
-  margin-bottom:.85rem;
-}
-.callout p{font-size:1rem}
-
-/* ---------- numbered steps ---------- */
-
-.step{
-  display:grid;
-  grid-template-columns:3.2rem 1fr;
-  gap:0 1.2rem;
-  margin:0 0 2.6rem;
-  max-width:38rem;
-}
-.step:last-child{margin-bottom:0}
-.step .num{
-  font-family:var(--sans);
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.06em;
-  color:var(--faint);
-  padding-top:.28rem;
-  font-variant-numeric:tabular-nums;
-}
-.step .body h3{margin-bottom:.6rem}
-.step .body p{max-width:31rem}
-
-/* ---------- cost table ---------- */
-
-.costs{
-  border-top:1px solid var(--rule-strong);
-  max-width:38rem;
-  margin:0 0 1.6rem;
-}
-.cost-row{
-  display:grid;
-  grid-template-columns:11rem 1fr;
-  gap:0 1.5rem;
-  padding:.85rem 0;
-  border-bottom:1px solid var(--rule);
-}
-.cost-row dt{
-  font-family:var(--sans);
-  font-size:.78rem;
-  font-weight:600;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:var(--faint);
-  padding-top:.22rem;
-}
-.cost-row dd{margin:0}
-
-/* ---------- deliverables ---------- */
-
-.deliverable{
-  margin:0 0 1.7rem;
-  max-width:var(--measure);
-  padding-left:1.1rem;
-  border-left:2px solid var(--rule-strong);
-}
-.deliverable:last-child{margin-bottom:0}
-.deliverable h3{
-  font-family:var(--sans);
-  font-size:.82rem;
-  font-weight:700;
-  letter-spacing:.09em;
-  text-transform:uppercase;
-  margin-bottom:.45rem;
+blockquote p{font-size:1.05rem}
+blockquote .label{
+  display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.45rem;font-weight:600;
 }
 
-/* ---------- list ---------- */
+.price{display:flex;flex-wrap:wrap;gap:1.5rem;margin:0 0 1.6rem}
+.price div{flex:1 1 12rem;border:1px solid var(--rule);padding:1.1rem 1.2rem}
+.price .amt{font-size:1.5rem;font-weight:600;display:block;margin-bottom:.25rem}
+.price .what{font-size:.92rem;color:var(--muted);line-height:1.45;display:block}
 
-ul.plain{
-  margin:0 0 1.15rem;
-  padding:0 0 0 1.1rem;
-  max-width:var(--measure);
-}
-ul.plain li{margin:0 0 .7rem}
+.ask{background:var(--panel);padding:1.8rem;margin-top:1.8rem}
+.ask p:first-child{font-size:1.15rem;font-weight:600}
 
-/* ---------- price ---------- */
+.note{margin-top:1.6rem}
 
-.price{
-  font-family:var(--serif);
-  font-size:clamp(1.6rem,4.5vw,2.1rem);
-  line-height:1.25;
-  margin:0 0 1.3rem;
-  letter-spacing:-.01em;
-}
-.price span{color:var(--faint)}
+footer{border-top:1px solid var(--rule);padding:2.6rem 0 4rem;color:var(--muted);font-size:.92rem}
+footer a{color:var(--accent)}
 
-/* ---------- phase ---------- */
-
-.phase{
-  margin:2.6rem 0 0;
-  max-width:38rem;
-}
-.phase-label{
-  font-family:var(--sans);
-  font-size:.74rem;
-  font-weight:700;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  color:var(--accent);
-  margin:0 0 .7rem;
-}
-
-/* ---------- contact ---------- */
-
-.contact{
-  margin-top:3rem;
-  padding-top:1.8rem;
-  border-top:1px solid var(--rule-strong);
-  max-width:var(--measure);
-}
-.contact a{
-  font-family:var(--sans);
-  font-size:1.02rem;
-  font-weight:600;
-}
-
-/* ---------- founder ---------- */
-
-.fill{
-  background:#fff3c4;
-  color:#4a3800;
-  padding:.1em .3em;
-  border-radius:2px;
-  font-family:var(--sans);
-  font-size:.9em;
-}
-@media (prefers-color-scheme: dark){
-  .fill{background:#4a3f14;color:#f5e9b8}
-}
-
-.aside{
-  color:var(--muted);
-  font-size:1rem;
-  font-style:italic;
-  margin-top:2.4rem;
-  padding-top:1.4rem;
-  border-top:1px solid var(--rule);
-  max-width:var(--measure);
-}
-
-/* ---------- footer ---------- */
-
-footer{
-  border-top:1px solid var(--rule);
-  padding:2.4rem 0 3.5rem;
-  color:var(--muted);
-  font-size:.95rem;
-}
-footer p{max-width:var(--measure)}
-footer .fine{
-  font-family:var(--sans);
-  font-size:.78rem;
-  color:var(--faint);
-  margin-top:1.6rem;
-}
-
-/* ---------- responsive ---------- */
-
-@media (max-width:36rem){
-  body{font-size:1.02rem}
-  .masthead{margin-bottom:3rem}
-  section{padding-bottom:3.4rem}
-  section + section{padding-top:3rem}
-  .step{grid-template-columns:1fr;gap:.35rem}
-  .step .num{padding-top:0}
-  .cost-row{grid-template-columns:1fr;gap:.2rem}
-  .cost-row dt{padding-top:0}
-}
-
-@media print{
-  :root{--paper:#fff;--ink:#000}
-  .masthead nav{display:none}
-  section{page-break-inside:avoid}
+@media (max-width:600px){
+  body{font-size:17px}
+  h1{font-size:1.75rem}
+  .opener{font-size:1.22rem}
+  .hero{padding-top:3rem}
 }
 </style>
 </head>
-
 <body>
-<a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
+<nav>
   <div class="wrap">
-    <a class="wordmark" href="/">
-      <svg width="13" height="12" viewBox="0 0 13 12" aria-hidden="true">
-        <path d="M6.5 0.5 L12.4 11 L0.6 11 Z" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
-      </svg>
-      Triangle
-    </a>
-    <nav><a href="/research.html">Research</a></nav>
+    <a class="mark" href="/">Triangle</a>
+    <a class="link" href="/research">Research</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="opener">
+      <span>What if your organisation was built the way the Trinity is?</span>
+      <span>Three distinct voices. Unified in one.</span>
+      <span>It is the oldest structure there is, and nobody has ever run a company on it.</span>
+    </p>
+
+    <h1>Three decide. The dissent is kept.</h1>
+    <p class="standfirst">
+      Three people decide, not nine. Each says where they stand, in their own
+      words, and it is written down. The framework is free and you can start on
+      Monday.
+    </p>
+
+    <div class="video">
+      <div class="video__frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/OSzXFAtV6CA?rel=0&amp;modestbranding=1"
+          title="Triangle — three decide, and the dissent is kept"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 </header>
 
-<main id="main">
-
-<!-- ============ HERO ============ -->
-<section class="hero">
+<section>
   <div class="wrap">
-    <h1>A decision architecture for organisations</h1>
-    <p class="lede">Every organisation records what it decided. Almost none record why, who disagreed, or what it rested on.</p>
+    <h2>The problem</h2>
+    <p class="lead">
+      Nine people go into a room. Every one of them has a view. Ninety minutes
+      later there is one view — and it is not the best one in the room, it is the
+      one everybody could live with.
+    </p>
+    <p>Nobody can tell you afterwards who believed what.</p>
+    <p>
+      Whoever speaks first sets the range everyone else argues inside. The thing
+      that only one person knows never gets said, because saying it means
+      interrupting. And by minute twenty everybody is arguing about the same
+      narrow question, which was never the important one.
+    </p>
+    <p>
+      So when it fails, eighteen months later, you go back to find out why — and
+      there is a deck, an outcome, and a date. That is everything.
+    </p>
   </div>
 </section>
 
-<!-- ============ PROBLEM ============ -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">The problem</p>
-    <h2>Three things go wrong in the way organisations decide, and they compound.</h2>
-
-    <div class="block">
-      <h3>The decision sits above the knowledge.</h3>
-      <p>The person who understands the problem cannot rule on it. The person who can rule on it has less context. So the question climbs, waits for a calendar slot, gets decided by someone further from the facts, and travels back down degraded.</p>
-    </div>
-
-    <div class="block">
-      <h3>The reasoning is never kept.</h3>
-      <p>Wikis and minutes record conclusions. They do not record the argument — who objected, on what grounds, and under what conditions they would have been right. So when a decision fails there is nothing to learn from except the outcome and whoever was standing nearest. That is how blame culture forms: not because people are unfair, but because the reasoning is missing and only the person is visible.</p>
-    </div>
-
-    <div class="block">
-      <h3>Nothing is connected.</h3>
-      <p>No one can say what depends on what. The odd exception in the billing rules exists for a reason nobody remembers, so eighteen months later someone tidies it up and takes down invoicing.</p>
-    </div>
-
-    <p>Triangle addresses all three by fixing the record.</p>
+    <h2>Why three</h2>
+    <p>
+      Rulers decide fast and crush dissent. Committees hear everyone and move
+      nothing. You have sat in both.
+    </p>
+    <p class="lead">Two people deadlock. Four people deadlock. Three cannot.</p>
+    <p>
+      Three is the smallest group that can hold real disagreement and is
+      structurally incapable of failing to resolve it. Three positions, two
+      options, no possible tie — which is also why there is no neutral, no
+      abstention and no coming back to you on that. A neutral is the one thing
+      that could make three people fail to reach an answer.
+    </p>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS ============ -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">How it works</p>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <strong>The proposition goes out before anyone meets.</strong>
+        <span>One sentence somebody can agree or disagree with. Writing it
+        properly is the hardest part, and it is the part most companies have
+        never done.</span>
+      </li>
+      <li>
+        <strong>Three people are named for it.</strong>
+        <span>Not the org chart. Whoever actually knows, and whoever has to live
+        with it. The reason each person is there is written on the page.
+        Everyone else carries on working.</span>
+      </li>
+      <li>
+        <strong>They argue.</strong>
+        <span>Exactly the way they always have. This part is not touched. It is
+        the part that works.</span>
+      </li>
+      <li>
+        <strong>Each states a position out loud.</strong>
+        <span>Agree, or disagree. Nothing else. In their own words, recorded as
+        spoken — not summarised, not minuted. And you do not have to know why to
+        say no.</span>
+      </li>
+      <li>
+        <strong>Two of three carries it.</strong>
+        <span>The one who disagreed stays in the record, named, in their own
+        words, next to the decision it lost to.</span>
+      </li>
+    </ol>
 
-    <div class="callout">
-      <h3>You do not change your meetings</h3>
-      <p>Start here, because it is the thing most people assume wrongly.</p>
-      <p>Triangle does not replace your meetings, shrink them, or add a voting ceremony. Twelve people can be in the room. Nobody stops the discussion to fill in a form.</p>
-      <p>What changes is that each decision on the agenda has three people named against it. That is the whole structural ask.</p>
-    </div>
-
-    <div class="step">
-      <div class="num">01</div>
-      <div class="body">
-        <h3>Three people, chosen for the question</h3>
-        <p>Decisions belong to a triad: three people named because they know something about this decision, not because of where they sit on a chart. Membership is per decision. Triads form and dissolve.</p>
-        <p>Three is deliberate. Adding people to a decision buys less accuracy than most executives assume, and costs accountability, speed and attention. Three is small enough that nobody can hide and large enough that no one decides alone.</p>
-        <p>Two of three carries. Dissent is recorded, not erased.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="num">02</div>
-      <div class="body">
-        <h3>The discussion runs as it already does</h3>
-        <p>People talk, argue, and reach a view. The system tracks four positions on each item: agree, disagree, neutral, or propose an alternative.</p>
-        <p>An alternative is not a vote. It reopens the question in a clearer form, which is often the most useful thing anyone does in a meeting.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="num">03</div>
-      <div class="body">
-        <h3>The summary is the product</h3>
-        <p>At the end, the system produces the record: what was decided, what it depends on, who owns what, and where each person stood.</p>
-        <p>Everyone reviews it and confirms or corrects their own position. The record stays open for twenty-four hours, so someone who thinks again overnight can amend it publicly, with a reason — the same way you would raise an objection after properly reading a contract.</p>
-        <p>Participants can also vote explicitly on screen. Where they do, those votes tell us how accurately the system reads a room, and that accuracy figure is published to you. Start with explicit votes. Move to inference when the number earns it. You never have to take it on trust.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="num">04</div>
-      <div class="body">
-        <h3>Every decision records what it rests on</h3>
-        <p>Each decision links to the decisions and assumptions it depends on. That single field is what makes the rest work.</p>
-        <p>When something a decision rested on changes, every decision downstream of it is flagged for review. Automatically. Nobody has to remember that the database choice depended on an assumption made two years ago by someone who has since left.</p>
-        <p>It also exposes circular dependencies — the budget that cannot be set until headcount is known, and the headcount that cannot be set until the budget is. Everyone has been in that loop. Triangle can name it, and tell you which decision has to be made on a stated assumption to break it.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="num">05</div>
-      <div class="body">
-        <h3>Scaling without committees</h3>
-        <p>Triangle never puts more people on a decision. It splits the decision instead.</p>
-        <p>A triad ruling on something large spawns the sub-decisions it does not own, and each goes to its own triad, in parallel. A triad that cannot decide because it is missing an input spawns that question and routes it sideways to whoever owns it — rather than escalating upwards to someone with less context.</p>
-        <p>The organisation ends up with a map of decisions and their dependencies. Every company has a chart of who reports to whom. None has a map of what depends on what.</p>
-      </div>
-    </div>
+    <blockquote>
+      <span class="label">The claim</span>
+      <p>
+        The majority decides. The minority survives. No other way of deciding
+        anything can say both of those.
+      </p>
+    </blockquote>
   </div>
 </section>
 
-<!-- ============ WHAT YOU GET ============ -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">What you get</p>
-
-    <div class="deliverable">
-      <h3>A record you can defend</h3>
-      <p>Named people, a stated question, positions, dissent preserved, and the reasoning intact. If AI contributed, it is logged as advisory and the humans who decided are named.</p>
-    </div>
-
-    <div class="deliverable">
-      <h3>Shorter paths to decisions</h3>
-      <p>Time from question to decision is measurable, before and after. It is the clearest number a pilot produces.</p>
-    </div>
-
-    <div class="deliverable">
-      <h3>Delivery, tracked separately</h3>
-      <p>Judgment and execution are different competences and Triangle keeps two records. Judgment informs who decides. Delivery informs who owns the work. They are never merged into a single score — a system that promotes the best operator into the decision seat is the problem, not the fix.</p>
-    </div>
-
-    <div class="deliverable">
-      <h3>A ledger that compounds</h3>
-      <p>Over time the record shows whose agreement means something — whether a person's yes reliably precedes a different outcome from their no. That is discrimination, and it is the part of judgment that cannot be trained or faked.</p>
-    </div>
+    <h2>What it costs your meeting</h2>
+    <p>Nothing before it. About three minutes inside it. A record after it.</p>
+    <p>
+      There is no software to install, no licence, no procurement and nothing to
+      roll out. There is a habit to maintain, and habits are the expensive part —
+      which is the honest version of that sentence.
+    </p>
   </div>
 </section>
 
-<!-- ============ WHAT IT COSTS YOU ============ -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">What it costs you</p>
-    <h2>The fee is not the cost. Senior time is.</h2>
-    <p>Here is the real bill.</p>
-
-    <dl class="costs">
-      <div class="cost-row">
-        <dt>Training</dt>
-        <dd>45 minutes per participant, once</dd>
-      </div>
-      <div class="cost-row">
-        <dt>Per decision</dt>
-        <dd>About 10 minutes per triad member, to confirm or correct their own position</dd>
-      </div>
-      <div class="cost-row">
-        <dt>Meetings</dt>
-        <dd>Unchanged. No additional meetings are created</dd>
-      </div>
-      <div class="cost-row">
-        <dt>Your contact</dt>
-        <dd>Roughly 2 hours a week</dd>
-      </div>
-    </dl>
-
-    <p>For a team of eight running twenty decisions, that is somewhere around sixteen hours of senior time in total across the whole pilot.</p>
-    <p>If that number is wrong we will tell you it was wrong in the debrief. It is the kind of thing pilots exist to find out.</p>
-  </div>
-</section>
-
-<!-- ============ WHAT IT DOES NOT DO ============ -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">What Triangle does not do</p>
-
-    <div class="block">
-      <h3>It does not make decisions.</h3>
-      <p>The system structures the record. People decide, and people can rewrite anything the system produced about them.</p>
-    </div>
-
-    <div class="block">
-      <h3>It does not score people on outcomes they did not control.</h3>
-      <p>A good decision can have a bad outcome. The record separates them.</p>
-    </div>
-
-    <div class="block">
-      <h3>It cannot measure judgment in a pilot.</h3>
-      <p>Separating a good decision-maker from a lucky one takes dozens of resolved decisions per person, not a handful. A pilot gives you the record and the latency numbers. The judgment layer is a second-year result, and anyone who tells you otherwise is selling you something.</p>
-    </div>
-
-    <div class="block">
-      <h3>The judgment ledger can be gamed. The record is harder.</h3>
-      <p>Be clear about which part of this is exposed.</p>
-      <p>Any system that scores people over time can be played — hedged positions, strategic neutrality, dissent registered for the file rather than for the argument. The judgment ledger is a scoring system. Defences are designed and not yet built, and until they are, that layer runs on participants engaging in good faith.</p>
-      <p>The decision record is a different thing. What the question was, who held which position, what it rested on, and when that stopped being true — that is a contemporaneous account confirmed by the people named in it, with a twenty-four hour correction window. Reconstructing a decision that has already happened cannot be gamed at all. It is history.</p>
-      <p>And for what it is worth: board minutes can be gamed. Performance reviews are gamed as a matter of routine. Risk registers are gamed by everyone who has ever written one. The difference is that we publish our attack surface. Ask your current system for its own.</p>
-    </div>
-
-    <div class="block">
-      <h3>It is not a replacement for judgment, culture or trust.</h3>
-      <p>It is a communication tool. It makes agreement explicit, ownership unavoidable and reasoning durable. It does not manufacture any of the three.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CLOSED ROOM ============ -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">The triad is a closed room</p>
-
-    <p>What is said inside a triad stays inside it. The decision and the outcome belong to the organisation. The deliberation belongs to the triad.</p>
-    <p>Management can request a room be opened. It is available, and it is micromanagement — the entire premise is that you trust three people you chose to work together without an audience.</p>
-    <p>To be clear about what this is: a policy control with an audit trail of who opened what, not encryption. Cryptographic enforcement is on the roadmap, not in a pilot.</p>
-
-    <div class="block" style="margin-top:2.2rem">
-      <h3>Regulators, auditors and courts are not management.</h3>
-      <p>The closed room is an internal norm, not a legal shield, and it never overrides a lawful requirement to disclose. Where a regulator, auditor, ombudsman or court can compel access to your records, they can compel access to these. Nothing in Triangle is designed to obstruct that, and nothing in it should be used to try. If your obligations require deliberation to be disclosable by default, we set that at the start rather than discovering it later.</p>
-    </div>
-
-    <p>Visibility settings are agreed per organisation before a pilot starts. A company that already records every meeting has different norms from one that does not, and Triangle adapts to that rather than dictating it.</p>
-  </div>
-</section>
-
-<!-- ============ WHO IT IS FOR ============ -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Who it is for</p>
-    <h2>Organisations where decisions are slow, ownership is vague, or the same arguments keep being relitigated.</h2>
-
-    <p>It bites hardest where:</p>
+    <h2>What comes out</h2>
     <ul class="plain">
-      <li>A board or regulator can ask you to demonstrate how a decision was reached, not just what was decided</li>
-      <li>The organisation has grown past the point where everyone knows everyone, and decisions that used to happen in corridors now queue for calendar slots</li>
-      <li>Ownership has recently changed — new investor, merger, new chief executive — and nobody can reconstruct why the inherited decisions were made</li>
-      <li>The same question keeps coming back because the last answer was never written down with its reasoning</li>
+      <li>One page per decision: the proposition, the three, what each of them
+        said, and who carried it</li>
+      <li>The dissent preserved by name, in the words it was spoken in</li>
+      <li>A record of who was named on what, and why</li>
+      <li>Across a quarter: how often anybody in your company disagrees out loud
+        — a question no executive has ever been able to answer</li>
     </ul>
-
-    <p>It works best where people are prepared to be clear: to say agree, disagree, neutral, or here is a better version of the question. That is a trainable habit and it is part of what a pilot delivers. Every participant reads a short guide first. Nobody is asked to change how they work beyond that.</p>
+    <p class="note">
+      Corrections are appended, never overwritten. A record that can be quietly
+      edited is not a record.
+    </p>
   </div>
 </section>
 
-<!-- ============ PILOTS ============ -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">Pilots</p>
-    <p>The framework is designed and ready to run in a real organisation.</p>
-
-    <p class="price">Twenty decisions.<br><span>Fixed scope. £5,000.</span></p>
-
-    <p>Twenty decisions rather than thirty days, because a calendar window measures how often your board meets, not how well your organisation decides. At executive team cadence, twenty decisions usually takes four to six weeks.</p>
-    <p>The pilot runs with your executive team, not your board. That is where the decisions are.</p>
-
-    <div class="phase">
-      <p class="phase-label">Phase one — one decision that already went wrong</p>
-      <p>Before anything changes, we take a decision you have already made that did not work out, and reconstruct the record that should have existed. What the question actually was. Who held which position. What it rested on. When that assumption stopped being true, and what downstream should have been flagged and was not.</p>
-      <p>It requires no new behaviour from anyone. It is usually the point at which people understand what the rest of this is for.</p>
-    </div>
-
-    <div class="phase">
-      <p class="phase-label">Phase two — your next twenty decisions</p>
-
-      <div class="deliverable">
-        <h3>A working decision record</h3>
-        <p>Questions, positions, dissent, dependencies and owners.</p>
-      </div>
-      <div class="deliverable">
-        <h3>A measured change in decision latency</h3>
-        <p>Time from question to decision, before and after, as a number.</p>
-      </div>
-      <div class="deliverable">
-        <h3>A delivery record</h3>
-        <p>What was committed to, by whom, and what was completed.</p>
-      </div>
-      <div class="deliverable">
-        <h3>A written debrief</h3>
-        <p>What worked in your context, what did not, and what we would change. Including the parts that did not work — that is the point of a pilot.</p>
-      </div>
-    </div>
-
-    <p style="margin-top:2.6rem"><strong>We run one pilot at a time.</strong> That is deliberate. A pilot involves facilitation, training every participant, and a full written debrief. Run several at once and none of them gets done properly.</p>
-
-    <p class="aside">One side effect worth mentioning, though it is not the reason to do this. Naming three people against each decision tends to reveal how many people are sitting in meetings about decisions they do not own. Most organisations find the calendar cost of that exceeds the fee. It is a pleasant side effect of a record that makes ownership explicit, not a productivity product.</p>
-
-    <div class="contact">
-      <p>If you want to talk about being next:<br>
-      <a href="mailto:martin.beyst@gmail.com?subject=Triangle%20pilot">martin.beyst@gmail.com</a></p>
-    </div>
+    <h2>The room is closed</h2>
+    <p>
+      The record always exists. The distribution list varies, and the list itself
+      is part of the record. Some decisions cannot go to everybody — a
+      restriction that is written down stays rare, and one that is silent becomes
+      a habit.
+    </p>
   </div>
 </section>
 
-<!-- ============ FOUNDER ============ -->
-<!--
-  ================= TWO THINGS TO FILL IN BEFORE PUBLISHING =================
-  Both are highlighted in yellow on the page so you cannot miss them.
-
-  1. THE CLIENT WORDING. If Repsol / Santander / Acciona / Stellantis came
-     through a training provider rather than direct engagements, write
-     "delivered executive communication coaching into ..." — accurate and
-     still strong. Do NOT write "clients include". A page selling governance
-     integrity cannot survive an inflated claim.
-
-  2. THE BOARD SENTENCE. One sentence. Specific. No adjectives. It is the
-     one line on this page a reader may try to verify.
-  ==========================================================================
--->
 <section>
   <div class="wrap">
-    <p class="eyebrow">Who is behind this</p>
-
-    <p>I am Martin Beyst.</p>
-
-    <p>For several years I have coached senior people at large multinationals — <span class="fill">[CHECK WORDING: Repsol, Santander, Acciona, Stellantis Financial Services]</span> — on executive communication. How to make an argument under pressure. How to handle a hostile question. How to say a difficult thing clearly enough that it lands.</p>
-
-    <p>Triangle came out of watching what happens in the rooms where nobody does.</p>
-
-    <p>The pattern repeated everywhere. Someone in the room could see the decision was wrong. They said something careful and hedged, or they said nothing at all, and the meeting moved on. Eighteen months later the consequence arrived and there was no way to reconstruct who had known what, or when.</p>
-
-    <p><span class="fill">[FILL IN: I also sat on the board of ____ from ____ to ____, during which ____ .]</span></p>
-
-    <div class="block" style="margin-top:2.2rem">
-      <h3>What I am not</h3>
-      <p>I am not a governance consultant. I have not run this inside an organisation before. The framework is designed and complete; it has not been tested in the field. If you go ahead, you are the first, and you should price that into your decision the same way I have priced it into the fee.</p>
-      <p>I would rather you heard that from me than found it out.</p>
-    </div>
-
-    <div class="block">
-      <h3>Why that might be all right</h3>
-      <p>The method does not rest on my seniority. That is the entire claim: decisions belong to people who know something about the question, not to people high on a chart. It would be a strange thing to argue and then ask you to trust me because of a job title.</p>
-      <p>What I bring is several years in rooms with senior people at large organisations, watching where communication breaks under pressure, and a framework built specifically on what I saw break.</p>
-    </div>
-
-    <p class="aside">I also perform improvised poetry. Give me seven words and you will have something in about a minute.</p>
+    <h2>What Triangle does not do</h2>
+    <ul class="plain">
+      <li>It does not remove anyone's authority. Whoever could overrule still can
+        — and the overrule is recorded next to what was known at the time</li>
+      <li>It does not work with two people. If there is genuinely no third, it is
+        one person deciding with an adviser. Say so rather than dress it up</li>
+      <li>It does not measure anybody. Nothing here belongs in a performance
+        review, and putting it there destroys the record inside a quarter</li>
+      <li>It does not promise better outcomes. Nobody in this category can prove
+        that, including the forty-year-old clinical version of the same
+        structure</li>
+      <li>It does not stop three people being confidently wrong together</li>
+    </ul>
   </div>
 </section>
 
-</main>
+<section>
+  <div class="wrap">
+    <h2>Who it is for</h2>
+    <p>
+      Companies at the point where decisions have outgrown one person. The
+      founder or chief executive can no longer be in everything, and knows it.
+    </p>
+    <p>
+      Under Triangle their job changes shape: they sit on the decisions where
+      they carry the consequence, they read every record, they choose who carries
+      what, and they overrule visibly when they must. That is a bigger job than
+      attending, and a less comfortable one. Some find it a relief.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it costs</h2>
+    <div class="price">
+      <div>
+        <span class="amt">Free</span>
+        <span class="what">The framework. It is on this page. Take it, use it,
+        you do not need me for it.</span>
+      </div>
+      <div>
+        <span class="amt">$5,000</span>
+        <span class="what">Half a day, remote, with your leadership team. Three
+        or four real decisions worked in the format and recorded.</span>
+      </div>
+    </div>
+    <p>
+      What I do is sit in the room while your people learn to say the difficult
+      thing out loud. That part I have not worked out how to give away.
+    </p>
+
+    <div class="ask">
+      <p>You do not have to reorganise anything to start.</p>
+      <p>
+        Take one item off next week's agenda. Name three people for it. It does
+        not get discussed in the meeting at all — those three handle it
+        separately and the record comes back to everyone. Your meeting runs
+        exactly as it always did, one item shorter.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who is behind this</h2>
+    <p>
+      Martin Beyst. I have spent years coaching senior people at Repsol,
+      Santander, Acciona and Stellantis on what it takes to object in a room
+      where objecting is expensive.
+    </p>
+    <p>
+      Not confidence training. Not be more assertive. Sentence construction under
+      pressure — how you say the difficult thing in a shape that survives the
+      room, and how you stop your objection collapsing into agreement the moment
+      it leaves your mouth.
+    </p>
+    <p>
+      I am not a governance consultant. I am someone who has sat in enough rooms
+      to know how decisions work and how they fail.
+    </p>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
-    <p>The theoretical grounding, the measurement approach, and a full statement of known limitations and open problems are on the <a href="/research.html">research page</a>.</p>
-    <p class="fine">© 2026 Triangle</p>
+    <p>
+      If you want to talk:
+      <a href="mailto:martin.beyst@gmail.com">martin.beyst@gmail.com</a>
+    </p>
+    <p>Triangle · triangle.ceo</p>
   </div>
 </footer>
 
