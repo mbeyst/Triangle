@@ -271,6 +271,39 @@
     .callout { background: var(--panel); margin-top: 2.25rem; padding: 1.7rem; }
     .callout p:first-child { font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
 
+    .founder { background: var(--panel); }
+    .founder-grid {
+      align-items: center;
+      display: grid;
+      gap: 3.5rem;
+      grid-template-columns: minmax(0, .9fr) minmax(20rem, 1.1fr);
+    }
+    .founder-copy { max-width: 35rem; }
+    .video { margin: 0; }
+    .video__frame {
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .video__frame iframe {
+      border: 0;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      width: 100%;
+    }
+    .video figcaption {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .07em;
+      line-height: 1.45;
+      margin-top: .75rem;
+      text-transform: uppercase;
+    }
+
     .closing { padding-bottom: 6.5rem; }
     .closing .wrap { max-width: 56rem; }
     .closing h2 { margin-bottom: 1.35rem; }
@@ -283,7 +316,7 @@
       body { font-size: 17px; }
       .wrap { width: min(100% - 2.5rem, 68rem); }
       .hero { padding: 4.25rem 0 3.25rem; }
-      .hero-grid, .split, .pilot .pilot-grid, .report-grid { grid-template-columns: 1fr; }
+      .hero-grid, .split, .pilot .pilot-grid, .report-grid, .founder-grid { grid-template-columns: 1fr; }
       .hero-diagram { justify-self: start; margin-top: .25rem; max-width: 14rem; }
       .hero-diagram figcaption { text-align: left; }
       section { padding: 3.85rem 0; }
@@ -510,6 +543,33 @@
             <li>It is not a promise that three people cannot be confidently wrong together.</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="founder">
+      <div class="wrap founder-grid">
+        <div class="founder-copy">
+          <h2>Who is behind Triangle</h2>
+          <p class="lead">Martin Beyst has spent years coaching senior people at Repsol, Santander, Acciona and Stellantis on how to object when objecting is expensive.</p>
+          <p>
+            Not confidence training. Not “be more assertive”. Sentence construction under pressure: how to say the difficult thing in a shape that survives the room, and how to stop an objection collapsing into agreement the moment it leaves your mouth.
+          </p>
+          <p>
+            Triangle came from watching what happens when organisations cannot hear — or cannot keep — what their own people know. The framework is free. The work is helping a company test it honestly on real decisions.
+          </p>
+        </div>
+        <figure class="video">
+          <div class="video__frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/OSzXFAtV6CA?rel=0&amp;modestbranding=1"
+              title="Martin Beyst introduces Triangle"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption>Martin introduces the original Triangle idea · 1 minute 20 seconds</figcaption>
+        </figure>
       </div>
     </section>
 
