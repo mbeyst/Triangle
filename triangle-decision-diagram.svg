@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" role="img" aria-labelledby="title description">
+  <title id="title">Triangle decision structure</title>
+  <desc id="description">Three equal participants connect to a central decision record.</desc>
+  <style>
+    .edge { fill: none; stroke: #a49e90; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+    .spoke { fill: none; stroke: #dedbd1; stroke-linecap: round; stroke-width: 1.5; }
+    .node { fill: #fbfaf8; stroke: #8c2f16; stroke-width: 2.2; }
+    .node-dot { fill: #8c2f16; }
+    .record { fill: #f3f0e8; stroke: #16150f; stroke-linejoin: round; stroke-width: 2; }
+    .record-line { fill: none; stroke: #8c2f16; stroke-linecap: round; stroke-width: 2.4; }
+    @media (prefers-color-scheme: dark) {
+      .edge { stroke: #9f998d; }
+      .spoke { stroke: #3a3933; }
+      .node { fill: #141412; stroke: #ed9677; }
+      .node-dot { fill: #ed9677; }
+      .record { fill: #1e1d19; stroke: #eeece4; }
+      .record-line { stroke: #ed9677; }
+    }
+  </style>
+
+  <path class="edge" d="M210 43 L58 300 H362 Z"/>
+  <path class="spoke" d="M210 43 L210 182 M58 300 L210 182 M362 300 L210 182"/>
+
+  <circle class="node" cx="210" cy="43" r="30"/>
+  <circle class="node-dot" cx="210" cy="43" r="6"/>
+  <circle class="node" cx="58" cy="300" r="30"/>
+  <circle class="node-dot" cx="58" cy="300" r="6"/>
+  <circle class="node" cx="362" cy="300" r="30"/>
+  <circle class="node-dot" cx="362" cy="300" r="6"/>
+
+  <path class="record" d="M166 132 H239 L254 147 V232 H166 Z"/>
+  <path class="record-line" d="M184 164 H235 M184 182 H235 M184 200 H218"/>
+</svg>

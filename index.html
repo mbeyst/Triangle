@@ -84,7 +84,31 @@
     }
     .nav-link:hover { color: var(--accent); }
 
-    .hero { padding: 7.25rem 0 5rem; }
+    .hero { padding: 5.75rem 0 4.25rem; }
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, .58fr);
+    }
+    .hero-copy { max-width: 43rem; }
+    .hero-diagram {
+      justify-self: end;
+      margin: 0;
+      max-width: 20rem;
+      width: min(100%, 20rem);
+    }
+    .hero-diagram img { display: block; height: auto; width: 100%; }
+    .hero-diagram figcaption {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      line-height: 1.45;
+      margin-top: .75rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
     .eyebrow, h2, .label {
       color: var(--muted);
       font-family: Arial, sans-serif;
@@ -95,11 +119,11 @@
     }
     .eyebrow { margin: 0 0 1.2rem; }
     h1 {
-      max-width: 14ch;
-      font-size: clamp(2.65rem, 6vw, 5.2rem);
+      max-width: 26ch;
+      font-size: clamp(1.55rem, 2.7vw, 2.5rem);
       font-weight: 600;
-      letter-spacing: -.045em;
-      line-height: 1.02;
+      letter-spacing: -.025em;
+      line-height: 1.16;
       margin: 0;
     }
     .standfirst {
@@ -258,9 +282,11 @@
     @media (max-width: 720px) {
       body { font-size: 17px; }
       .wrap { width: min(100% - 2.5rem, 68rem); }
-      .hero { padding: 4.75rem 0 3.5rem; }
+      .hero { padding: 4.25rem 0 3.25rem; }
+      .hero-grid, .split, .pilot .pilot-grid, .report-grid { grid-template-columns: 1fr; }
+      .hero-diagram { justify-self: start; margin-top: .25rem; max-width: 14rem; }
+      .hero-diagram figcaption { text-align: left; }
       section { padding: 3.85rem 0; }
-      .split, .pilot .pilot-grid, .report-grid { grid-template-columns: 1fr; }
       .cards { grid-template-columns: 1fr; }
       .pilot-card { padding: 1.5rem; }
     }
@@ -286,17 +312,23 @@
   </nav>
 
   <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">A decision architecture for organisations</p>
-      <h1>Delegate decisions without losing the truth about how they were made.</h1>
-      <p class="standfirst">
-        Triangle puts three relevant people around one clear proposition. Two can carry it.
-        The dissent stays with the decision. We test it on real decisions before you commit to a wider change.
-      </p>
-      <div class="actions">
-        <a class="button" href="mailto:martin.beyst@gmail.com?subject=Triangle%20Evidence%20Pilot">Talk about a live decision</a>
-        <a class="button button--quiet" href="#how-it-works">See how it works</a>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">A decision architecture for organisations</p>
+        <h1>Delegate decisions without losing the truth about how they were made.</h1>
+        <p class="standfirst">
+          Triangle puts three relevant people around one clear proposition. Two can carry it.
+          The dissent stays with the decision. We test it on real decisions before you commit to a wider change.
+        </p>
+        <div class="actions">
+          <a class="button" href="mailto:martin.beyst@gmail.com?subject=Triangle%20Evidence%20Pilot">Talk about a live decision</a>
+          <a class="button button--quiet" href="#how-it-works">See how it works</a>
+        </div>
       </div>
+      <figure class="hero-diagram">
+        <img src="/triangle-decision-diagram.svg" alt="Three equal people connected around a shared decision record">
+        <figcaption>Three people. One decision. A record that remains.</figcaption>
+      </figure>
     </div>
   </header>
 
