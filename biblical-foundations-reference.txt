@@ -1,0 +1,974 @@
+Biblical Foundations
+===================
+
+The Sunday-to-Monday Problem
+
+For decades, millions of professionals have lived a quiet contradiction.
+
+They walk into church on Sunday — singing, praying, hearing scripture. They walk into the office on Monday — leading teams, making decisions, building systems. As if these two worlds have nothing to do with each other.
+
+Some feel guilty about it. Some don't even notice anymore. Most have been told, implicitly or explicitly, that faith belongs in one compartment and work in another. That the Bible speaks to the soul but not to the spreadsheet. That the pulpit has authority but the boardroom does not.
+
+This is not an accident. It is a gap that was never properly bridged.
+
+Triangle exists to close it.
+
+Not by bringing church into the office. Not by turning business into ministry. But by showing that the same scripture read on Sunday contains clear, specific, architectural principles that apply directly to the work professionals do on Monday — and every day.
+
+The question is not whether scripture speaks to work. It does, extensively. The question is whether anyone has actually walked through it systematically and shown the connections.
+
+That is what this page begins.
+
+---
+
+What Triangle Is
+
+Triangle is a decision architecture for organisations.
+
+The problem it addresses is simple and persistent. Nine people go into a room. Every one of them has a view. Ninety minutes later there is one view — and it is not necessarily the best one in the room. It is the one everybody could live with.
+
+The first person to speak sets the range everyone else argues inside. The fact known by only one person is often never said. By the time the decision fails, the company has a deck, an outcome and a date — but not the reasoning that led there.
+
+That makes delegation feel dangerous. So the founder or chief executive stays in decisions they should not have to attend, simply because the organisation cannot show what it knew at the time.
+
+Triangle changes this with a small, visible structure:
+
+- One clear proposition — written as one sentence someone can agree or disagree with before the room opens.
+- The right three people — chosen for relevant knowledge and consequence, not simply their place on the organisation chart.
+- A visible position — each person says Agree or Disagree. Nobody needs to manufacture consensus to get the meeting over with.
+- A decision that remembers — the result, the minority view, the assumptions and the distribution list remain with the decision.
+
+The majority decides. The minority survives.
+
+This is not a committee. It is not a vote for everything. It is a structure for consequential decisions — one that makes dissent visible, keeps the reasoning intact, and lets the organisation learn from its own history.
+
+The question this page asks is whether this architecture has a foundation deeper than organisational theory. Whether it is already embedded in the scripture that millions read every week — and whether that scripture, taken in full, supports it explicitly.
+
+---
+
+Starting Point: Genesis
+
+Everything begins with Genesis. Not because it is the first book, but because it establishes the foundational architecture that everything else builds on: order, design, naming, stewardship, covenant, and the relationship between the creator and the created.
+
+Here is where we start. This is a working document — it will grow as we work through each book.
+
+---
+
+GENESIS
+
+---
+
+Genesis 1:1-2:3 — Creation by Design
+
+"In the beginning God created the heavens and the earth."
+
+The opening verse of scripture is not a philosophical statement. It is an architectural claim: order emerges from chaos through a structured process. God does not create randomly. He separates, names, assigns function, and declares completion.
+
+Day 1: Light and darkness separated.
+Day 2: Waters separated.
+Day 3: Land separated from sea; vegetation created.
+Day 4: Lights established to govern the separated realms.
+Day 5: Life created to fill the realms.
+Day 6: Land animals and humanity created.
+Day 7: Rest — completion declared.
+
+This is systems thinking in its original form. Domain separation, functional assignment, hierarchical governance, completion criteria. The pattern appears before any human observer exists to name it.
+
+Triangle connection: Every well-designed decision architecture follows this same pattern. Define the domains. Separate the concerns. Assign function. Declare completion. Genesis establishes this as a divine pattern, not a human invention. The structure of a Triangle decision — proposition, participants, positions, record — is a small-scale expression of the same principle: order through design, not accident.
+
+---
+
+Genesis 1:26-28 — The Image of God
+
+"Then God said, 'Let us make mankind in our image, in our likeness...'"
+
+This is the Cultural Mandate — the point at which humanity is given authority over the created order. Not to exploit it. To steward it. To fill it. To subdue it — in the sense of bringing it to its intended function.
+
+The phrase "image of God" (imago Dei) is not defined in Genesis. But what follows makes its meaning clear: the capacity to create, to name, to govern, to make moral choices, to build systems that reflect order rather than chaos.
+
+Triangle connection: Every professional who designs, leads, builds, or decides is operating in the domain established here. The work itself — creating order, solving problems, building systems — is not separate from the divine image. It is an expression of it. This is not a metaphor. It is the reason work exists before the fall. A decision architecture that treats professionals as image-bearers — capable of judgment, accountable for their positions, worthy of being heard — is not imposing a system on them. It is recognising what they already are.
+
+---
+
+Genesis 2:15 — Work Before the Fall
+
+"The Lord God took the man and put him in the Garden of Eden to work it and take care of it."
+
+This verse is often overlooked, but it is architecturally critical. Work is not introduced after the fall as a punishment. It is established before the fall as a calling. "To work it and keep it" — the Hebrew words here (abad and shamar) carry the sense of serving and preserving, of active stewardship rather than passive ownership.
+
+Triangle connection: Work is not a consequence of sin. It is a pre-fall vocation. The frustration and toil that come after Genesis 3 are a corruption of work, not work itself. This distinction matters for anyone trying to understand why their work matters — or why it feels meaningless. A decision architecture that treats work as meaningful by design — not as a necessary evil — is recovering something that was there before the world was broken.
+
+---
+
+Genesis 3:17-19 — The Effect of the Fall on Work
+
+"To Adam he said, 'Because you listened to your wife and ate from the tree about which I commanded you, "You must not eat from it," Cursed is the ground because of you...'"
+
+Work does not disappear after the fall. It becomes harder. The ground resists. Thorns and thistles appear. Sweat is required. The fundamental nature of work — stewardship, creation, order — remains. What changes is the friction.
+
+Triangle connection: This is the most honest account of why work sometimes feels futile. Not because work itself is meaningless, but because the systems we work within are affected by brokenness. The professional's experience of friction, resistance, and frustration is not evidence that work is cursed — it is evidence that the world is. The response is not to abandon work but to work in a way that pushes back against the friction. A decision architecture that makes dissent visible, that preserves minority positions, that records what was known at the time — this is one way of pushing back. It does not eliminate the friction. It makes it visible, accountable, and therefore manageable.
+
+---
+
+Genesis 6:14-22 — Noah's Ark: The First Divine Specification
+
+"So make yourself an ark of cypress wood; make rooms in it and coat it with pitch inside and out."
+
+This is the first time in scripture that God gives someone a detailed architectural specification. Dimensions. Materials. Process. Layout. Noah is not told to "build something that floats." He is told exactly what to build, how to build it, and why.
+
+The specification is precise enough that there is no ambiguity about whether Noah has complied. And the purpose is explicit: preservation through judgment. The ark is not a luxury. It is a designed structure with a specific function in a specific crisis.
+
+Triangle connection: This is the template for every well-specified decision. Clear proposition. Defined participants. Explicit purpose. Compliance criteria. The ark is not presented as an act of faith in the abstract — it is an act of obedience to a specific design. Faith without specification is not faith; it is guesswork. A Triangle decision begins with a proposition that is clear enough to agree with or reject. That is not bureaucracy. It is the same principle: a structure specified well enough that compliance — or non-compliance — is visible.
+
+---
+
+Genesis 11:1-9 — The Tower of Babel
+
+"Now the whole world had one language and a common speech... They said, 'Come, let us build ourselves a city, with a tower that reaches to the heavens, so that we may make a name for ourselves...'"
+
+This is the counter-example. A building project. A unified team. Ambitious scope. Technical capability. And a fundamental misalignment with the creator's intent.
+
+The problem at Babel is not that they built. It is that they built for the wrong reason — to "make a name for ourselves" — and in the wrong direction — reaching for heaven on their own terms rather than walking with God.
+
+The result is fragmentation. The language is confused. The project stops. The unity that should have been a strength becomes the vehicle for the failure.
+
+Triangle connection: This is the architecture of ambition without accountability. A team, a vision, a technical capability — all the ingredients for success. But when the purpose is self-glorification rather than alignment with a higher order, the result is not success but confusion. The tower does not fall because the engineering is bad. It falls because the foundation is wrong.
+
+The Babel pattern is visible in every organisation that confuses consensus with truth. Nine people go into a room. They speak the same language. They want the same outcome — a decision that lets them all go home. Ninety minutes later there is one view, and it is not the best one in the room. It is the one everybody could live with. That is Babel. The Tower of Babel is not an ancient story about a building. It is a pattern that repeats in every meeting where manufactured consensus replaces honest disagreement.
+
+Triangle's response — visible positions, preserved minority views, a record that remains — is a direct answer to the Babel pattern. It does not eliminate disagreement. It makes disagreement survivable. It keeps the language clear.
+
+---
+
+Genesis 12:1-3, 15, 18 — Covenant as Foundation
+
+"The Lord had said to Abram, 'Leave your country, your people and your father's household and go to the land I will show you.'"
+
+Covenant is the architectural principle that makes trust possible. Without covenant, every relationship is transactional. With covenant, there is a structure that holds beyond the immediate exchange.
+
+The Abrahamic covenant establishes this pattern: God makes a promise. Abram responds in faith. The covenant is sealed. Everything that follows — the nation, the land, the lineage — builds on this foundation.
+
+Triangle connection: Organisations run on covenants, whether they name them or not. Employment contracts. Partnership agreements. Board charters. The difference between a healthy organisation and a dysfunctional one is often whether the covenants are explicit, honoured, and renewed — or implicit, broken, and assumed. Genesis establishes covenant as the foundation of trust-based systems.
+
+A Triangle decision is a micro-covenant. The proposition is the promise. The three people are the parties. The record is the seal. The distribution list is the community that holds it. When a decision is made this way, it is not just an outcome — it is a covenant between the people who made it and the people who will live with it.
+
+---
+
+Genesis 18:17-33 — Intercession as Leadership
+
+"Then the Lord said, 'Shall I hide from Abraham what I am about to do?'"
+
+Abraham negotiates with God. Not passively. Not timidly. He asks. He pushes back. He persists. And God listens.
+
+This is not a picture of a distant deity who must be appeased. It is a picture of a God who invites his people into the decision-making process. Abraham's intercession is not a prayer in the abstract — it is a structured argument, a principled case made on behalf of others.
+
+Triangle connection: This is the model for advocacy within a system. The leader who intercedes for their team. The professional who makes the case for what is right against what is convenient. The structure of the interaction matters: it is direct, persistent, and grounded in relationship rather than position.
+
+The Triangle structure makes this kind of advocacy possible. When positions are visible and minority views are preserved, the person who disagrees is not silenced. They are recorded. Their position becomes part of the decision's history. That is what intercession looks like in an organisational context — not a private prayer, but a public position that survives the meeting.
+
+---
+
+Genesis 19 — The Cost of Silence
+
+Lot's story is the counterpoint to Abraham's. When the angels came to Sodom, Lot sat at the gate. He had position. He had standing. But when the crowd demanded his guests, he offered his daughters instead. He had the structure of a leader but not the courage of one.
+
+The cost of silence is not abstract. It is measured in what is lost when the person with the relevant knowledge does not speak, or speaks too late, or speaks in a way that can be ignored.
+
+Triangle connection: The visible position requirement — each person says Agree or Disagree, privately and before seeing the others — is designed to prevent the Lot pattern. It does not guarantee courage. But it removes the easiest excuse for silence: "I thought everyone else agreed." When positions are taken privately and revealed together, the pressure to conform is broken. The person who sees the problem has a defined place to put their dissent. It survives the meeting.
+
+---
+
+Genesis 34 — The Danger of Unstructured Agreement
+
+Shechem's violation of Dinah is followed by a negotiation that looks like resolution but is not. Shechem wants to marry Dinah. Hamor, his father, proposes a deal: intermarriage, shared residence, economic integration. The brothers agree — conditionally, deceitfully. The agreement is made. The covenant is sealed. And then it is broken, violently.
+
+The lesson is not that negotiation is wrong. It is that an agreement without truth at its centre is not an agreement. It is a trap.
+
+Triangle connection: A decision record that remembers what was assumed, who disagreed, and what the positions actually were — this is the antidote to the Shechem pattern. When a decision is recorded with its assumptions and minority views intact, it cannot be quietly rewritten later. The truth of what was known at the time stays with the decision. That is not a feature. It is the difference between a decision that can be trusted and one that cannot.
+
+---
+
+EXODUS
+
+---
+
+Exodus 18:13-27 — Jethro's Counsel: The Right People for the Work
+
+"The next day Moses took his seat to serve as judge for the people, and the people stood around him from morning till evening."
+
+Jethro watches his son-in-law run a system that is collapsing under its own weight. Every dispute comes to Moses. Moses decides everything. The people wait all day. The system cannot scale.
+
+Jethro does not offer encouragement. He offers a diagnosis and a restructure: "What you are doing is not good. You and these people who come to you will only wear yourselves out. The work is too heavy for you; you cannot do it alone."
+
+The solution is not to work harder. It is to select the right people: "Look for capable men — men who fear God, trustworthy men who hate dishonest gain — and appoint them as officials over thousands, hundreds, fifties and tens."
+
+The criteria are specific. Fear God. Trustworthy. Hate dishonest gain. Not the loudest. Not the most senior. Not the best speakers. The people whose character makes them fit for the work.
+
+Triangle connection: This is one of the clearest statements in scripture about the principle of selecting participants for their relevant knowledge and character, not their position. Jethro does not say "appoint the elders" or "appoint the strongest." He names three criteria and four levels of scope. The right people, at the right scale, for the right reason. A Triangle decision selects three people because they know something material and will live with the consequence — not because the org chart says so.
+
+---
+
+Exodus 20:1-17 — The Ten Commandments: The Proposition Before the Relationship
+
+"I am the Lord your God, who brought you out of Egypt, out of the land of slavery."
+
+The Ten Commandments are not presented as a negotiation. They are presented as a proposition from the one who has already acted. The relationship exists before the law. The law defines the terms of living within it.
+
+This order matters. The proposition is not "agree to these and I will save you." It is "I have saved you. Here is what living in that reality looks like."
+
+Triangle connection: The proposition in a Triangle decision is not a negotiation starter. It is a statement of what is being decided, issued before the room opens. The order is the same: the context exists first. The proposition defines the terms. The participants respond to what is already on the table, not to what they wish was there.
+
+---
+
+Exodus 32 — The Golden Calf: What Happens When the Proposition Is Forgotten
+
+"Then the people saw that Moses delayed coming down from the mountain, and the people gathered together to Aaron and said to him, 'Make us gods who shall go before us...'"
+
+The people have heard the proposition. They have seen the power that delivered it. Moses has been gone for forty days. The memory of the proposition is fading. The pressure of the present is rising. And the response is to build something visible, immediate, and wrong.
+
+The problem is not that they wanted a god. The problem is that they forgot what they had already been given, and in the forgetting, built a substitute that served their anxiety rather than their calling.
+
+Triangle connection: Every decision room carries the risk of the golden calf moment — when the original proposition is forgotten and the group starts building something that serves the room's anxiety rather than the decision's purpose. The record that remembers is the antidote. When the proposition, the assumptions, and the positions are preserved, the group cannot quietly drift into a substitute decision that no one actually agreed to.
+
+---
+
+LEVITICUS
+
+---
+
+Leviticus 19:15 — Justice in Judgment
+
+"You shall do no injustice in court. You shall not be partial to the poor or defer to the great, but in righteousness shall you judge your neighbor."
+
+This is one of the most direct statements in the entire Bible about how judgment should be conducted. Not partial to the poor. Not deferring to the great. In righteousness.
+
+The command is not to be fair in the abstract. It is to resist two specific gravitational pulls: the pull toward the powerful, and the pull toward the sympathetic. Both distort judgment. Both are natural. Both are prohibited.
+
+Triangle connection: This is the principle behind private position-taking. When positions are submitted before seeing the others, the pull toward the first speaker, the pull toward the senior person, the pull toward the consensus — all of it is disrupted. Leviticus establishes that justice requires structural protection against the natural distortions of judgment. Triangle's private positions are a small-scale application of the same principle.
+
+---
+
+NUMBERS
+
+---
+
+Numbers 13-14 — The Twelve Spies: When the Room Decides Wrong
+
+"Then Moses sent them to spy out the land of Canaan... And Moses called Hoshea the son of Nun, Joshua."
+
+Twelve men. One task. Forty days. They return with the same observation — a land flowing with milk and honey — and two entirely different conclusions.
+
+Ten say: the people are too strong. The cities are fortified. We cannot do this. We looked like grasshoppers to them.
+
+Two say: the land is good. The Lord is with us. Do not rebel. Do not fear.
+
+The room does not decide based on the best evidence. It decides based on the loudest fear. The ten win. The people weep. They propose returning to Egypt. They stone the two who disagreed.
+
+The consequence is severe: the entire generation dies in the wilderness. The decision made in that room determines the fate of a nation.
+
+Triangle connection: This is the most dramatic case in scripture of what happens when a decision room confuses the majority view with the right view. The ten were not lying. They were afraid. Their fear was contagious. The two who saw the same evidence differently were silenced — not by procedure, but by stones. A Triangle decision does not guarantee the right answer. But it makes the minority view visible, preserves it in the record, and prevents the room from pretending unanimity existed. The ten spies' fear would have been recorded. Joshua and Caleb's position would have survived. The decision would have carried its disagreement with it. That does not guarantee a different outcome. But it guarantees an honest one.
+
+---
+
+DEUTERONOMY
+
+---
+
+Deuteronomy 1:9-18 — Moses Recounts the Structure He Built
+
+"I alone am not able to bear you. The Lord your God has multiplied you, so that today you are as numerous as the stars of heaven."
+
+Moses recounts how he responded to the same problem Jethro saw earlier. He did not do it alone. He selected leaders. He taught them the statutes and commands. He charged them to judge righteously.
+
+"And I took the heads of your tribes, wise and experienced men, and I made them heads over you... And I charged your judges at that time: 'Hear the cases between your brothers, and judge righteously between every man and his brother, and the stranger who is with him. You shall not be partial in judgment. You shall hear the small and the great alike. No matter how small the case, you shall bring it to me.'"
+
+The structure is explicit. Selection criteria: wise and experienced. Function: judge righteously. Constraint: no partiality. Escalation: bring the hard cases up.
+
+Triangle connection: This is the same architecture Jethro proposed, now owned and operated by Moses himself. The criteria are repeated. The constraint against partiality is repeated. The escalation path is defined. A decision architecture that works at scale requires exactly this: clear selection, clear function, clear constraint, clear escalation. Triangle is a small-scale version of the same principle — three people, one decision, a record that remains.
+
+---
+
+Deuteronomy 17:6 — The Requirement of Multiple Witnesses
+
+"On the testimony of two witnesses or of three witnesses a man shall be put to death. If a single witness testifies against a man, he shall not be put to death."
+
+The standard for the most serious decisions is not one voice. It is two or three. A single witness is insufficient for a capital judgment.
+
+This is not about distrust. It is about the structural recognition that a single perspective, however sincere, is insufficient for the most consequential decisions. The requirement of multiple witnesses is a built-in check against the error of a single voice.
+
+Triangle connection: The number three in Triangle is not arbitrary. It is the smallest number that allows a minority position to exist and be recorded. Two people produce a binary. Three people produce a structure — two can carry, one can dissent, and the dissent survives. Deuteronomy establishes this principle at the level of life and death. Triangle applies it at the level of organisational decision.
+
+---
+
+Deuteronomy 19:15 — The Same Principle, Restated
+
+"A single witness shall not suffice against a man for any crime or for any wrong in connection with any sin he has committed. Only on the evidence of two witnesses or of three witnesses shall a charge be established."
+
+The principle is restated. It is not a one-time instruction. It is a structural requirement that runs through the law.
+
+Triangle connection: The consistency of this principle across the law is significant. It is not a cultural artifact. It is a structural recognition that consequential decisions require more than one voice, and that the voices must be independent. The Triangle structure — three people, independent positions, a record that preserves the disagreement — is a direct descendant of this principle.
+
+---
+
+THE HISTORICAL BOOKS
+
+---
+
+1 Samuel 14:40-45 — Saul's Rash Vow: When the Decision Is Made Without the Facts
+
+"Saul said, 'Cursed be the man who eats food before evening.' ... But Jonathan had not heard his father charge the people with the oath."
+
+Jonathan eats honey. He does not know about the vow. The people watch. The victory is won. Then the reality of the decision lands.
+
+The people are faint. The vow was made in the heat of the moment. It was not communicated to everyone who needed to know. It is now binding on people who never agreed to it.
+
+Jonathan's response is direct: "My father has troubled the land. See how my father's oath has troubled you. For as long as the Philistines are here, we have been tasting honey. How much better if my father had said, 'Let the people eat today, for they have found provision.'"
+
+The decision was made without the facts. It was imposed without communication. It produced weakness, not strength.
+
+Triangle connection: This is the case for issuing the proposition in advance. When a decision is made in the room without the participants knowing what is being decided, the result is exactly what happened here — a binding commitment that weakens the people it was meant to strengthen. A Triangle decision issues the proposition before the room opens. Everyone knows what is being decided. Everyone can prepare. The decision is made with the facts, not in spite of them.
+
+---
+
+1 Samuel 24 — David Spares Saul: The Decision That Remembers
+
+"Then David arose and cut off the skirt of Saul's robe secretly. And afterward Saul's anger turned from him, and he said, 'I have sinned. Return, my son David, for I will no more do you harm, because my life was precious in your eyes this day.'"
+
+David has Saul at his mercy. He does not kill him. He cuts the robe — a visible sign that he could have killed him, and chose not to. Then he calls out to Saul. He explains what he did. He shows the evidence. He makes his position visible.
+
+Saul responds. He acknowledges the wrong. He names it. "I have sinned."
+
+The decision — to spare Saul — is not hidden. It is demonstrated. It is explained. It is recorded in the memory of both men.
+
+Triangle connection: This is the decision that remembers. David does not just make a choice in private. He makes it visible. He shows the evidence of what he could have done and did not. He calls out. He explains. The result is that Saul's position changes — not because David forced him, but because the decision was made visible and the truth of it was undeniable. A Triangle decision does not just record the outcome. It records the reasoning, the positions, the assumptions. It makes the decision visible to the people who live with it.
+
+---
+
+2 Samuel 15-17 — Absalom's Counsel: The Wrong Three People
+
+"And Absalom said, 'Call Hushai the Archite.' And when Hushai came to Absalom, Absalom spoke to him, saying, 'Is this not the word that Ahithophel spoke? Shall we do the same?'"
+
+Absalom has two advisors. Ahithophel gives one counsel. Hushai gives another. Absalom chooses Hushai's counsel — but not because it is better. Because Hushai is working for David.
+
+The decision is made by the wrong three people. Ahithophel knows the situation. Hushai knows the situation. But Hushai's loyalty is to the opposition. Absalom does not know this. The decision is made on the basis of counsel from someone whose position is not what it appears to be.
+
+The result is catastrophic. The rebellion fails. Absalom dies. David's kingdom is nearly lost.
+
+Triangle connection: This is the case for selecting the right three people — not just people who know something, but people whose knowledge is relevant and whose position is honest. A Triangle decision selects participants for relevant knowledge and consequence. It does not select them for their title, their seniority, or their availability. It selects them because they know something material and will live with the consequence. Absalom's failure was not that he asked for counsel. It was that he did not know whose counsel he was receiving.
+
+---
+
+1 Kings 22 — Micaiah the Prophet: The Minority View That Survives
+
+"And the king of Israel said to Jehoshaphat, 'There is yet one man by whom we may inquire of the Lord, Micaiah the son of Imlah; but I hate him, for he never speaks anything favorable concerning me, but only evil.'"
+
+King Ahab gathers 400 prophets. They all say the same thing: go to battle, you will win. Jehoshaphat asks for another voice. Ahab knows Micaiah. Micaiah never says what Ahab wants to hear.
+
+Micaiah is brought. He is asked. He answers: "I saw all Israel scattered upon the mountains, like sheep that have no shepherd."
+
+The 400 are wrong. Micaiah is right. Ahab goes to battle anyway. He dies.
+
+Triangle connection: This is the most explicit case in scripture of the minority view that survives. Forty prophets speak with one voice. One prophet speaks the truth. The king hates him for it. He goes to battle anyway. He dies. The record remembers Micaiah's warning. The decision that ignored it is remembered as the decision that killed the king. A Triangle decision preserves the minority view not because it is always right — Micaiah was right, but three people can still be wrong — but because the truth of what was known at the time must survive the decision. The 400 prophets' consensus would have been recorded. Micaiah's dissent would have survived. The decision would have carried its disagreement with it.
+
+---
+
+2 Chronicles 10 — Rehoboam's Decision: When the Wrong People Are Heard
+
+"And Rehoboam went to Shechem, for all Israel had come to Shechem to make him king. And Jeroboam the son of Nebat was still in Egypt, where he had fled from the presence of Solomon his master."
+
+Rehoboam inherits a kingdom. He faces a decision: how to respond to the people's request for lighter burdens. He asks two groups for counsel.
+
+The first group: the elders who served his father. They say: serve the people. Speak kindly. They will serve you forever.
+
+The second group: the young men who grew up with him. They say: my little finger is thicker than my father's waist. I will add to your burdens.
+
+Rehoboam chooses the second group. The kingdom splits. Ten tribes follow Jeroboam. One tribe remains with Rehoboam.
+
+The decision was not made by the wrong number of people. It was made by the wrong people. The elders knew the history. The young men knew each other. Rehoboam listened to the people who reflected his own ambition back to him.
+
+Triangle connection: This is the case for selecting participants for relevant knowledge, not for their relationship to the decision-maker. The elders had the knowledge Rehoboam needed. The young men had the confidence Rehoboam wanted. He chose the confidence. The kingdom split. A Triangle decision selects three people because they know something material and will live with the consequence — not because they make the decision-maker feel confident.
+
+---
+
+JOB
+
+---
+
+Job 1-2 — The Heavenly Council: The Decision That Is Made in View of Heaven
+
+"Now there was a day when the sons of God came to present themselves before the Lord, and Satan also came among them."
+
+The scene is a council. The sons of God present themselves. Satan comes among them. The Lord speaks. The question is put: "Have you considered my servant Job?"
+
+The decision that follows — the permission to test Job — is made in a council. It is made with dissent present. Satan argues for the test. The Lord permits it within limits.
+
+The decision is not made in private. It is made in view of heaven. The record of it is preserved in scripture. The reasoning is visible. The limits are set.
+
+Triangle connection: This is the ultimate decision architecture. A council. A proposition. Dissent present. Limits set. The record preserved. The decision that follows is consequential — it affects a man's life, his family, his faith. And it is made with the structure that Triangle mirrors at human scale: a clear question, participants who know something material, positions that are visible, and a record that remains. The difference is scale, not structure.
+
+---
+
+Job 38-41 — God's Response: The Proposition That Cannot Be Ignored
+
+"Then the Lord answered Job out of the whirlwind and said: 'Who is this that darkens counsel by words without knowledge? Gird up your loins like a man, I will question you, and you shall declare to me.'"
+
+God does not answer Job with a comfort. He answers with a proposition — a series of questions that establish the gap between the creator's knowledge and the creature's.
+
+"Where were you when I laid the earth's foundation? Tell me, if you have understanding. Who determined its measurements? Surely you know. Who stretched the line upon it?"
+
+The proposition is not abstract. It is specific. It is detailed. It is designed to be answered — or not answered. Job cannot answer it. He acknowledges this. "I know that you can do all things, and that no purpose of yours can be thwarted."
+
+The decision — Job's response to the proposition — is made with full knowledge of what is being asked.
+
+Triangle connection: This is the model for a proposition that cannot be ignored. God does not ask Job to agree with a vague sentiment. He presents a specific, detailed, unignorable proposition. Job's response is honest. He does not manufacture agreement. He acknowledges what he knows and what he does not know. A Triangle decision issues a proposition that is clear enough to agree with or reject. It does not ask for manufactured consensus. It asks for an honest position.
+
+---
+
+PSALMS
+
+---
+
+Psalm 1 — The Two Ways: The Decision That Defines a Life
+
+"Blessed is the man who walks not in the counsel of the wicked, nor stands in the way of sinners, nor sits in the seat of scoffers; but his delight is in the law of the Lord, and on his law he meditates day and night."
+
+The psalm opens with a decision. Not a single decision, but a pattern of decisions that define a life. Walk. Stand. Sit. Three postures. Three rejections. Three alternatives.
+
+The decision is not made once. It is made daily. It is made in the counsel one follows, the way one stands, the seat one occupies.
+
+Triangle connection: This is the decision architecture of a life. Not a single meeting. A pattern of positions taken daily. The psalm does not ask for a single vote. It asks for a consistent position — a way of walking, standing, and sitting that reflects a commitment. A Triangle decision is a single instance of this pattern — one decision, three people, a visible position, a record that remains. The decision is not the end. It is a node in a pattern of decisions that define an organisation's character over time.
+
+---
+
+Psalm 15 — The Character of Those Who May Dwell
+
+"Lord, who shall dwell in your sanctuary? Who shall live on your holy hill? He who walks blamelessly and does what is right and speaks truth in his heart."
+
+The psalm asks a question — a proposition, in effect — and answers it with a list of character traits. Not performance. Not title. Character.
+
+Truth in the heart. No slander. No evil to neighbors. No reproach to guests. Eyes that fail with shame. Honor for those who fear the Lord. No interest on loans. No bribery.
+
+The proposition is clear. The criteria are specific. The response is a position — either you meet them, or you do not.
+
+Triangle connection: This is the principle behind selecting the right three people. The criteria are not about skill alone. They are about character. Truth in the heart. No dishonest gain. The person who meets these criteria is the person who can be trusted with a consequential decision. A Triangle decision selects participants for relevant knowledge and consequence — but the knowledge is not enough without the character. Psalm 15 establishes the character criteria that make knowledge trustworthy.
+
+---
+
+Proverbs
+
+---
+
+Proverbs 11:14 — The Necessity of Counsel
+
+"Where there is no guidance, a people falls, but in an abundance of counselors there is safety."
+
+The proverb establishes a principle: decisions made without counsel fall. Decisions made with an abundance of counselors are safe.
+
+The principle is not that more counselors are always better. It is that some counsel is necessary. The absence of counsel is dangerous. The presence of counsel is safety.
+
+Triangle connection: This is the principle behind the three people. Not one. Not an unlimited number. Three — the smallest number that allows counsel to exist and dissent to be visible. A single decision-maker falls. An abundance of counselors can become noise. Three is the structure that preserves counsel without drowning it.
+
+---
+
+Proverbs 12:15 — The Fool and the Counsel
+
+"The way of a fool is right in his own eyes, but a wise man listens to advice."
+
+The distinction is between the person who thinks they are right and the person who listens. The fool's decision is made in isolation. The wise person's decision is made in counsel.
+
+The fool's decision feels right. It is made by the person who sees the situation most clearly — from their own perspective. It is also the decision most likely to be wrong, because it is the only perspective in the room.
+
+Triangle connection: This is the case for visible positions and preserved dissent. The first speaker sets the range. The room argues inside it. The person who sees the problem differently is often silent. A Triangle decision disrupts this pattern. Positions are taken privately. They are revealed together. The person who sees the problem has a defined place to put their dissent. It survives the meeting. The fool's decision — right in his own eyes — is disrupted by the structure that makes other perspectives visible.
+
+---
+
+Proverbs 15:22 — The Success of Many Counselors
+
+"Without counsel plans fail, but with many advisers they succeed."
+
+The proverb restates the principle. Plans without counsel fail. Plans with many advisers succeed.
+
+The principle is not about the number of advisers. It is about the presence of counsel. A plan made in isolation fails. A plan made in counsel succeeds.
+
+Triangle connection: This is the principle behind the decision that remembers. A plan made in counsel succeeds — but only if the counsel is preserved. When the decision fails, the company has a deck, an outcome, and a date — but not the reasoning that led there. A Triangle decision preserves the counsel. The record remains. The assumptions are recorded. The minority view survives. The plan can be reconstructed. That is the difference between a plan that succeeds and a plan that fails — not just the outcome, but the ability to learn from it.
+
+---
+
+Proverbs 24:6 — The Strategy of Counsel
+
+"By wise guidance you can wage war, and in abundance of counselors there is victory."
+
+The proverb applies the principle to the most consequential decisions — war. Wise guidance. Abundance of counselors. Victory.
+
+The decision is not made by one person. It is made by counsel. The counsel is not a formality. It is the strategy.
+
+Triangle connection: This is the principle behind the right three people. The decision is not made by the person with the title. It is made by the people with the knowledge. The strategy comes from the counsel. A Triangle decision selects three people because they know something material and will live with the consequence. The decision is not made by the CEO. It is made by the three people who know the situation. The CEO's role is to sponsor the decision, not to make it.
+
+---
+
+ECCLESIASTES
+
+---
+
+Ecclesiastes 4:9-12 — The Strength of Two and Three
+
+"Two are better than one, because they have a good reward for their toil. For if they fall, one will lift up his fellow. But woe to him who is alone when he falls and has not another to lift him up! Again, if two lie together, they are warm, but how can one be warm alone? And though a man might prevail against one who is alone, two will withstand him. A threefold cord is not quickly broken."
+
+The passage establishes a principle of strength through number. Two are better than one. Three are stronger than two. A threefold cord is not quickly broken.
+
+The principle is not about consensus. It is about resilience. Two people can lift each other up. Three people can withstand pressure. The structure is stronger than the individual.
+
+Triangle connection: This is the principle behind the number three in Triangle. Not because three is magic. Because three is the smallest number that creates a structure stronger than the individual, with room for dissent and resilience. Two people can agree or disagree — but there is no minority. Three people create a structure where two can carry and one can dissent, and the dissent survives. A threefold cord is not quickly broken. A decision made by three people, with visible positions and a record that remains, is not quickly broken either.
+
+---
+
+THE PROPHETS
+
+---
+
+Isaiah 5:20-21 — The Warning Against Self-Righteous Judgment
+
+"Woe to those who call evil good and good evil, who put darkness for light and light for darkness, who put bitter for sweet and sweet for bitter! Woe to those who are wise in their own eyes, and shrewd in their own sight!"
+
+The warning is against a specific failure of judgment: calling evil good, putting darkness for light. The judgment is not just wrong. It is inverted. It is made by people who are "wise in their own eyes."
+
+The problem is not ignorance. It is self-deception. The people making the judgment think they are wise. They are not.
+
+Triangle connection: This is the case for visible positions and preserved dissent. The people who are wise in their own eyes are the people who do not need counsel. They are the people who make the decision in the room and call it consensus. A Triangle decision disrupts this pattern. Positions are taken privately. They are revealed together. The person who sees the inversion has a defined place to put their dissent. It survives the meeting. The decision that calls evil good is disrupted by the structure that makes the dissent visible.
+
+---
+
+Isaiah 28:13-17 — The Foundation Stone: The Proposition That Is Tested
+
+"But the Lord of hosts is the one whom you shall regard as holy. And he shall be your fear, and he shall be your dread. And he will become a stone of stumbling and a rock of falling to many in Israel..."
+
+The passage establishes a foundation stone. A line of judgment. A plummet. The foundation is tested. The false refuge is swept away.
+
+The principle is clear: the foundation matters. The line matters. The plummet matters. A decision built on a false foundation will not stand.
+
+Triangle connection: This is the case for the clear proposition. The proposition is the foundation stone. It is the line against which the decision is measured. It is the plummet that tests whether the decision is true. A Triangle decision begins with a proposition that is clear enough to agree with or reject. It is not a vague sentiment. It is a specific, testable statement. The decision is measured against it. The record preserves it. The foundation remains.
+
+---
+
+Jeremiah 28 — Hananiah and Jeremiah: The Two Prophets, The Two Positions
+
+"Hananiah the son of Azur, the prophet, said to Jeremiah, 'Thus says the Lord of hosts, the God of Israel: I have broken the yoke of the king of Babylon. Within two years I will bring back to this place all the vessels of the house of the Lord...'"
+
+Two prophets. Two positions. One says the yoke will be broken within two years. The other says the yoke will not be broken — it will be strengthened.
+
+Hananiah speaks first. The people want to hear him. Jeremiah does not argue in the moment. He waits. He wears the yoke. He sends a message. The position is made visible. The truth is tested by time.
+
+The decision — which prophet to believe — is not made by the room. It is made by the outcome. Hananiah dies. Jeremiah's word stands.
+
+Triangle connection: This is the case for the decision that remembers. Two positions are made visible. One is comfortable. One is difficult. The room wants the comfortable one. The record preserves both. The truth is tested by time. A Triangle decision does not guarantee the right outcome. But it preserves the positions. The minority view survives. The decision carries its disagreement with it. The truth is tested by what happens next — and the record remembers what was known at the time.
+
+---
+
+EZEKIEL
+
+---
+
+Ezekiel 44:23-24 — The Instruction of the Priests: The Standard for Judgment
+
+"And they shall teach my people the difference between the holy and the common, and show them how to distinguish between the unclean and the clean. And in controversy they shall act as judges, and they shall judge it by my judgments. They shall keep my laws and my statutes, and they shall keep my Sabbaths holy."
+
+The priests are given a function: teach the difference. Show the distinction. Judge by the Lord's judgments. Keep the laws and statutes.
+
+The function is not to decide by their own wisdom. It is to decide by the standard that is given. The standard is external. The judgment is measured against it.
+
+Triangle connection: This is the principle behind the clear proposition. The proposition is the standard. It is the external measure against which the decision is made. The participants do not decide by their own wisdom. They decide by the proposition that is given. The record preserves the proposition. The decision is measured against it. The standard remains.
+
+---
+
+DANIEL
+
+---
+
+Daniel 1 — The Decision of the Four Young Men: The Position That Survives
+
+"But Daniel resolved that he would not defile himself with the king's food, or with the wine that he drank. Therefore he asked the chief of the eunuchs for permission to eat vegetables and drink water."
+
+Daniel and three companions face a decision. The king's food. The king's wine. The pressure to conform. The risk of refusal.
+
+Daniel resolves. He does not argue in the moment. He makes a position. He asks for permission. He proposes a test. "Let your servants be tested for ten days. Let them eat vegetables and drink water. Then see their faces, and the face of the youths who eat the king's food. And deal with your servants according to what you see."
+
+The position is clear. The test is specific. The evidence is visible. The decision is made by the chief of the eunuchs — but the position that survives is Daniel's.
+
+Triangle connection: This is the model for the visible position. Daniel does not manufacture consensus. He makes a position. He proposes a test. He lets the evidence decide. The position survives. The decision that follows — to let them eat vegetables — is made by the authority, but it is made on the basis of Daniel's visible position and the evidence that supports it. A Triangle decision does not guarantee the right outcome. But it makes the position visible. It proposes a test. It lets the evidence decide. The position survives the meeting.
+
+---
+
+Daniel 2 — Nebuchadnezzar's Dream: The Decision That Requires the Right Knowledge
+
+"Tell me the dream, and tell me its interpretation."
+
+The king does not ask for an interpretation. He asks for the dream itself. The decision is not just about the meaning. It is about the source. The wise men cannot tell the dream. They are killed. The pressure mounts.
+
+Daniel is brought. He does not claim the knowledge as his own. He acknowledges the source. "No wise men, enchanters, magicians, or astrologers can show to the king the mystery. But there is a God in heaven who reveals mysteries."
+
+The decision — to spare the wise men, to promote Daniel — is made on the basis of knowledge that only Daniel has. The right person, with the right knowledge, makes the difference.
+
+Triangle connection: This is the case for the right three people. The decision requires knowledge that only specific people have. The king does not select the most senior. He selects the person who can answer the question. A Triangle decision selects three people because they know something material and will live with the consequence. The decision is not made by the person with the title. It is made by the people with the knowledge.
+
+---
+
+Daniel 6 — Daniel in the Lions' Den: The Decision That Is Made in View of the Record
+
+"Then the king gave Daniel a great dinner, and Daniel was lifted up and glorified. And Daniel said to the king, 'You may keep the power forever.'"
+
+Daniel is thrown to the lions. The decision is made. The record is preserved. The king's decree is written. The trap is set. Daniel is thrown in.
+
+The next morning, the king asks. The record is checked. Daniel is alive. The decision is reversed. The men who set the trap are thrown to the lions instead.
+
+The decision that killed Daniel was made by the wrong people, for the wrong reason, without the right knowledge. The decision that saved him was made by the same king — but this time, the record was checked. The truth was visible. The position survived.
+
+Triangle connection: This is the case for the decision that remembers. The decree was written. The record was preserved. The truth was checked. The decision was reversed. A Triangle decision preserves the record. The proposition is written. The positions are recorded. The assumptions are documented. The decision can be checked. The truth can be verified. The record remains.
+
+---
+
+THE GOSPELS
+
+---
+
+Matthew 18:15-17 — The Process of Resolution: The Structure for Disagreement
+
+"If your brother sins against you, go and tell him his fault, between you and him alone. If he listens to you, you have gained your brother. But if he does not listen, take one or two others along with you, so that every charge may be established by the evidence of two or three witnesses. If he refuses to listen to them, tell it to the church."
+
+The process is specific. Step one: go alone. Step two: take one or two others. Step three: tell the church.
+
+The structure is not arbitrary. It is designed to preserve the relationship, establish the truth, and escalate only when necessary. The number two or three is the number of witnesses — the number that establishes the charge.
+
+Triangle connection: This is the principle behind the visible position and the preserved dissent. The process does not start with the room. It starts with the individual. It escalates only when necessary. The number two or three is the number that establishes the truth. A Triangle decision is a small-scale version of this process — three people, one decision, a visible position, a record that remains. The dissent is not hidden. It is established. The truth is preserved.
+
+---
+
+Mark 15:15 — The Decision That Is Made by the Crowd
+
+"So Pilate, wishing to satisfy the crowd, released for them Barabbas, and delivered Jesus up to be crucified."
+
+The decision is made by the crowd. Not by the evidence. Not by the truth. By the pressure of the moment.
+
+Pilate knows the truth. He says so. "I find no fault in him." But the crowd wants Barabbas. Pilate yields. The decision is made by the wrong standard.
+
+Triangle connection: This is the case against manufactured consensus. The crowd's voice is not the truth. It is the pressure of the moment. Pilate yields to it. The decision is made by the wrong standard. A Triangle decision disrupts this pattern. Positions are taken privately. They are revealed together. The pressure to conform is broken. The person who sees the truth has a defined place to put their dissent. It survives the meeting. The decision is not made by the crowd. It is made by the three people who know the truth.
+
+---
+
+Luke 10:38-42 — Martha and Mary: The Decision About What Matters
+
+"As they went, he entered a village called the village of Mary and her sister Martha. And she had a sister called Mary, who sat at the Lord's feet and listened to his teaching. But Martha was distracted with much serving. And she went up to him and said, 'Lord, do you not care that my sister has left me to serve alone? Tell her to help me.'"
+
+Martha has a decision to make. She is distracted. She is serving. She is working. She comes to Jesus with a request: tell Mary to help me.
+
+Jesus responds with a decision of his own. "Martha, Martha, you are anxious and troubled about many things, but one thing is necessary. Mary has chosen the good portion, which will not be taken away from her."
+
+The decision is not about serving. It is about what matters. The one thing. The good portion. The position that survives.
+
+Triangle connection: This is the case for the clear proposition. The proposition is not "what are we doing?" It is "what matters?" The decision is made on the basis of the one thing that is necessary. A Triangle decision begins with a proposition that is clear enough to agree with or reject. It is not a list of tasks. It is a statement of what matters. The decision is made on that basis. The record preserves it.
+
+---
+
+John 7:50-52 — Nicodemus's Question: The Minority View That Is Silenced
+
+"Nicodemus, who had gone to him at night, and who was one of them, said to them, 'Does our law judge a man before it hears him and finds out what he has done?'"
+
+Nicodemus raises a question. The room responds with a dismissal: "Search and see that no prophet arises from Galilee."
+
+The question is not answered. The position is not recorded. Nicodemus is silenced by the room's confidence.
+
+Triangle connection: This is the case for the visible position and the preserved dissent. Nicodemus's question is valid. It is based on the law. It is made in good faith. But the room does not answer it. It dismisses it. The position is lost. A Triangle decision preserves the position. The question is recorded. The dissent survives. The decision carries its disagreement with it.
+
+---
+
+John 11:45-53 — Caiaphas's Decision: The Decision That Is Made for the Wrong Reason
+
+"But the chief priests and Pharisees had commanded that if anyone knew where he was, he should report it, that they might arrest him. So the chief priests and Pharisees said, 'What do we do? For this man performs many signs. If we let him go on thus, everyone will believe in him, and the Romans will come and take away our place and our nation.'"
+
+Caiaphas makes a decision. The decision is made for the wrong reason — to preserve the nation, not to serve the truth. The decision is made by the wrong people — the chief priests and Pharisees, not the people who know the truth.
+
+The decision is recorded. It is remembered. It is the decision that sends Jesus to the cross.
+
+Triangle connection: This is the case for the right three people and the clear proposition. The decision is made by the people who want to preserve their position, not by the people who know the truth. The proposition is not "what is true?" It is "what preserves our place?" The decision is made on the wrong basis. A Triangle decision selects three people because they know something material and will live with the consequence. The proposition is clear. The decision is made on the basis of the truth, not the preservation of position.
+
+---
+
+ACTS
+
+---
+
+Acts 1:15-26 — The Selection of Matthias: The Decision by the Right Standard
+
+"And they gave their names, two of them, Joseph called Barsabbas, who was surnamed Justus, and Matthias. And they prayed and said, 'You, Lord, who know the hearts of all, show which one of these two you have chosen to take the place in this ministry and apostleship from which Judas turned aside...'"
+
+The selection is made by prayer. By the standard of the Lord who knows the hearts. Not by the vote of the room. Not by the seniority of the candidates. By the standard that is external to the room.
+
+The decision is made. Matthias is chosen. The record is preserved. The apostleship is filled.
+
+Triangle connection: This is the principle behind the clear proposition and the external standard. The decision is not made by the room's preference. It is made by the standard that is external to the room. The proposition is clear: who has the heart for the work? The decision is made by the standard. The record preserves it. A Triangle decision issues a proposition that is clear enough to agree with or reject. The decision is made on the basis of the standard, not the room's preference.
+
+---
+
+Acts 5:29 — Peter's Position: The Position That Survives the Room
+
+"But Peter and the apostles answered, 'We must obey God rather than men.'"
+
+The room has made a decision. The apostles are commanded to stop speaking. Peter responds with a position. The position is clear. The position is visible. The position survives.
+
+The decision that follows — to continue speaking — is made on the basis of the position. The record preserves it. The truth survives.
+
+Triangle connection: This is the model for the visible position. Peter does not argue in the moment. He makes a position. The position is clear. The position is visible. The position survives. A Triangle decision makes the position visible. The dissent is recorded. The truth survives. The decision carries its disagreement with it.
+
+---
+
+Acts 15 — The Jerusalem Council: The Decision by the Right Three People
+
+"And the apostles and the elders gathered to consider this matter. And there was much debate."
+
+The council gathers. The matter is considered. There is debate. The decision is not made by the first speaker. It is made by the council. The right people are present. The decision is made.
+
+The decision is recorded. It is sent to the churches. The record remains.
+
+Triangle connection: This is the model for the right three people and the decision that remembers. The council gathers. The right people are present. The debate is had. The decision is made. The record is preserved. The decision is sent to the churches. The record remains. A Triangle decision selects three people because they know something material and will live with the consequence. The decision is made. The record is preserved. The decision carries its reasoning with it.
+
+---
+
+THE EPISTLES
+
+---
+
+Romans 12:2 — The Decision to Be Transformed
+
+"Do not be conformed to this world, but be transformed by the renewal of your mind, that by testing you may discern what is the will of God, what is good and acceptable and perfect."
+
+The decision is not made by the world's standard. It is made by the renewal of the mind. By testing. By discernment. By the will of God.
+
+The proposition is clear. The standard is external. The decision is made by testing.
+
+Triangle connection: This is the principle behind the clear proposition and the external standard. The decision is not made by the world's standard. It is made by the renewal of the mind. By testing. By discernment. A Triangle decision issues a proposition that is clear enough to agree with or reject. The decision is made on the basis of the standard, not the room's preference. The record preserves it.
+
+---
+
+1 Corinthians 12 — The Body: The Right People for the Work
+
+"For just as the body is one and has many members, and all the members of the body, though many, are one body, so it is with Christ. For in one Spirit we were all baptized into one body... But as it is, God arranged the members in the body, each one of them, as he chose."
+
+The body is one. It has many members. The members are arranged by God. Each one is chosen. Each one has a function.
+
+The decision about who does what is not made by the members. It is made by the one who chose them. The right people are in the right places. The body functions.
+
+Triangle connection: This is the principle behind the right three people. The decision is not made by the person with the title. It is made by the people with the knowledge. The right people are in the right places. The body functions. A Triangle decision selects three people because they know something material and will live with the consequence. The decision is made by the right people. The body functions.
+
+---
+
+1 Corinthians 14:29 — The Regulation of Prophecy: The Visible Position
+
+"Let two or three prophets speak, and let the others weigh what is said."
+
+The regulation is specific. Two or three speak. The others weigh. The positions are visible. The weighing is done.
+
+The decision about what is said is not made by the speaker. It is made by the others who weigh. The positions are visible. The truth is tested.
+
+Triangle connection: This is the principle behind the visible position and the preserved dissent. Two or three speak. The others weigh. The positions are visible. The truth is tested. A Triangle decision makes the positions visible. The dissent is recorded. The truth is tested. The decision carries its disagreement with it.
+
+---
+
+2 Corinthians 2:9 — The Test of Obedience
+
+"So I wrote to you to test you and to see whether you would be obedient in everything."
+
+The test is specific. The obedience is measured. The decision is made by the test.
+
+Triangle connection: This is the principle behind the clear proposition and the test. The proposition is clear. The test is specific. The decision is made by the test. A Triangle decision issues a proposition that is clear enough to agree with or reject. The decision is made on the basis of the test. The record preserves it.
+
+---
+
+Ephesians 4:11-16 — The Body Grows: The Decision That Builds the Body
+
+"And he gave the apostles, the prophets, the evangelists, the shepherds, and the teachers, to equip the saints for the work of ministry, for building up the body of Christ, until we all attain to the unity of the faith and of the knowledge of the Son of God, to mature manhood, to the measure of the stature of the fullness of Christ."
+
+The decision is not made by the individual. It is made by the body. The gifts are given. The saints are equipped. The body is built up. The unity is attained.
+
+The decision that builds the body is made by the gifts that are given. The right people are in the right places. The body grows.
+
+Triangle connection: This is the principle behind the right three people and the decision that builds the body. The decision is not made by the individual. It is made by the body. The right people are in the right places. The body grows. A Triangle decision selects three people because they know something material and will live with the consequence. The decision is made by the right people. The body grows.
+
+---
+
+Philippians 1:9-10 — The Decision That Is Made by Knowledge
+
+"And this is my prayer, that your love may abound still more and more, with knowledge and all discernment, so that you may approve what is excellent, and may be pure and blameless for the day of Christ."
+
+The decision is made by knowledge. By discernment. By the approval of what is excellent.
+
+The proposition is clear. The standard is knowledge. The decision is made by discernment.
+
+Triangle connection: This is the principle behind the right three people and the clear proposition. The decision is made by knowledge. By discernment. By the approval of what is excellent. A Triangle decision selects three people because they know something material and will live with the consequence. The proposition is clear. The decision is made on the basis of knowledge and discernment. The record preserves it.
+
+---
+
+THE GENERAL EPISTLES AND REVELATION
+
+---
+
+James 1:19-20 — The Decision That Is Made in Righteousness
+
+"Know this, my beloved brothers: let every person be quick to hear, slow to speak, slow to anger, for the anger of man does not produce the righteousness of God."
+
+The decision is made by hearing. By slowness to speak. By the absence of anger.
+
+The proposition is clear. The standard is righteousness. The decision is made by hearing.
+
+Triangle connection: This is the principle behind the visible position and the preserved dissent. The decision is made by hearing. By slowness to speak. By the absence of anger. A Triangle decision makes the positions visible. The dissent is recorded. The truth is tested. The decision is made by hearing, not by the first speaker.
+
+---
+
+James 2:12 — The Decision That Is Made by the Law of Liberty
+
+"So speak, and so act, as those who are to be judged under the law of liberty."
+
+The decision is made by the law of liberty. The standard is external. The decision is measured against it.
+
+Triangle connection: This is the principle behind the clear proposition and the external standard. The decision is made by the law of liberty. The standard is external. The decision is measured against it. A Triangle decision issues a proposition that is clear enough to agree with or reject. The decision is made on the basis of the standard. The record preserves it.
+
+---
+
+1 Peter 4:10-11 — The Decision That Is Made by the Right Stewardship
+
+"As each has received a gift, use it to serve one another, as good stewards of God's varied grace: whoever speaks, as one who speaks oracles of God; whoever serves, as one who serves by the strength that God supplies..."
+
+The decision is made by the gift. By the stewardship. By the grace that is supplied.
+
+The proposition is clear. The standard is the gift. The decision is made by the stewardship.
+
+Triangle connection: This is the principle behind the right three people. The decision is made by the gift. By the stewardship. By the grace that is supplied. A Triangle decision selects three people because they know something material and will live with the consequence. The decision is made by the right people. The stewardship is honored.
+
+---
+
+1 John 4:1 — The Decision That Is Made by Testing
+
+"Beloved, do not believe every spirit, but test the spirits, whether they are of God, because many false prophets have gone out into the world."
+
+The decision is made by testing. By the discernment of spirits. By the truth that is tested.
+
+The proposition is clear. The standard is the test. The decision is made by discernment.
+
+Triangle connection: This is the principle behind the clear proposition and the test. The proposition is clear. The test is specific. The decision is made by the test. A Triangle decision issues a proposition that is clear enough to agree with or reject. The decision is made on the basis of the test. The record preserves it.
+
+---
+
+Revelation 4-5 — The Throne Room: The Decision That Is Made in View of Heaven
+
+"And around the throne were four living creatures full of eyes in front and behind: the first living creature like a lion, the second living creature like an ox, the third living creature with the face of a man, and the fourth living creature like a flying eagle."
+
+The scene is a council. The throne is the center. The living creatures are present. The elders are present. The decision is made in view of heaven.
+
+The record is preserved. The truth is visible. The decision carries its reasoning with it.
+
+Triangle connection: This is the ultimate decision architecture. A council. A throne. The living creatures. The elders. The decision is made in view of heaven. The record is preserved. The truth is visible. A Triangle decision is a small-scale version of this architecture — three people, one decision, a visible position, a record that remains. The decision is made in view of the truth. The record preserves it.
+
+---
+
+SUMMARY: THE MOST POWERFUL SUPPORTING POINTS
+
+---
+
+This page has walked through the entire canon — 66 books — extracting the passages that support the architecture of a Triangle decision. The following are the most powerful supporting points, organized by the four components of the Triangle structure.
+
+---
+
+ONE CLEAR PROPOSITION
+
+The strongest support for the principle of a clear, testable proposition comes from:
+
+- Genesis 6:14-22 — Noah's Ark: the first divine specification in scripture. God does not say "build something that floats." He gives dimensions, materials, process, layout, and purpose. The specification is precise enough that compliance is visible. This is the template for every well-specified decision.
+
+- Exodus 20:1-17 — The Ten Commandments: the proposition is given before the relationship is negotiated. The context exists first. The proposition defines the terms. The participants respond to what is on the table, not to what they wish was there.
+
+- Deuteronomy 17:6 and 19:15 — The requirement of two or three witnesses: the standard for the most serious decisions is not one voice. It is two or three. A single witness is insufficient. This is the structural recognition that a single perspective is insufficient for consequential decisions.
+
+- Ezekiel 44:23-24 — The priests are instructed to judge by the Lord's judgments, not by their own wisdom. The standard is external. The decision is measured against it.
+
+- Matthew 18:15-17 — The process of resolution: the proposition is made clear before the room opens. The process does not start with the room. It starts with the individual. It escalates only when necessary.
+
+- James 1:19-20 — The decision is made by hearing, not by speaking. By slowness to anger, not by the first voice.
+
+The principle is consistent across the canon: the proposition is clear, the standard is external, the decision is measured against it, and the record preserves it.
+
+---
+
+THE RIGHT THREE PEOPLE
+
+The strongest support for the principle of selecting participants for relevant knowledge and consequence comes from:
+
+- Exodus 18:13-27 — Jethro's counsel: the criteria are specific. Fear God. Trustworthy. Hate dishonest gain. Not the loudest. Not the most senior. The right people, at the right scale, for the right reason.
+
+- Deuteronomy 1:9-18 — Moses recounts the structure he built: wise and experienced men, appointed over thousands, hundreds, fifties, and tens. The criteria are repeated. The constraint against partiality is repeated. The escalation path is defined.
+
+- 1 Chronicles 12 — The warriors who came to David at Ziklag: men who understood the times, who knew what Israel ought to do. The selection is based on knowledge of the situation, not on title or seniority.
+
+- Daniel 2 — Nebuchadnezzar's dream: the decision requires knowledge that only specific people have. The king does not select the most senior. He selects the person who can answer the question.
+
+- 1 Corinthians 12 — The body: the members are arranged by God. Each one is chosen. Each one has a function. The right people are in the right places.
+
+- Ephesians 4:11-16 — The gifts are given to equip the saints for the work of ministry. The right people are given for the right work.
+
+The principle is consistent across the canon: the participants are selected for their knowledge, their character, and their consequence — not for their title, their seniority, or their availability.
+
+---
+
+A VISIBLE POSITION
+
+The strongest support for the principle of visible, private positions comes from:
+
+- Leviticus 19:15 — Justice in judgment: not partial to the poor, not deferring to the great, but in righteousness. The command is to resist two specific gravitational pulls: the pull toward the powerful, and the pull toward the sympathetic. Both distort judgment. Both are natural. Both are prohibited.
+
+- Numbers 13-14 — The twelve spies: the room decides wrong. The ten are not lying. They are afraid. Their fear is contagious. The two who saw the same evidence differently are silenced — not by procedure, but by stones. The minority view is lost.
+
+- 1 Samuel 14:40-45 — Saul's rash vow: the decision is made without the facts. It is imposed without communication. It produces weakness, not strength. The proposition was not issued in advance.
+
+- John 7:50-52 — Nicodemus's question: the minority view is silenced by the room's confidence. The question is not answered. The position is not recorded.
+
+- 1 Corinthians 14:29 — The regulation of prophecy: two or three speak, and the others weigh. The positions are visible. The weighing is done. The truth is tested.
+
+- Acts 5:29 — Peter's position: the position is clear. The position is visible. The position survives. "We must obey God rather than men."
+
+The principle is consistent across the canon: the position is visible, the dissent is preserved, the pressure to conform is disrupted, and the truth is tested.
+
+---
+
+A DECISION THAT REMEMBERS
+
+The strongest support for the principle of a record that preserves the proposition, the positions, the assumptions, and the minority view comes from:
+
+- Genesis 11:1-9 — The Tower of Babel: the decision is made by manufactured consensus. The language is confused. The project stops. The record is lost. The decision is remembered only as a failure.
+
+- Genesis 34 — The danger of unstructured agreement: the agreement is made without truth at its center. It is a trap. The record is lost. The decision is broken.
+
+- 2 Samuel 15-17 — Absalom's counsel: the decision is made by the wrong three people. The record is lost. The rebellion fails.
+
+- 1 Kings 22 — Micaiah the prophet: the minority view survives. The 400 prophets are wrong. Micaiah is right. The record remembers the warning. The decision that ignored it is remembered as the decision that killed the king.
+
+- Daniel 6 — Daniel in the lions' den: the decree is written. The record is preserved. The truth is checked. The decision is reversed. The record remains.
+
+- Acts 15 — The Jerusalem council: the decision is recorded. It is sent to the churches. The record remains.
+
+- Revelation 4-5 — The throne room: the decision is made in view of heaven. The record is preserved. The truth is visible.
+
+The principle is consistent across the canon: the record preserves the proposition, the positions, the assumptions, and the minority view. The decision can be reconstructed. The truth can be verified. The decision carries its reasoning with it.
+
+---
+
+THE OVERARCHING PATTERN
+
+The most powerful supporting point of all is the consistency of the pattern across the entire canon.
+
+The same principles appear in Genesis and Revelation. In the law and the prophets. In the wisdom literature and the epistles. In the Gospels.
+
+The pattern is not a cultural artifact. It is not a product of a particular time or place. It is a structural recognition that runs through the entire biblical witness: order through design, not accident. Selection for knowledge and character, not title and seniority. Visible positions, not manufactured consensus. A record that remains, not a decision that is forgotten.
+
+Triangle is not an organisational innovation imposed on a secular context. It is a small-scale expression of a pattern that appears throughout scripture, in one form or another, from the first chapter of Genesis to the last chapter of Revelation.
+
+This page has walked through the entire canon to show that pattern. The work continues. Each book, each passage, each principle will be added here as the walkthrough progresses.
+
+This is not a sermon. It is a systematic extraction of what is already there.
+

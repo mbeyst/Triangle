@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblical Foundations — Triangle</title>
+  <meta name="description" content="The strongest biblical foundations relevant to Triangle's decision architecture, with a downloadable full-canon working reference.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Biblical Foundations — Triangle">
+  <meta property="og:description" content="Sunday truth and Monday decisions do not need to live in separate worlds.">
+  <meta property="og:url" content="https://triangle.ceo/biblical-foundations.html">
+  <link rel="canonical" href="https://triangle.ceo/biblical-foundations.html">
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --fg: #16150f;
+      --muted: #5d5a4e;
+      --rule: #dedbd1;
+      --accent: #8c2f16;
+      --accent-dark: #6c2110;
+      --panel: #f3f0e8;
+      --dark: #201f1a;
+      --dark-fg: #fffdf9;
+      --dark-muted: #d7d2c8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141412;
+        --fg: #eeece4;
+        --muted: #aaa597;
+        --rule: #302f2a;
+        --accent: #ed9677;
+        --accent-dark: #f0a385;
+        --panel: #1e1d19;
+        --dark: #e9e5dc;
+        --dark-fg: #181714;
+        --dark-muted: #514d45;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 18px/1.62 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: none; }
+    .wrap { width: min(100% - 3rem, 48rem); margin: 0 auto; }
+    nav { border-bottom: 1px solid var(--rule); }
+    nav .wrap {
+      min-height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .mark {
+      color: var(--fg);
+      font-family: Arial, sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.2rem; }
+    .nav-link {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--accent); }
+    header { padding: 5.8rem 0 4.7rem; }
+    .eyebrow, h2, .label, .reference {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 1.2rem; }
+    h1 {
+      max-width: 17ch;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      font-weight: 600;
+      letter-spacing: -.035em;
+      line-height: 1.08;
+      margin: 0;
+    }
+    .standfirst {
+      color: var(--muted);
+      font-size: clamp(1.16rem, 2vw, 1.4rem);
+      line-height: 1.48;
+      margin: 2rem 0 0;
+      max-width: 42rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.3rem; }
+    .button {
+      align-items: center;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      display: inline-flex;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: .07em;
+      min-height: 3rem;
+      padding: .7rem 1.05rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .button:hover { background: var(--accent-dark); color: #fff; }
+    .button--quiet { background: transparent; color: var(--accent); }
+    .button--quiet:hover { background: var(--panel); color: var(--accent-dark); }
+    section { border-top: 1px solid var(--rule); padding: 5.25rem 0; }
+    h2 { margin: 0 0 1.5rem; }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -.018em;
+      line-height: 1.22;
+      margin: 0 0 .8rem;
+    }
+    p { margin: 0 0 1.15rem; }
+    p:last-child { margin-bottom: 0; }
+    .lead {
+      font-size: clamp(1.3rem, 2.4vw, 1.72rem);
+      letter-spacing: -.018em;
+      line-height: 1.36;
+    }
+    .muted { color: var(--muted); }
+    .statement {
+      border-left: 2px solid var(--accent);
+      margin: 2.3rem 0 0;
+      max-width: 42rem;
+      padding: .35rem 0 .35rem 1.45rem;
+    }
+    .statement p { font-size: 1.28rem; line-height: 1.42; margin: 0; }
+    .statement .label { display: block; margin-bottom: .6rem; }
+    .method { background: var(--panel); }
+    .method .lead { max-width: 43rem; }
+    .principles { list-style: none; margin: 2.35rem 0 0; padding: 0; }
+    .principles li {
+      border-top: 1px solid var(--rule);
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: 2.15rem 1fr;
+      padding: 1.35rem 0;
+    }
+    .principles li:last-child { border-bottom: 1px solid var(--rule); }
+    .number {
+      align-items: center;
+      border: 1px solid var(--rule);
+      color: var(--accent);
+      display: flex;
+      font-family: Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      height: 1.7rem;
+      justify-content: center;
+      margin-top: .1rem;
+      width: 1.7rem;
+    }
+    .principles strong { display: block; font-weight: 600; margin-bottom: .2rem; }
+    .principles span { color: var(--muted); font-size: 1rem; line-height: 1.52; }
+    .study-header { max-width: 43rem; }
+    .passage { border-top: 1px solid var(--rule); padding: 2.25rem 0 2.6rem; }
+    .passage:last-of-type { border-bottom: 1px solid var(--rule); }
+    .reference { color: var(--accent); display: block; margin-bottom: .7rem; }
+    .finding { color: var(--muted); font-size: 1rem; line-height: 1.55; margin-top: 1.05rem; }
+    .finding strong { color: var(--fg); }
+    .caveat {
+      border-left: 2px solid var(--accent);
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.53;
+      margin: 2.35rem 0 0;
+      padding: .35rem 0 .35rem 1.35rem;
+    }
+    .caveat strong { color: var(--fg); }
+    .reference-panel { background: var(--dark); color: var(--dark-fg); }
+    .reference-panel h2, .reference-panel .eyebrow { color: var(--dark-muted); }
+    .reference-panel p { color: var(--dark-muted); }
+    .reference-panel .lead { color: var(--dark-fg); }
+    .reference-panel .button--quiet { border-color: var(--dark-muted); color: var(--dark-fg); }
+    .reference-panel .button--quiet:hover { background: rgba(255,255,255,.12); color: var(--dark-fg); }
+    .reference-panel .note { font-size: .98rem; line-height: 1.52; margin-top: 1.65rem; max-width: 43rem; }
+    .sources { font-size: .96rem; }
+    .sources ol { margin: 1.25rem 0 0; padding-left: 1.35rem; }
+    .sources li { margin: 0 0 .9rem; padding-left: .25rem; }
+    footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; padding: 2.5rem 0 4rem; }
+    footer p { margin-bottom: .4rem; }
+    @media (max-width: 640px) {
+      body { font-size: 17px; }
+      .wrap { width: min(100% - 2.5rem, 48rem); }
+      header { padding: 4.25rem 0 3.4rem; }
+      section { padding: 3.85rem 0; }
+    }
+    @media (max-width: 420px) {
+      nav .wrap { min-height: 4rem; }
+      .nav-links { gap: .8rem; }
+      .nav-link { font-size: .68rem; }
+      .actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="mark" href="index.html">Triangle</a>
+      <div class="nav-links">
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="biblical-foundations.html">Biblical foundations</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <div class="wrap">
+        <p class="eyebrow">Biblical foundations</p>
+        <h1>Sunday truth. Monday decisions.</h1>
+        <p class="standfirst">
+          Many Christian professionals know the split. On Sunday, they hear that every person bears God’s image, truth matters and power is accountable. On Monday, they enter a room where the highest title speaks first, agreement is safer than honesty, and the reasoning behind a decision disappears.
+        </p>
+        <p class="standfirst">
+          Triangle exists in that gap. It does not turn Scripture into a management manual. It asks a more modest question: what does the Bible repeatedly show about human authority, witness, work, truth and the keeping of a record — and what might that require of the organisations Christians help lead?
+        </p>
+        <div class="actions">
+          <a class="button" href="#highlights">Read the strongest points</a>
+          <a class="button button--quiet" href="biblical-foundations-reference.txt" download>Download the full reference (TXT)</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <h2>The gap is real</h2>
+        <p class="lead">The church is not meant to produce one kind of person for worship and another for work.</p>
+        <p>
+          A professional can sing about humility on Sunday, then be rewarded for never challenging a senior colleague on Monday. They can hear that people are not disposable, then sit in a meeting where the people closest to the consequence are absent. They can believe that truth sets people free, then work inside decisions whose assumptions, objections and reversals are quietly lost.
+        </p>
+        <p>
+          This is not mainly a problem of individual courage. It is a problem of architecture. A good person inside a structure that rewards silence will eventually learn silence. Triangle is an attempt to give truth, relevant knowledge and visible responsibility a place in the way consequential decisions are made.
+        </p>
+        <blockquote class="statement">
+          <span class="label">The working claim</span>
+          <p>Faith should change more than a professional’s private ethics. It should change the shape of the room where consequential decisions are made.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="method">
+      <div class="wrap">
+        <h2>How to read this page</h2>
+        <p class="lead">The strongest points are published here. The full-canon working reference is available to download.</p>
+        <p>
+          This page is a short public summary. The full working reference is available to download — it walks through the 66-book canon from Genesis to Revelation and shows the connections to Triangle's four-part structure: one clear proposition, the right three people, a visible position, and a decision that remembers.
+        </p>
+        <p>
+          These are not isolated proof texts and they are not a claim that every biblical pattern is a corporate protocol. Each highlight distinguishes what the text shows, the question it raises for Triangle, and the limit of that comparison.
+        </p>
+        <ol class="principles">
+          <li><span class="number">1</span><div><strong>The text comes first.</strong><span>We name the biblical action before drawing an organisational implication.</span></div></li>
+          <li><span class="number">2</span><div><strong>Patterns are not commands.</strong><span>A narrative can expose a pattern without supplying a universal operating rule for a company.</span></div></li>
+          <li><span class="number">3</span><div><strong>Authority is not erased.</strong><span>Triangle does not pretend that biblical leadership is leaderless. It asks how authority can remain responsible, informed and open to truth.</span></div></li>
+          <li><span class="number">4</span><div><strong>The record matters.</strong><span>When the text shows a witness, covenant, boundary or remembered act, we take that seriously without inventing a modern data system behind it.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="wrap">
+        <div class="study-header">
+          <p class="eyebrow">The strongest points</p>
+          <h2>Four foundations for the Triangle architecture</h2>
+          <p class="lead">The claim is not that the Bible supplies a ready-made operating manual. It is that it repeatedly refuses hidden, isolated and unremembered power.</p>
+        </div>
+
+        <article class="passage">
+          <span class="reference">1. One clear proposition · Genesis 6:14–22 <a href="#source-2">[2]</a></span>
+          <h3>Consequential action begins with something clear enough to be tested.</h3>
+          <p>
+            Noah is not told to build something that floats. He is given a purpose, dimensions, materials, layout and a defined act of obedience. The narrative makes the instruction visible enough for compliance or refusal to mean something.
+          </p>
+          <p class="finding"><strong>Triangle connection:</strong> a decision should start as one sentence someone can genuinely agree with or reject. Clarity is not bureaucratic debris. It is what lets people prepare, object, act and later learn from what was actually decided.</p>
+          <p class="finding"><strong>Limit:</strong> Genesis does not require businesses to mimic a divine specification. It does show that vague purpose is a poor foundation for consequential action.</p>
+        </article>
+
+        <article class="passage">
+          <span class="reference">2. The right three people · Exodus 18:13–27; Deuteronomy 19:15 <a href="#source-3">[3]</a> <a href="#source-4">[4]</a></span>
+          <h3>Authority does not mean carrying every decision alone.</h3>
+          <p>
+            Jethro sees Moses becoming the bottleneck for an entire people and names the problem plainly: the work is too heavy for one person. His answer is not a bigger meeting. It is the deliberate selection of capable, trustworthy people who reject dishonest gain. The law also refuses the sufficiency of a single witness in consequential accusation.
+          </p>
+          <p class="finding"><strong>Triangle connection:</strong> the right people are chosen for relevant knowledge, character and consequence — not rank, volume or availability. Three is Triangle’s practical number: large enough for a minority position to exist, small enough for responsibility not to evaporate.</p>
+          <p class="finding"><strong>Limit:</strong> neither passage ordains a three-person corporate rule. The biblical pattern is plural, qualified witness and delegated responsibility.</p>
+        </article>
+
+        <article class="passage">
+          <span class="reference">3. A visible position · Numbers 13–14; 1 Kings 22 <a href="#source-5">[5]</a> <a href="#source-6">[6]</a></span>
+          <h3>A majority can decide and still be wrong.</h3>
+          <p>
+            Twelve spies see the same land and return with two incompatible judgements. Ten carry the fearful conclusion; Joshua and Caleb dissent. Later, Ahab receives the approval of hundreds of prophets, while Micaiah gives the warning no one wants to hear. In both accounts, numerical agreement does not certify truth.
+          </p>
+          <p class="finding"><strong>Triangle connection:</strong> “The majority decides. The minority survives.” A minority view should not be softened into meeting minutes or lost under the pressure to sound united. Triangle gives it a named, visible place beside the final decision.</p>
+          <p class="finding"><strong>Limit:</strong> these stories do not teach anonymous polling. They expose the danger of treating confidence, seniority or numbers as a substitute for honest judgement.</p>
+        </article>
+
+        <article class="passage">
+          <span class="reference">4. A decision that remembers · Genesis 31:44–53; Acts 15:22–35 <a href="#source-7">[7]</a> <a href="#source-8">[8]</a></span>
+          <h3>Serious agreements need a durable, shared witness.</h3>
+          <p>
+            Jacob and Laban mark their covenant with a visible boundary and call it a witness. The Jerusalem Council reaches a decision, puts it in writing and sends the letter with trusted people to the churches affected by it. In both cases, the decision is not left inside the memories of the people who happened to be in the room.
+          </p>
+          <p class="finding"><strong>Triangle connection:</strong> a consequential decision needs to keep its proposition, participants, positions, result, assumptions and distribution list. Otherwise the person with the most power can later rewrite what was known, disputed or promised.</p>
+          <p class="finding"><strong>Limit:</strong> a stone heap and an apostolic letter are not templates for a digital system. They show why a shared witness is not an administrative afterthought.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The necessary guardrail</h2>
+        <p class="lead">Triangle is not a way to baptise hierarchy. It is a way to make human authority more answerable to truth.</p>
+        <p>
+          In Genesis, Abraham questions the justice of what is about to happen to Sodom; the question is not treated as disloyalty. Joseph, holding immense political power over his brothers, refuses to take the place of God.<a href="#source-9">[9]</a> <a href="#source-10">[10]</a>
+        </p>
+        <p>
+          That matters because a decision architecture can be used badly. It can become another mechanism for silencing people while pretending to hear them. The biblical challenge is sharper: authority is real, but it is not absolute; it must be willing to hear what it does not want to hear and to leave an honest record behind.
+        </p>
+        <aside class="caveat">
+          <strong>The strongest claim we can make:</strong> Scripture does not prove that God ordained a two-out-of-three rule. It does repeatedly point toward qualified counsel, truthful witness, visible accountability, limits on power and remembered agreements. That is a serious foundation for asking better questions about the way Christians lead and decide.
+        </aside>
+      </div>
+    </section>
+
+    <section class="reference-panel" id="reference">
+      <div class="wrap">
+        <p class="eyebrow">Full-canon working reference</p>
+        <h2>The detailed reference remains available.</h2>
+        <p class="lead">This public page carries the highlights. The full text keeps the wider body of material open to anyone who wants to read the longer argument.</p>
+        <p>
+          It begins with Genesis and follows the working connections through the law, history, wisdom literature, prophets, Gospels, epistles, and Revelation. It is a reference document, not a replacement for reading Scripture in context.
+        </p>
+        <div class="actions">
+          <a class="button button--quiet" href="biblical-foundations-reference.txt" download>Download the full reference (TXT)</a>
+        </div>
+        <p class="note">Plain text. Easy to open, keep, annotate and search on Windows.</p>
+      </div>
+    </section>
+
+    <section class="sources">
+      <div class="wrap">
+        <h2>Sources</h2>
+        <ol>
+          <li id="source-1"><a href="https://www.biblegateway.com/">Bible Gateway — public domain translations.</a></li>
+          <li id="source-2"><a href="https://bible-api.com/Genesis%206:14-22?translation=web">Genesis 6:14–22, World English Bible.</a></li>
+          <li id="source-3"><a href="https://bible-api.com/Exodus%2018:13-27?translation=web">Exodus 18:13–27, World English Bible.</a></li>
+          <li id="source-4"><a href="https://bible-api.com/Deuteronomy%2019:15?translation=web">Deuteronomy 19:15, World English Bible.</a></li>
+          <li id="source-5"><a href="https://bible-api.com/Numbers%2013:1-14:10?translation=web">Numbers 13:1–14:10, World English Bible.</a></li>
+          <li id="source-6"><a href="https://bible-api.com/1%20Kings%2022:1-38?translation=web">1 Kings 22:1–38, World English Bible.</a></li>
+          <li id="source-7"><a href="https://bible-api.com/Genesis%2031:44-53?translation=web">Genesis 31:44–53, World English Bible.</a></li>
+          <li id="source-8"><a href="https://bible-api.com/Acts%2015:22-35?translation=web">Acts 15:22–35, World English Bible.</a></li>
+          <li id="source-9"><a href="https://bible-api.com/Genesis%2018:16-33?translation=web">Genesis 18:16–33, World English Bible.</a></li>
+          <li id="source-10"><a href="https://bible-api.com/Genesis%2050:15-21?translation=web">Genesis 50:15–21, World English Bible.</a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="index.html">Triangle for organisations</a> · <a href="research.html">Theoretical research</a></p>
+      <p>© 2026 Triangle</p>
+    </div>
+  </footer>
+</body>
+</html>
