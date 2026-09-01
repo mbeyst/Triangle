@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk about a live decision — Triangle</title>
+  <meta name="description" content="Bring one decision that exposed the problem and one decision coming up. We will see whether there is a credible ninety-day test.">
+
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --fg: #16150f;
+      --muted: #5d5a4e;
+      --rule: #dedbd1;
+      --accent: #8c2f16;
+      --accent-dark: #6c2110;
+      --panel: #f3f0e8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141412;
+        --fg: #eeece4;
+        --muted: #aaa597;
+        --rule: #302f2a;
+        --accent: #ed9677;
+        --accent-dark: #f0a385;
+        --panel: #1e1d19;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 18px/1.62 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: none; }
+    .wrap { width: min(100% - 3rem, 68rem); margin: 0 auto; }
+
+    nav { border-bottom: 1px solid var(--rule); }
+    nav .wrap {
+      min-height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .mark {
+      color: var(--fg);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.2rem; }
+    .nav-link {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    .page-hero { padding: 5rem 0 3.5rem; border-bottom: 1px solid var(--rule); }
+    .page-hero .wrap { max-width: 52rem; }
+    .eyebrow, h2, .label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 1.2rem; }
+    h1 {
+      font-size: clamp(1.55rem, 2.7vw, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.16;
+      margin: 0 0 1.5rem;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      line-height: 1.48;
+      margin: 0 0 2rem;
+      max-width: 43rem;
+    }
+
+    .form-section { padding: 4rem 0 5rem; }
+    .form-section .wrap { max-width: 48rem; }
+
+    .form-card {
+      background: var(--panel);
+      border: 1px solid var(--rule);
+      padding: 2.5rem;
+    }
+
+    .field { margin-bottom: 1.75rem; }
+    .field label {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--fg);
+      margin-bottom: .6rem;
+    }
+    .field label .optional {
+      font-weight: 400;
+      color: var(--muted);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .field input[type="text"],
+    .field input[type="email"],
+    .field input[type="tel"],
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: .7rem .85rem;
+      font: inherit;
+      color: var(--fg);
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 0;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .field textarea { resize: vertical; min-height: 80px; }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .chat-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+    }
+    .chat-options label {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--fg);
+      cursor: pointer;
+      padding: .4rem .5rem;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      border-radius: 0;
+      transition: border-color .15s;
+    }
+    .chat-options label:hover { border-color: var(--accent); }
+    .chat-options input[type="radio"] { margin: 0; accent-color: var(--accent); }
+
+    .time-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .time-options label {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--fg);
+      cursor: pointer;
+      padding: .4rem .65rem;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      border-radius: 0;
+      transition: border-color .15s;
+    }
+    .time-options label:hover { border-color: var(--accent); }
+    .time-options input[type="radio"] { margin: 0; accent-color: var(--accent); }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      align-items: center;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      display: inline-flex;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: .07em;
+      min-height: 3rem;
+      padding: .7rem 1.4rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .button:hover { background: var(--accent-dark); color: #fff; }
+
+    .note {
+      font-size: .85rem;
+      color: var(--muted);
+      max-width: 38rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .92rem;
+      padding: 2.5rem 0 4rem;
+    }
+    footer p { margin-bottom: .4rem; }
+
+    @media (max-width: 600px) {
+      .field-row { grid-template-columns: 1fr; }
+      .chat-options { grid-template-columns: 1fr; }
+      .time-options { flex-direction: column; }
+      .form-card { padding: 1.5rem; }
+      .page-hero { padding: 3.5rem 0 2.5rem; }
+      .form-section { padding: 3rem 0 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a class="mark" href="index.html">Triangle</a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html#pilot">The pilot</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="biblical-foundations.html">Biblical foundations</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Begin with a live decision</p>
+      <h1>Talk about a live decision</h1>
+      <p class="lead">
+        Bring one decision that exposed the problem and one decision coming up.
+        We will see whether there is a credible ninety-day test.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <div class="wrap">
+        <div class="form-card">
+          <form id="decision-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required
+                     placeholder="Your name" autocomplete="name">
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required
+                       placeholder="you@company.com" autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="mobile">Mobile <span class="optional">(optional)</span></label>
+                <input type="tel" id="mobile" name="mobile"
+                       placeholder="+44 7700 900000" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Preferred online chat interface</label>
+              <div class="chat-options">
+                <label>
+                  <input type="radio" name="chat_interface" value="Microsoft Teams" checked>
+                  Microsoft Teams
+                </label>
+                <label>
+                  <input type="radio" name="chat_interface" value="Slack">
+                  Slack
+                </label>
+                <label>
+                  <input type="radio" name="chat_interface" value="Zoom">
+                  Zoom
+                </label>
+                <label>
+                  <input type="radio" name="chat_interface" value="Google Meet">
+                  Google Meet
+                </label>
+                <label>
+                  <input type="radio" name="chat_interface" value="WhatsApp">
+                  WhatsApp
+                </label>
+                <label>
+                  <input type="radio" name="chat_interface" value="Other">
+                  Other
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="other-chat" class="optional" style="margin-top: .5rem;">
+                If other, which interface?
+              </label>
+              <input type="text" id="other-chat" name="other_chat"
+                     placeholder="e.g. Webex, in-app chat">
+            </div>
+
+            <div class="field">
+              <label>Good time to call</label>
+              <div class="time-options">
+                <label>
+                  <input type="radio" name="call_time" value="Morning (8–11)" checked>
+                  Morning (8–11)
+                </label>
+                <label>
+                  <input type="radio" name="call_time" value="Midday (11–14)">
+                  Midday (11–14)
+                </label>
+                <label>
+                  <input type="radio" name="call_time" value="Afternoon (14–17)">
+                  Afternoon (14–17)
+                </label>
+                <label>
+                  <input type="radio" name="call_time" value="Evening (17–19)">
+                  Evening (17–19)
+                </label>
+                <label>
+                  <input type="radio" name="call_time" value="Flexible">
+                  Flexible
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="decision">The decision you want to bring</label>
+              <textarea id="decision" name="decision" rows="3"
+                        placeholder="One sentence describing the decision that exposed the problem, and one coming up."></textarea>
+            </div>
+
+            <div class="submit-row">
+              <button type="submit" class="button">Send</button>
+              <span class="note">
+                I will read every message and reply within two working days.
+                No newsletter, no forwarding.
+              </span>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Triangle · three decide, and the dissent is kept.</p>
+      <p><a href="mailto:martin.beyst@gmail.com">martin.beyst@gmail.com</a> · <a href="research.html">Research</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Handle form submission without a backend endpoint.
+    // Replace the formspree action above with your own endpoint when ready.
+    // This fallback constructs a mailto link so nothing is lost before that's set up.
+    const form = document.getElementById('decision-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const data = new FormData(form);
+      const name = data.get('name') || '';
+      const email = data.get('email') || '';
+      const mobile = data.get('mobile') || '';
+      const chat = data.get('chat_interface') || '';
+      const otherChat = data.get('other_chat') || '';
+      const callTime = data.get('call_time') || '';
+      const decision = data.get('decision') || '';
+
+      const body = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Mobile: ${mobile || '—'}`,
+        `Preferred chat: ${chat}${otherChat ? ` (${otherChat})` : ''}`,
+        `Good time to call: ${callTime}`,
+        ``,
+        `Decision to bring:`,
+        `${decision}`
+      ].join('\n');
+
+      const subject = 'Triangle — live decision enquiry';
+      const mailto = `mailto:martin.beyst@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Open the mail client as a fallback. Replace this block with a fetch()
+      // to your form endpoint when you have one configured.
+      window.location.href = mailto;
+    });
+  </script>
+
+</body>
+</html>
