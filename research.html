@@ -35,56 +35,38 @@
     color:var(--accent);font-weight:600;margin:0 0 1.25rem
   }
   .mark a{color:var(--accent);text-decoration:none}
-  h1{font-size:2.4rem;line-height:1.15;margin:0 0 1rem;font-weight:normal;letter-spacing:-.01em}
-  .sub{font-size:1.2rem;color:var(--muted);margin:0;line-height:1.45}
-  h2{
+  h1{font-size:2.4rem;line-height:1.15;margin:0 0 1rem;font-weight:400}
+  h2{font-size:1.5rem;line-height:1.25;margin:2.5rem 0 .75rem;font-weight:400}
+  h2 .n{
+    display:inline-block;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);font-weight:600;
-    margin:4rem 0 1.5rem;padding-bottom:.6rem;border-bottom:1px solid var(--rule)
+    font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);margin-right:.5rem;vertical-align:middle
   }
-  h2 .n{color:var(--accent);margin-right:.7rem}
-  p{margin:0 0 1.1rem}
-  strong{font-weight:600}
-  .claim{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
-    color:var(--warn);display:block;margin:2rem 0 .4rem
-  }
-  .cap{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
-    color:var(--ink);display:block;margin:2rem 0 .4rem
-  }
-  table{border-collapse:collapse;width:100%;margin:1.5rem 0;font-size:.95rem;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
-  th,td{text-align:left;padding:.5rem .8rem .5rem 0;border-bottom:1px solid var(--rule)}
-  th{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
-  td.num{text-align:right;padding-right:0}
+  p{margin:0 0 1rem;text-align:justify}
   a{color:var(--accent)}
-  .mail{display:inline-block;margin-top:.5rem;font-size:1.1rem;
-    border-bottom:1px solid var(--accent);text-decoration:none}
-  .refs{font-size:.9rem;color:var(--muted);line-height:1.5}
-  .refs p{margin:0 0 .55rem}
-  footer{margin-top:5rem;padding:2.5rem 0 4rem;border-top:1px solid var(--rule);
-    color:var(--muted);font-size:.95rem}
-  @media(max-width:600px){
-    body{font-size:17px}
-    h1{font-size:1.9rem}
-    header{padding:3rem 0 2rem}
+  .cap{
+    display:block;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--warn);font-weight:600;margin:1.5rem 0 .5rem
   }
+  .refs p{font-size:.85rem;line-height:1.5;text-align:left}
+  footer{margin:3rem 0;padding:2rem 0;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted)}
+  footer p{margin:0}
+  .mail{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:.9rem}
+  blockquote{border-left:3px solid var(--rule);margin:0 0 1rem;padding:.25rem 1rem;color:var(--muted);font-style:italic}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <header>
-  <p class="mark"><a href="index.html">Triangle</a> — Research · <a href="biblical-foundations.html">Biblical foundations</a></p>
+  <div class="mark"><a href="index.html">Triangle for organisations</a></div>
   <h1>Theoretical grounding</h1>
-  <p class="sub">Every theorem stated as it actually is, including where it argues against the design.</p>
+  <p style="font-size:1.05rem;color:var(--muted);text-align:left">Every theorem stated as it actually is, including where it argues against the design.</p>
 </header>
 
-<h2>Position</h2>
+<h2><span class="n">Position</span></h2>
 
 <p>Organisations produce decisions continuously and record almost nothing about how they were reached. The conclusion survives. The reasoning, the dissent, and the dependency structure do not.</p>
 
@@ -92,69 +74,83 @@
 
 <p>Triangle is an attempt to produce that missing artifact — a structured, outcome-verified record of human judgment — as a by-product of running normal meetings.</p>
 
+<p>What the record verifies is whether the reasoning held up: whether the premises were later reversed, whether the decision was revisited, whether the expected result appeared or was contradicted by events. That is a narrower claim than "the decision was correct," and it is the claim the architecture can actually support.</p>
+
 <p>We make no claim that this is solved. Below is the reasoning, the evidence, and an explicit statement of what remains open.</p>
 
-<h2><span class="n">1</span>Group size</h2>
+<h2><span class="n">1</span>The competence condition</h2>
 
-<p><strong>Condorcet's Jury Theorem</strong> (1785) states that where individuals judge independently and each is correct with probability <em>p</em>, the majority outperforms the individual if <em>p</em> &gt; 0.5, and improves as the group grows. The theorem is symmetrical: where <em>p</em> &lt; 0.5, larger groups converge on certainty of error.</p>
+<p>"Three heads are better than one." It's one of those sayings everyone affirms and nobody examines. You've heard it. It feels true because it sounds wise — and it's also not automatically true.</p>
 
-<span class="claim">We do not claim Condorcet justifies a three-person group</span>
-<p>It does not. Taken at face value it argues for large groups. We deploy triads for three reasons, none of which is the theorem's headline result.</p>
+<p>It depends on whether each of those three heads is more likely right than wrong.</p>
 
-<p><strong>Marginal return.</strong> At an individual accuracy of 60%, moving from one decision-maker to three yields the largest single gain available. Returns diminish sharply while accountability, latency and attention all degrade.</p>
+<p>The uncomfortable fact, majority voting only amplifies accuracy when each person is more likely right than wrong. Below that line, adding more people makes the decision worse — not gradually, but reliably and fast. A big room full of people who are each slightly misinformed doesn't self-correct. It converges on the wrong answer with growing confidence.</p>
 
-<table>
-  <tr><th>Decision-makers</th><th class="num">Majority correct</th><th class="num">Gain</th></tr>
-  <tr><td>1</td><td class="num">60.0%</td><td class="num">—</td></tr>
-  <tr><td>3</td><td class="num">64.8%</td><td class="num">+4.8</td></tr>
-  <tr><td>5</td><td class="num">68.3%</td><td class="num">+3.5</td></tr>
-  <tr><td>9</td><td class="num">73.3%</td><td class="num">+2.3</td></tr>
-</table>
+<p>This is the competence condition, and it is the floor beneath everything Triangle does.</p>
 
-<p><strong>The competence condition.</strong> The theorem's content is conditional on <em>p</em> &gt; 0.5. Below that line, group decision-making amplifies error. No organisation measures which side of that line its people are on; competence is inferred from seniority. This is the condition our measurement layer exists to establish. It is not an additional feature — it is what makes the theorem applicable at all.</p>
+<p>The classical result — Condorcet's Jury Theorem (1785) — says that where individuals judge independently and each is correct with probability p, the majority outperforms the individual if p > 0.5, and improves as the group grows. The theorem is symmetrical: where p < 0.5, larger groups converge on certainty of error. The same mechanism that produces collective wisdom above the line produces collective delusion below it.</p>
 
-<p><strong>Independence fails in organisations.</strong> Condorcet requires conditionally independent judgments. Colleagues share managers, briefings, incentives and information sources, and correlation degrades the result sharply (Ladha 1992; Boland 1989; Dietrich &amp; Spiekermann on the common-cause problem). Under correlation the asymptotic result does not merely weaken — it fails.</p>
+<p>Triangle assumes triads can make better decisions than individuals. It does not claim to make people competent. The question the design sets out to answer is whether an organisation can tell, for any given decision, whether that assumption holds.</p>
+
+<p>Triangle's outcome-tracking is built to surface that over time — recording what was decided, what it rested on, and how it turned out — so that competence becomes visible rather than assumed. Routing To people with knowledge and understanding, rather than guessing who has it.</p>
+
+<p>With appropriate tracking and behaviour, triads become more than a meeting format. They become a way to route decisions to the people most likely to get them right. If either fails, three heads are just three heads.</p>
+
+<p>The asymptotic result is the prize. Condorcet's theorem is a limit result: if you have enough independent voters, each better than random, the majority gets it right with certainty. That convergence — the behaviour as the group grows without bound — is what the theorem promises. It is the theoretical endpoint of collective decision-making: more qualified, independent voices, and accuracy climbs toward 100%.</p>
+
+<p>In practice, no organisation reaches it. Correlation kills the mechanism. Shared managers, shared briefings, shared incentives — once voters are not independent, adding more people does not converge on truth. The asymptotic guarantee is gone, not weakened. You cannot fix it by adding people, because the precondition the theorem requires is absent.</p>
+
+<p>Triangle's outcome-tracking is designed to change that. If you can record what was decided, what it rested on, and how it turned out, you can identify who is actually competent — who has been right, on what, and how confident they were. You can route decisions to people above chance rather than guessing at it. You can reduce correlation by diversifying who hears what before they decide.</p>
+
+<p>That turns the asymptotic result from a theorem about infinite hypothetical voters into a practical design target. Add more qualified, independent voices, and accuracy climbs. Without competence tracking, "more voices" is just more noise. With it, "more voices" becomes a mechanism that actually works — because you are adding qualified voices, not just more of them.</p>
+
+<p>This is the difference between hoping three heads are better than one and engineering it. The theorem says it is possible. Triangle is designed to make it reachable.</p>
+
+<p>Independence fails in organisations. Condorcet requires conditionally independent judgments. Colleagues share managers, briefings, incentives and information sources, and correlation degrades the result sharply (Ladha 1992; Boland 1989; Dietrich &amp; Spiekermann on the common-cause problem). Under correlation the asymptotic result does not merely weaken — it fails.</p>
 
 <p>We do not claim triads preserve independence. In a deliberative meeting everyone hears everyone before any position is recorded, so anchoring is substantial. We claim only that a triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost.</p>
 
-<p><strong>May's Theorem</strong> (1952) does the work Condorcet is often wrongly asked to do. For a binary choice, simple majority is the unique rule satisfying anonymity, neutrality and positive responsiveness. This justifies two-of-three directly, and shows that supermajority thresholds violate neutrality by privileging the status quo — which is why unanimity is preferred here but not required.</p>
+<p>Countermeasures to gaming the system are discussed in section seven. The current implementation lies somewhat on ethical behaviour of participants.</p>
 
-<p>Arrow's Impossibility Theorem does not apply: it concerns preference orderings over three or more options, and these decisions are binary.</p>
+<h2><span class="n">2</span>Fairness and the binary rule</h2>
 
-<h2><span class="n">2</span>Aggregation</h2>
+<p>May's Theorem (1952) answers a question Condorcet never asked: not whether majority voting works, but whether it is the fair way to decide a yes/no question.</p>
 
-<p><strong>The discursive dilemma.</strong> Where a decision rests on multiple conditions, aggregating over the conditions and aggregating over the conclusion can yield opposite results from the same individual judgments. Three judges, each internally consistent, can produce a majority for each premise and a majority against the conclusion (Kornhauser &amp; Sager 1986).</p>
+<p>Kenneth May proved that for any binary choice, simple majority is the only rule that satisfies three conditions at once:</p>
 
-<p><strong>List &amp; Pettit</strong> (2002) generalise this to an impossibility result: no aggregation function satisfying universal domain, anonymity and systematicity guarantees a consistent collective judgment set on a non-trivial agenda. It is the judgment-aggregation analogue of Arrow.</p>
+<p>Anonymity — every voter counts the same. No one's vote is weighted more heavily.<br>
+Neutrality — the rule treats both options symmetrically. It does not privilege "yes" over "no" or vice versa.<br>
+Positive responsiveness — if the result is a tie and one person changes their mind to the winning side, the outcome flips. The rule responds to changed minds.</p>
 
-<span class="claim">We do not escape this. Nothing does.</span>
-<p>Triangle's response is to make the choice explicit rather than accidental. Positions are recorded per condition rather than on the decision as a whole, which also corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.</p>
+<p>Any other rule — supermajority, unanimity, weighted voting, a single decision-maker — breaks at least one of these. That is the theorem. It is not a claim that majority voting produces good decisions. It is a claim that, for a yes/no question, it is the only rule that treats everyone equally, treats both sides equally, and actually moves when people change their minds.</p>
+
+<p>This is what Condorcet is often wrongly asked to do. Condorcet tells you when majority voting works — when each voter is more likely right than wrong, and independent. May tells you that, for a binary choice, majority voting is the only fair way to aggregate whatever judgments people bring. The two results are complementary, and they answer different questions.</p>
+
+<p>For Triangle, this is the formal grounding for two-of-three. It is not an assumption or a convention. It is the unique rule that satisfies the fairness conditions for a binary decision among three people.</p>
+
+<p>It also tells you what is wrong with the alternatives. A supermajority threshold — requiring two-thirds or three-quarters to decide — violates neutrality by privileging the status quo. The rule makes it harder to change a decision than to leave it where it is, which means the option that was there first has an advantage the other does not. Unanimity does the same thing more extremely: a single dissenter blocks the decision, and the status quo prevails by default.</p>
+
+<p>This is why unanimity is preferred in Triangle but not required. It is the strongest possible consensus signal — everyone agrees — and when it appears it is worth recording. But as a decision rule it is paralysing: one person can hold the whole group. The design prefers the outcome that moves, and records the dissent, to the outcome that does not move because one person objected.</p>
+
+<p>May's Theorem does not extend to decisions with three or more options. For those, Arrow's Impossibility Theorem is the relevant result — and it is why Triangle decomposes multi-option questions into a series of binary ones rather than asking a triad to rank alternatives. Arrow's Theorem does not apply to the binary decisions Triangle actually makes.</p>
+
+<h2><span class="n">3</span>Aggregation</h2>
+
+<p>The discursive dilemma. Where a decision rests on multiple conditions, aggregating over the conditions and aggregating over the conclusion can yield opposite results from the same set of individual judgments. Three judges, each internally consistent, each voting on two premises and a conclusion, can produce a majority for each premise and a majority against the conclusion (Kornhauser &amp; Sager 1986).</p>
+
+<p>List &amp; Pettit (2002) generalise this to an impossibility result: no aggregation function satisfying universal domain, anonymity and systematicity guarantees a consistent collective judgment set on a non-trivial agenda. It is the judgment-aggregation analogue of Arrow.</p>
+
+<p>We do not escape this. Nothing does.</p>
+
+<p>Triangle's response is to make the choice explicit rather than accidental. The facilitator frames the conditions that the decision rests on. Positions are recorded per condition rather than on the decision as a whole, which also corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.</p>
+
+<p>The framing is presented to the triad for challenge before any position is recorded. If the conditions are contested, the facilitator reframes. The conditions are not imposed by the system — they are stated by a human who is also a voter, and can be outvoted on the outcome.</p>
 
 <p>Which error is cheaper depends on reversibility. We treat it as a parameter rather than pretending there is a neutral default.</p>
 
-<p><strong>Related but distinct:</strong> aggregating verdicts across groups rather than individuals produces the referendum paradox, in which a minority of individuals can carry a majority of groups. This is why Triangle does not nest triads or aggregate their verdicts. See section 4.</p>
+<p>Related but distinct: aggregating verdicts across groups rather than individuals produces the referendum paradox, in which a minority of individuals can carry a majority of groups. This is why Triangle does not nest triads or aggregate their verdicts. See section five.</p>
 
-<p><strong>Group agency.</strong> List &amp; Pettit's wider argument is that for a group to bear responsibility — for "the organisation decided" to be coherent — its judgments must be consistent and closed under entailment. The impossibility result shows that consistency is not free. Group agency has to be engineered. That is the claim underlying our interest in institutional accountability, and it is a design problem rather than a natural property of people in a room.</p>
-
-<h2><span class="n">3</span>Measurement</h2>
-
-<p>Positions are recorded as agree, disagree, neutral, or propose an alternative. Participants are not asked to state numerical confidence.</p>
-
-<span class="claim">We have deliberately given up calibration measurement</span>
-<p>Strictly proper scoring rules such as the Brier score require graded probability forecasts and cannot be applied to categorical positions. We do not apply them, and we do not claim to measure calibration or overconfidence. Earlier versions of this page did; that was an error and it has been removed.</p>
-
-<p>The reasoning for the trade is threefold. Self-reported confidence is an introspective judgment, and its error is systematic rather than random — it correlates with seniority, culture and personality, so it introduces bias that must then be modelled out. Untrained participants without feedback loops produce poor probability estimates. And a confidence field reintroduces the retrospective hedge — <em>I had doubts but went along with it</em> — that a categorical position record is designed to eliminate.</p>
-
-<p>We note the counter-argument honestly: trained forecasters produce genuinely informative probability estimates, and coarsening their forecasts measurably degrades accuracy. Our position is that this holds for trained, self-selected, feedback-supported forecasters and not for a general workforce in a Tuesday meeting. It is an empirical claim about our population, not a general dismissal of probability elicitation.</p>
-
-<span class="cap">What remains measurable is discrimination</span>
-<p>Over a sufficient number of resolved decisions, one can ask whether a person's agreement predicts a different outcome from their disagreement. Simulation indicates this separates a knowledgeable participant from a noisy one within roughly fifty resolved decisions — substantially fewer than calibration measurement would require.</p>
-
-<p>Discrimination is the component of forecasting skill that reflects genuine knowledge. Calibration, by contrast, is trainable within weeks. Giving up the trainable half to gain adoption is, we think, the right trade.</p>
-
-<p><strong>Known vulnerability:</strong> a participant who never disagrees has no comparison group and can appear to discriminate perfectly. A minimum number of resolved positions in both directions is required before any score is produced.</p>
-
-<p><strong>Delivery is recorded separately and never combined.</strong> Judgment and execution are distinct competences. Merging them into a single score would route decision authority toward the best operators, which is the failure mode the architecture exists to avoid.</p>
+<p>Group agency. List &amp; Pettit's wider argument is that for a group to bear responsibility — for "the organisation decided" to be coherent — its judgments must be consistent and closed under entailment. The impossibility result shows that consistency is not free. Group agency has to be engineered. That is the claim underlying our interest in institutional accountability, and it is a design problem rather than a natural property of people in a room.</p>
 
 <h2><span class="n">4</span>Scaling: decomposition, not aggregation</h2>
 
@@ -164,9 +160,9 @@
 
 <p>A triad ruling on a large question spawns the sub-decisions it does not own, each routed to its own triad, in parallel. A triad blocked for want of an input spawns the blocking question and routes it laterally to whoever owns it, rather than escalating to a less-informed authority.</p>
 
-<p><strong>Consequences.</strong> The referendum paradox cannot arise, because no question is ever decided by more than one triad — a dissolution rather than a fix. Revisiting becomes a graph query: each decision records what it rested on, and when a parent is re-decided, descendants are flagged. Circular dependencies become detectable, and can be broken by identifying which decision must be made on a stated assumption.</p>
+<p>Consequences. The referendum paradox cannot arise, because no question is ever decided by more than one triad — a dissolution rather than a fix. Revisiting becomes a graph query: each decision records what it rested on, and when a parent is re-decided, descendants are flagged. Circular dependencies become detectable, and can be broken by identifying which decision must be made on a stated assumption.</p>
 
-<span class="claim">This does not eliminate judgment aggregation — it relocates it</span>
+<p>This does not eliminate judgment aggregation — it relocates it</p>
 <p>Where triad C's decision depends on rulings by triads A and B, C is bound by them, which is premise-based aggregation distributed across groups. C may therefore be pushed toward a conclusion its own members would not independently reach. Our proposed resolution is that a bound triad may formally reopen a prior decision rather than override it: prior rulings cannot be ignored, but can be sent back to their owners. This is designed, not built, and not yet tested.</p>
 
 <p><strong>Known vulnerability:</strong> decomposition permits salami-slicing — splitting a decision until each part is individually approvable. Any decision spawning children should retain a closing decision reviewing the whole. This is specified and not yet implemented.</p>
