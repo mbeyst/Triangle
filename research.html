@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
+<html lang="en-GB"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Triangle — Theoretical grounding</title>
@@ -79,7 +78,7 @@
 <div class="wrap">
 
 <header>
-  <p class="mark"><a href="index.html">Triangle</a> — Research · <a href="biblical-foundations.html">Biblical foundations</a></p>
+  <p class="mark"><a href="index.html">Triangle</a> — Research</p>
   <h1>Theoretical grounding</h1>
   <p class="sub">Every theorem stated as it actually is, including where it argues against the design.</p>
 </header>
@@ -96,39 +95,68 @@
 
 <h2><span class="n">1</span>Group size</h2>
 
-<p><strong>Condorcet's Jury Theorem</strong> (1785) states that where individuals judge independently and each is correct with probability <em>p</em>, the majority outperforms the individual if <em>p</em> &gt; 0.5, and improves as the group grows. The theorem is symmetrical: where <em>p</em> &lt; 0.5, larger groups converge on certainty of error.</p>
+<p><strong>"Three heads are better than one."</strong> It's one of those sayings everyone affirms and nobody examines. You've heard it. You've probably said it. It feels true because it sounds wise — and it's also not automatically true.</p>
 
-<span class="claim">We do not claim Condorcet justifies a three-person group</span>
-<p>It does not. Taken at face value it argues for large groups. We deploy triads for three reasons, none of which is the theorem's headline result.</p>
+<p>It depends on whether each of those three heads is more likely right than wrong.</p>
 
-<p><strong>Marginal return.</strong> At an individual accuracy of 60%, moving from one decision-maker to three yields the largest single gain available. Returns diminish sharply while accountability, latency and attention all degrade.</p>
+<p>Jumping straight into a theorem will put a lot of people off and make this look like an academic football game. So here's the uncomfortable fact, stated plainly: majority voting only amplifies accuracy when each person is more likely right than wrong. Below that line, adding more people makes the decision worse — not gradually, but reliably and fast. A big room full of people who are each slightly misinformed doesn't self-correct. It converges on the wrong answer with growing confidence.</p>
 
-<table>
-  <tr><th>Decision-makers</th><th class="num">Majority correct</th><th class="num">Gain</th></tr>
-  <tr><td>1</td><td class="num">60.0%</td><td class="num">—</td></tr>
-  <tr><td>3</td><td class="num">64.8%</td><td class="num">+4.8</td></tr>
-  <tr><td>5</td><td class="num">68.3%</td><td class="num">+3.5</td></tr>
-  <tr><td>9</td><td class="num">73.3%</td><td class="num">+2.3</td></tr>
-</table>
+<p>This is the competence condition, and it is the floor beneath everything Triangle does.</p>
 
-<p><strong>The competence condition.</strong> The theorem's content is conditional on <em>p</em> &gt; 0.5. Below that line, group decision-making amplifies error. No organisation measures which side of that line its people are on; competence is inferred from seniority. This is the condition our measurement layer exists to establish. It is not an additional feature — it is what makes the theorem applicable at all.</p>
+<p>The classical result — Condorcet's Jury Theorem (1785) — says that where individuals judge independently and each is correct with probability <em>p</em>, the majority outperforms the individual if <em>p</em> &gt; 0.5, and improves as the group grows. The theorem is symmetrical: where <em>p</em> &lt; 0.5, larger groups converge on certainty of error. The same mechanism that produces collective wisdom above the line produces collective delusion below it.</p>
+
+<p>Triangle assumes triads can make better decisions than individuals. It does not claim to make people competent. The question the design sets out to answer is whether an organisation can tell, for any given decision, whether that assumption holds.</p>
+
+<p>Triangle's outcome-tracking is built to surface that over time — recording what was decided, what it rested on, and how it turned out — so that competence becomes visible rather than assumed. Who has been right, on what, and how confident they were. Routing aggregation to people above chance instead of guessing at it.</p>
+
+<p>This is a design goal, not a demonstrated property. The incentive problems in section 6 — scores that affect standing, participants who control the outcomes they're assessed on, premises that can be voted on strategically — are the main things that can undermine it. Every mechanism that records more creates more that can be manipulated, and the defences are currently procedural rather than technical.</p>
+
+<p>If the condition holds and the tracking works, triads become more than a meeting format. They become a way to route decisions to the people most likely to get them right. If either fails, three heads are just three heads.</p>
+
+<p><strong>The asymptotic result is the prize.</strong> Condorcet's theorem is a limit result: if you have enough independent voters, each better than random, the majority gets it right with certainty. That convergence — the behaviour as the group grows without bound — is what the theorem promises. It is the theoretical endpoint of collective decision-making: more qualified, independent voices, and accuracy climbs toward 100%.</p>
+
+<p>In practice, no organisation reaches it. Correlation kills the mechanism. Shared managers, shared briefings, shared incentives — once voters are not independent, adding more people does not converge on truth. The asymptotic guarantee is gone, not weakened. You cannot fix it by adding people, because the precondition the theorem requires is absent.</p>
+
+<p>Triangle's outcome-tracking is designed to change that. If you can record what was decided, what it rested on, and how it turned out, you can identify who is actually competent — who has been right, on what, and how confident they were. You can route decisions to people above chance rather than guessing at it. You can reduce correlation by diversifying who hears what before they decide.</p>
+
+<p>That turns the asymptotic result from a theorem about infinite hypothetical voters into a practical design target. Add more qualified, independent voices, and accuracy climbs. Without competence tracking, "more voices" is just more noise. With it, "more voices" becomes a mechanism that actually works — because you are adding qualified voices, not just more of them.</p>
+
+<p>This is the difference between hoping three heads are better than one and engineering it. The theorem says it is possible. Triangle is designed to make it reachable.</p>
 
 <p><strong>Independence fails in organisations.</strong> Condorcet requires conditionally independent judgments. Colleagues share managers, briefings, incentives and information sources, and correlation degrades the result sharply (Ladha 1992; Boland 1989; Dietrich &amp; Spiekermann on the common-cause problem). Under correlation the asymptotic result does not merely weaken — it fails.</p>
 
 <p>We do not claim triads preserve independence. In a deliberative meeting everyone hears everyone before any position is recorded, so anchoring is substantial. We claim only that a triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost.</p>
 
-<p><strong>May's Theorem</strong> (1952) does the work Condorcet is often wrongly asked to do. For a binary choice, simple majority is the unique rule satisfying anonymity, neutrality and positive responsiveness. This justifies two-of-three directly, and shows that supermajority thresholds violate neutrality by privileging the status quo — which is why unanimity is preferred here but not required.</p>
+<p><strong>May's Theorem</strong> (1952) answers a question Condorcet never asked: not whether majority voting works, but whether it is the fair way to decide a yes/no question.</p>
 
-<p>Arrow's Impossibility Theorem does not apply: it concerns preference orderings over three or more options, and these decisions are binary.</p>
+<p>Kenneth May proved that for any binary choice, simple majority is the <em>only</em> rule that satisfies three conditions at once:</p>
+
+<p><strong>Anonymity</strong> — every voter counts the same. No one's vote is weighted more heavily.</p>
+<p><strong>Neutrality</strong> — the rule treats both options symmetrically. It does not privilege "yes" over "no" or vice versa.</p>
+<p><strong>Positive responsiveness</strong> — if the result is a tie and one person changes their mind to the winning side, the outcome flips. The rule responds to changed minds.</p>
+
+<p>Any other rule — supermajority, unanimity, weighted voting, a single decision-maker — breaks at least one of these. That is the theorem. It is not a claim that majority voting produces good decisions. It is a claim that, for a yes/no question, it is the only rule that treats everyone equally, treats both sides equally, and actually moves when people change their minds.</p>
+
+<p>This is what Condorcet is often wrongly asked to do. Condorcet tells you when majority voting <em>works</em> — when each voter is more likely right than wrong, and independent. May tells you that, for a binary choice, majority voting is the only <em>fair</em> way to aggregate whatever judgments people bring. The two results are complementary, and they answer different questions.</p>
+
+<p>For Triangle, this is the formal grounding for two-of-three. It is not an assumption or a convention. It is the unique rule that satisfies the fairness conditions for a binary decision among three people.</p>
+
+<p>It also tells you what is wrong with the alternatives. A supermajority threshold — requiring two-thirds or three-quarters to decide — violates neutrality by privileging the status quo. The rule makes it harder to change a decision than to leave it where it is, which means the option that was there first has an advantage the other does not. Unanimity does the same thing more extremely: a single dissenter blocks the decision, and the status quo prevails by default.</p>
+
+<p>This is why unanimity is preferred in Triangle but not required. It is the strongest possible consensus signal — everyone agrees — and when it appears it is worth recording. But as a decision rule it is paralysing: one person can hold the whole group. The design prefers the outcome that moves, and records the dissent, to the outcome that does not move because one person objected.</p>
+
+<p>May's Theorem does not extend to decisions with three or more options. For those, Arrow's Impossibility Theorem is the relevant result — and it is why Triangle decomposes multi-option questions into a series of binary ones rather than asking a triad to rank alternatives. Arrow's Theorem does not apply to the binary decisions Triangle actually makes.</p>
 
 <h2><span class="n">2</span>Aggregation</h2>
 
-<p><strong>The discursive dilemma.</strong> Where a decision rests on multiple conditions, aggregating over the conditions and aggregating over the conclusion can yield opposite results from the same individual judgments. Three judges, each internally consistent, can produce a majority for each premise and a majority against the conclusion (Kornhauser &amp; Sager 1986).</p>
+<p><strong>The discursive dilemma.</strong> Where a decision rests on multiple conditions, aggregating over the conditions and aggregating over the conclusion can yield opposite results from the same set of individual judgments. Three judges, each internally consistent, each voting on two premises and a conclusion, can produce a majority for each premise and a majority against the conclusion (Kornhauser &amp; Sager 1986).</p>
 
 <p><strong>List &amp; Pettit</strong> (2002) generalise this to an impossibility result: no aggregation function satisfying universal domain, anonymity and systematicity guarantees a consistent collective judgment set on a non-trivial agenda. It is the judgment-aggregation analogue of Arrow.</p>
 
 <span class="claim">We do not escape this. Nothing does.</span>
-<p>Triangle's response is to make the choice explicit rather than accidental. Positions are recorded per condition rather than on the decision as a whole, which also corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.</p>
+<p>Triangle's response is to make the choice explicit rather than accidental. The facilitator frames the conditions that the decision rests on. Positions are recorded per condition rather than on the decision as a whole, which also corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.</p>
+
+<p>The framing is presented to the triad for challenge before any position is recorded. If the conditions are contested, the facilitator reframes. The conditions are not imposed by the system — they are stated by a human who is also a voter, and can be outvoted on the outcome.</p>
 
 <p>Which error is cheaper depends on reversibility. We treat it as a parameter rather than pretending there is a neutral default.</p>
 
@@ -138,14 +166,21 @@
 
 <h2><span class="n">3</span>Measurement</h2>
 
-<p>Positions are recorded as agree, disagree, neutral, or propose an alternative. Participants are not asked to state numerical confidence.</p>
+<p>Positions are recorded as <strong>agree</strong>, <strong>disagree</strong>, or <strong>neutral</strong>. Participants are not asked to state numerical confidence.</p>
 
-<span class="claim">We have deliberately given up calibration measurement</span>
-<p>Strictly proper scoring rules such as the Brier score require graded probability forecasts and cannot be applied to categorical positions. We do not apply them, and we do not claim to measure calibration or overconfidence. Earlier versions of this page did; that was an error and it has been removed.</p>
+<p><strong>Agree</strong> — the participant accepts the proposition as stated.</p>
+<p><strong>Disagree</strong> — the participant rejects the proposition as stated.</p>
+<p><strong>Neutral</strong> — the participant has not formed a position. This is a genuine outcome, not a failure to respond. It signals that the triangle has not yet resolved on this proposition.</p>
 
-<p>The reasoning for the trade is threefold. Self-reported confidence is an introspective judgment, and its error is systematic rather than random — it correlates with seniority, culture and personality, so it introduces bias that must then be modelled out. Untrained participants without feedback loops produce poor probability estimates. And a confidence field reintroduces the retrospective hedge — <em>I had doubts but went along with it</em> — that a categorical position record is designed to eliminate.</p>
+<span class="claim">Proposing an alternative is a reframe, not a position</span>
+<p>An alternative proposal is recorded separately from the position scale. It is not a position on the current proposition — it is the creation of a new one. When someone proposes an alternative, that alternative becomes a new statement for the next deliberation round, where the group then takes positions on it. This is how the triangle reframes and respawns.</p>
 
-<p>We note the counter-argument honestly: trained forecasters produce genuinely informative probability estimates, and coarsening their forecasts measurably degrades accuracy. Our position is that this holds for trained, self-selected, feedback-supported forecasters and not for a general workforce in a Tuesday meeting. It is an empirical claim about our population, not a general dismissal of probability elicitation.</p>
+<p>After each round, the distribution of positions determines the outcome:</p>
+<p>A clear majority of agree or disagree means the triangle has concluded on this proposition. A majority of neutral, or no clear majority, means the triangle has not reached a conclusion — the proposition remains open for further deliberation, reframing, or additional evidence.</p>
+
+<p>If participants cannot be brought to either agree or disagree, the proposition is undecided. This is not a breakdown — it is information. It tells you the proposition needs more work: reframing, more context, or a different group composition.</p>
+
+<p>Each response is recorded with its round number. Neutral in round one means "I have not yet formed a view." Neutral in round five means "I have considered the arguments and still cannot commit." The meaning of neutral changes as deliberation progresses, and round number preserves that distinction.</p>
 
 <span class="cap">What remains measurable is discrimination</span>
 <p>Over a sufficient number of resolved decisions, one can ask whether a person's agreement predicts a different outcome from their disagreement. Simulation indicates this separates a knowledgeable participant from a noisy one within roughly fifty resolved decisions — substantially fewer than calibration measurement would require.</p>
@@ -169,17 +204,25 @@
 <span class="claim">This does not eliminate judgment aggregation — it relocates it</span>
 <p>Where triad C's decision depends on rulings by triads A and B, C is bound by them, which is premise-based aggregation distributed across groups. C may therefore be pushed toward a conclusion its own members would not independently reach. Our proposed resolution is that a bound triad may formally reopen a prior decision rather than override it: prior rulings cannot be ignored, but can be sent back to their owners. This is designed, not built, and not yet tested.</p>
 
-<p><strong>Known vulnerability:</strong> decomposition permits salami-slicing — splitting a decision until each part is individually approvable. Any decision spawning children should retain a closing decision reviewing the whole. This is specified and not yet implemented.</p>
+<p><strong>Known vulnerability:</strong> decomposition permits salami-slicing — splitting a decision until each part is individually approvable. Any decision spawning children retains a closing decision reviewing the whole. The facilitator presents the closing assessment — the sub-decisions synthesised into a whole — and the triad takes a position on it: agree, disagree, or neutral. The facilitator's assessment is recorded but not binding. If the majority disagrees with the whole, the decision is blocked or sent back for re-deliberation. Any participant may also record a closing objection — agreement with each sub-decision but disagreement with the whole — which is logged in the decision record and flagged for review. This is the mechanism that prevents salami-slicing: the parts may pass individually, but the whole must also pass, and dissent on the whole is visible even when the majority agrees.</p>
+
+<p><strong>The facilitator decides decomposition.</strong> The facilitator decides when a decision should be split into sub-decisions and what those sub-decisions are. This is a natural extension of the framing role: if the facilitator frames the conditions, they also decide whether those conditions can be owned by one triad or need to be broken apart. The facilitator holds this role for one meeting. After the meeting, the other two participants can vote to replace the facilitator for the next meeting.</p>
+
+<p><strong>The facilitator's role in a meeting.</strong> Within a single meeting, the facilitator frames the conditions, decides whether to decompose, and presents the closing assessment. These are three distinct powers, and they are all held by one person for the duration of the meeting. The other two participants can challenge each of them: the framing can be contested and reframed, the decomposition can be questioned, and the closing assessment is not binding — the triad votes on the whole, and the facilitator is bound by the outcome like any other participant. After the meeting, the facilitator can be replaced for the next meeting by majority vote of the other two participants. The replaced facilitator can still participate as a regular member; they simply do not hold the framing role next time. What constitutes a poor performance is not exhaustively specified — contested framing that was not resolved, decomposition that was excessive or insufficient, or a closing assessment that ignored recorded dissent are examples. The mechanism is forward-looking: it rotates the role, it does not punish past decisions.</p>
+
+<p><strong>The facilitator is chosen at the start of every meeting.</strong> The participants vote for who should facilitate. No one may vote for themselves. If the vote produces a tie, the group resolves it by coin flip or by deferring to an external authority — whichever is more appropriate to the context. The choice is based on suitability for the role, not on reversibility of the decisions being made. The same facilitator holds the role for the duration of that meeting. After the meeting, the other two participants can vote to replace the facilitator for the next meeting.</p>
 
 <p>The graph structure was reached from an interest in physical lattices, graphene in particular, as an analogy for three-coordinate social structures. We present that as the origin of the idea and not as a derivation. No claim in this document rests on materials science.</p>
 
 <h2><span class="n">5</span>The role of the system</h2>
 
-<p>The AI transcribes discussion, identifies decisions and their conditions, and infers each participant's position. Every inference is presented for human confirmation and can be overwritten.</p>
+<p>The AI transcribes discussion, infers each participant's position, and presents every inference for human confirmation. Every inference can be overwritten.</p>
 
-<p>This is a substantial role, and it creates a genuine tension with the principle that machine systems should not hold decision authority. Whoever frames the question exercises real influence over the answer, and here the model does part of the framing.</p>
+<p>The facilitator frames the conditions that the decision rests on. The AI does not frame. This is deliberate: whoever frames the question exercises real influence over the answer, and here that influence belongs to a human who is also a voter, and can be outvoted on the outcome.</p>
 
-<p>Our response is measurement rather than assertion. Explicit voting is available and optional. Where participants vote, those votes serve as ground truth for the inference, and the resulting accuracy figure is published to the organisation. An organisation can begin with explicit voting and move to inference when the accuracy justifies it.</p>
+<p>This is a substantial role for the facilitator, and it creates a genuine tension with the principle that no single participant should hold disproportionate influence. The framing authority is balanced by the other two participants' ability to challenge and outvote. If the conditions are contested, the facilitator reframes. If the framing is not accepted, the triad does not proceed to voting.</p>
+
+<p>Our response to the framing-authority problem is measurement rather than assertion. Explicit voting is available and optional. Where participants vote, those votes serve as ground truth for the inference, and the resulting accuracy figure is published to the organisation. An organisation can begin with explicit voting and move to inference when the accuracy justifies it.</p>
 
 <p>We note that participants who opt into explicit voting are not a random sample, so the accuracy estimate is biased. We report it as an indication, not a validated measure.</p>
 
@@ -204,6 +247,12 @@
 
 <span class="cap">The public amendment window may under-serve quiet participants</span>
 <p>Amendment is public and reasoned, which prevents costless retrospective dissent. It may also deter exactly the participants whose views are hardest to capture. This is a live tension with the premise that small groups surface views large groups suppress. It is measurable in a pilot — who uses the window, and at what seniority — and we intend to measure it.</p>
+
+<span class="cap">Framing authority is concentrated in one participant</span>
+<p>The facilitator frames the conditions. The other two participants can challenge and outvote, but the framing itself is not voted on — it is presented, contested, and reframed if necessary. A facilitator who frames narrowly can constrain the decision without being outvoted on the framing itself. This is a known risk of the servant-leader model, and it is mitigated by the record: the conditions are visible in the decision record, and patterns of framing across decisions are reviewable.</p>
+
+<span class="cap">Facilitator authority is concentrated across three distinct powers</span>
+<p>Within a single meeting, the facilitator frames the conditions, decides whether to decompose, and presents the closing assessment. These are three separate powers — framing, decomposition, and closing — held by one person. The other two participants can challenge each of them, and the closing assessment is not binding, but the facilitator exercises influence before any position is recorded. This is not hidden: the framing is presented for challenge, the decomposition can be questioned, and the closing assessment is subject to a triad vote. The post-meeting replacement mechanism is the backstop: if the facilitator did not do a good job, the other two participants can choose someone else next time. What constitutes a poor performance is not exhaustively specified — contested framing that was not resolved, decomposition that was excessive or insufficient, or a closing assessment that ignored recorded dissent are examples. The mechanism is forward-looking: it rotates the role, it does not punish past decisions.</p>
 
 <h2><span class="n">7</span>Status</h2>
 
@@ -233,10 +282,11 @@
 </div>
 
 <footer>
-  <p><a href="index.html">← Triangle for organisations</a> · <a href="biblical-foundations.html">Biblical foundations</a></p>
+  <p><a href="index.html">← Triangle for organisations</a></p>
   <p>© 2026 Triangle</p>
 </footer>
 
 </div>
-</body>
-</html>
+
+
+</body></html>
