@@ -3,53 +3,159 @@ Biblical foundations
 
 © 2026 Triangle
 
-Position
+About this document
 
-Organisations produce decisions continuously and record almost nothing about how they were reached. The conclusion survives. The reasoning, the dissent, and the dependency structure do not.
+Triangle is a decision-making process organised around triads. This document describes each process, what it does, and its grounding in Scripture.
 
-This is a problem for the organisation, which cannot learn from its own history. It is also a problem for machine learning: models trained on organisational text inherit conclusions without the judgment that produced them, and without any signal about which sources were reliably right.
+The processes are: forming the triad, choosing a facilitator, framing the agenda and conditions, voting, recording and aggregation, scaling through decomposition, tracking outcomes, the amendment window, and the role of the system.
 
-Triangle is an attempt to produce that missing artifact — a structured, outcome-verified record of human judgment — as a by-product of running normal meetings.
+The document follows the lifecycle of a Triangle meeting. Scripture is cited inline by reference; the full text of each passage is given at the end.
 
-What the record verifies is whether the reasoning held up: whether the premises were later reversed, whether the decision was revisited, whether the expected result appeared or was contradicted by events. That is a narrower claim than "the decision was correct," and it is the claim the architecture can actually support.
+Limitations and project status are documented separately.
 
-We make no claim that this is solved. Below is the reasoning, the evidence, and an explicit statement of what remains open.
+—
 
-1 The competence condition
+1 The triad
 
-"Three heads are better than one." It's one of those sayings everyone affirms and nobody examines. You've heard it. It feels true because it sounds wise — and it's also not automatically true.
+A triad is three people making one decision. The decision is recorded per condition, with each person voting yes, no, or neutral.
 
-It depends on whether each of those three heads is more likely right than wrong.
+The competence condition
 
-The uncomfortable fact is that majority voting only amplifies accuracy when each person is more likely right than wrong. Below that line, adding more people makes the decision worse — not gradually, but reliably and fast. A big room full of people who are each slightly misinformed doesn't self-correct. It converges on the wrong answer with growing confidence.
+The triad assumes three people can make better decisions than one. It does not claim to make people competent. The question the design sets out to answer is whether an organisation can tell, for any given decision, whether that assumption holds.
 
-Scripture affirms the principle and names the condition. "Where there is no guidance, a people falls, but in an abundance of counselors there is safety" (Proverbs 11:14). "Plans fail for lack of counsel, but with many advisers they succeed" (Proverbs 15:22). "For by wise counsel you can wage your war, and in abundance of counselors there is victory" (Proverbs 24:6). The pattern is consistent: counsel multiplies strength, but only when the counselors carry understanding. The proverb does not promise that numbers alone save — it promises that wise counsel does.
+Scripture affirms the principle and names the condition: counsel multiplies strength, but only when the counselors carry understanding (Proverbs 11:14; 15:22; 24:6). The proverb does not promise that numbers alone save — it promises that wise counsel does.
 
-Ecclesiastes 4:9–12 makes the same point in a different register: "Two are better than one, because they have a good reward for their toil. For if they fall, one will lift up his fellow. But woe to him who is alone when he falls and has not another to lift him up… And a threefold cord is not quickly broken." The cord is threefold not by formula but by the nature of things — strength in plurality, provided the strands hold.
+Two are better than one, and a threefold cord is not quickly broken (Ecclesiastes 4:9–12). The cord is threefold not by formula but by the nature of things — strength in plurality, provided the strands hold.
 
-Sirach (Ecclesiasticus) 37:5–6 is explicit: "Before a matter, seek counsel, and turn not aside in any case." And Wisdom of Solomon 6:24: "For wisdom is the voice of the Lord." The Apocrypha does not soften the principle — it sharpens it. Counsel is not a numbers game; it is a search for the voice that speaks wisdom.
+The Apocrypha sharpens the principle: seek counsel before a matter, and turn not aside (Sirach 37:5–6). Wisdom is the voice of the Lord (Wisdom of Solomon 6:24). Counsel is not a numbers game; it is a search for the voice that speaks wisdom.
 
-Triangle assumes triads can make better decisions than individuals. It does not claim to make people competent. The question the design sets out to answer is whether an organisation can tell, for any given decision, whether that assumption holds.
+Unless the Lord builds the house, those who build it labor in vain (Psalm 127:1). The triad is the house. It is built by people, but it stands only by God's design.
 
-Triangle's outcome-tracking is built to surface that over time — recording what was decided, what it rested on, and how it turned out — so that competence becomes visible rather than assumed. Routing to people with knowledge and understanding, rather than guessing who has it.
+The limit of the principle is that it depends on the character of the counsel. Trust in the Lord with all your heart and do not lean on your own understanding (Proverbs 3:5–6). The counsel is only as sound as the orientation of those who give it. The way of a fool is right in his own eyes, but a wise man listens to advice (Proverbs 12:15). Without the disposition to hear, plurality becomes noise.
 
-With appropriate tracking and behaviour, triads become more than a meeting format. They become a way to route decisions to the people most likely to get them right. If either fails, three heads are just three heads.
+Independence fails in organisations. Two are better than one — but the threefold cord is broken when the strands are not truly independent. Shared managers, shared briefings, shared incentives: once those who counsel are bound by the same interests, the cord is of one strand, and it is not quickly broken because it was never three.
 
-Scripture testifies that the accumulation of wisdom is a reaching toward truth. "The heart of the wise seeks knowledge, and the ear of the wise seeks wisdom" (Proverbs 18:15). Wisdom is not given once; it is accumulated, tested, and refined through what comes to pass. "The beginning of wisdom is this: Get wisdom. Whatever you get, get insight" (Proverbs 4:7). The accumulation — recording what was decided, what it rested on, and how it turned out — is the practice of that accumulation.
+The triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost. Triangle's outcome-tracking is built to surface over time whether the assumption held — recording what was decided, what it rested on, and how it turned out — so that competence becomes visible rather than assumed.
 
-The limit of the principle is that it depends on the character of the counsel. "Trust in the Lord with all your heart and do not lean on your own understanding; in all your ways acknowledge him, and he will make straight your paths" (Proverbs 3:5–6). The counsel is only as sound as the orientation of those who give it. "The way of a fool is right in his own eyes, but a wise man listens to advice" (Proverbs 12:15). Without the disposition to hear, plurality becomes noise.
+—
 
-Independence fails in organisations. Scripture is aware of this too. "Two are better than one, because they have a good reward for their toil" — but the threefold cord is broken when the strands are not truly independent. Shared managers, shared briefings, shared incentives: once those who counsel are bound by the same interests, the cord is of one strand, and it is not quickly broken because it was never three.
+2 The facilitator
 
-We do not claim triads preserve independence. In a deliberative meeting everyone hears everyone before any position is recorded, so anchoring is substantial. We claim only that a triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost.
+The facilitator structures the agenda, frames the conditions, and closes with a review. They do not chair the meeting — they design it. The facilitator is also a voter.
 
-Countermeasures to gaming the system are discussed in section nine. The current implementation lies somewhat on ethical behaviour of participants.
+Choosing a facilitator
 
-2 Fairness and the binary rule
+The person who surfaced the decision usually facilitates.
 
-Scripture is plain that justice must be administered without partiality. "You shall not be partial in judgment; you shall hear the small and the great alike" (Deuteronomy 19:17). "You shall not be partial in judgment; you shall hear the small and the great alike; you shall not be intimidated by a man, for the judgment is God's" (2 Chronicles 19:7). The rule must treat every voice the same and both sides of a question the same.
+If someone else is better suited to structure this particular decision, that person facilitates instead.
 
-This is the biblical grounding for two-of-three. It is not an assumption or a convention. It is the pattern Scripture establishes for establishing a matter: "On the evidence of two witnesses or of three witnesses the one who is to die shall be put to death; a person shall not be put to death on the evidence of one witness" (Numbers 35:30). "By the mouth of two or three witnesses every charge may be established" (Matthew 18:16). "This is the third time I am ready to come to you. By the mouth of two or three witnesses every charge may be established" (2 Corinthians 13:1).
+If the group cannot agree, the authorised person selects.
+
+The democratic bridge
+
+The mechanism: the group is asked who should facilitate. The community's knowledge of who is best suited is the signal. The selection is the accountability.
+
+This is the same pattern as forming the triad: the community identifies the qualified, the authority confirms, and the competence signal begins.
+
+The people chose, and Moses appointed (Deuteronomy 1:13–15). The community picked, and the apostles appointed (Acts 6:3). The whole church was involved in the selection (Acts 15:22). The people's recognition of who the elders were was the signal (Numbers 11:16). The churches chose their own representative (2 Corinthians 8:19).
+
+The fast mode
+
+The authorised person simply selects the facilitator. No nomination. No group input.
+
+This is the fallback, not the default. It fits when the authority has better knowledge than the group, when speed matters more than participation, or when the decision is sufficiently specialised that only the authority knows who is competent. But it bypasses the community's knowledge, and that knowledge is the specific asset the process needs.
+
+Jesus called to him those whom he desired, and they came to him (Mark 3:13–14). God told Moses to lay his hand on Joshua, a man in whom is the Spirit (Numbers 27:18–21).
+
+The voice that was not chosen
+
+God told Samuel to anoint one of Jesse's sons as king. The elder sons were brought in. Each looked the part. Samuel assumed the eldest was the one. God said no: the Lord sees not as man sees. Man looks on the outward appearance, but the Lord looks on the heart (1 Samuel 16). David was the youngest. He was not invited to the meeting. He was out keeping the sheep. He was not nominated. God chose him anyway.
+
+The democratic bridge captures the community's knowledge. But the community's knowledge is not God's knowledge. The community can nominate the obvious choice and miss the right one. David was the right one, and he was not nominated.
+
+This is what the amendment window is for. The amendment window is the standing invitation for the David — the person who should have been in the triad but was not nominated. The democratic bridge is the cold start. The amendment window is the correction. Together they form the complete pattern: the community nominates, the authority confirms, and the structure makes room for the voice that was missed.
+
+Micaiah was not on the agenda. He was summoned because a dissenting voice was needed (1 Kings 22). The democratic bridge forms the triad. The amendment window is the mechanism that says: is there a Micaiah we have not heard?
+
+—
+
+3 The agenda and conditions
+
+The agenda is not a list of topics. It is a list of decisions. Each decision is decomposed into the conditions it rests on, and each condition is routed to the triad best placed to judge it.
+
+The agenda as a routing problem
+
+If Triangle routes different decisions to different triads based on competence, then a single agenda with five items might need five different triads. The traditional model — everyone in one room, go through items A to E — does not work. You need a different kind of meeting.
+
+The problem is not the triad. The problem is the agenda.
+
+Scripture does not show one model of meetings. It shows several, and the pattern is consistent: the structure follows the question, not the other way round.
+
+Moses sat from morning to evening, judging every case himself. Jethro said: decompose. Select capable men. Let them judge the small matters. Let only the hard cases come to you (Exodus 18). The agenda was not flattened — it was decomposed. The meeting structure followed the work, not the other way round.
+
+One question: do Gentiles need circumcision? The agenda was set by the question. But the process was not one debate. Paul and Barnabas reported what God had done. Peter spoke from his experience. James spoke from Scripture and gave the ruling. Different people spoke at different points. Not everyone spoke on everything (Acts 15).
+
+The apostles said: it is not right that we should give up preaching the word of God to serve tables. They delegated a specific task to specific people chosen for that task (Acts 6).
+
+The court prophets all said go up, and the king's agenda was set. One voice said no. Micaiah was not on the agenda. He was summoned because a dissenting voice was needed (1 Kings 22).
+
+The people gathered as one. But the Levites went among them, helping the people understand, each in their own group (Nehemiah 8).
+
+When you come together, each one has a hymn, a lesson, a revelation, a tongue, or an interpretation. Let all things be done for building up (1 Corinthians 14:26). The meeting is not one person's agenda. It is structured participation.
+
+Framing conditions
+
+Before anyone votes, the facilitator names the conditions the decision rests on.
+
+"What has to be true for this to be the right call?"
+
+Each condition is written as a yes/no question. Keep it to two or three. If there are more, the decision needs splitting.
+
+The triad can challenge the conditions before voting. If someone says the conditions are wrong, the facilitator reframes. The conditions are not imposed by the system — they are stated by a human who is also a voter, and can be outvoted on the outcome.
+
+Summoning an outsider
+
+The triad may summon an outsider to speak to a condition. The outsider gives input, not a vote. The triad then decides as normal. The summoning is recorded: who was summoned, why, and what they said.
+
+The recommendation is to keep your decisions in the three.
+
+A condition can be marked neutral — the facilitator does not have a position on it. A neutral vote does not count toward the two-of-three. If fewer than two people take a position on a condition, it is unresolved, and the decision cannot pass on it.
+
+Writing the agenda
+
+Surface the decisions. What needs deciding? Not what do we need to discuss — what do we need to decide?
+
+Decompose each decision into its conditions.
+
+Identify who needs to be in the room for each decision — not who should be informed, but who should be deciding.
+
+Sequence by dependency — if B depends on A, A comes first. If A and C are independent, they can happen in parallel.
+
+Leave room for the voice that was not planned. The amendment window is the standing invitation for the dissenting voice. But the agenda itself should include a standing item: is there a voice we have not heard?
+
+Close with a review of the whole. Every meeting that spawns sub-decisions should end with a closing decision that reviews the whole — a decision: does the whole hold, given what we decided in the parts?
+
+—
+
+4 Voting — two of three
+
+Each person votes on each condition: yes, no, or neutral.
+
+Two out of three yes votes on any resolved condition means it passes. Zero yes votes means it fails.
+
+Neutral
+
+A neutral vote means "I do not have a position on this condition." It is not maybe, and it is not abstention. It is an honest signal that the condition is not answerable by this person — either they lack the knowledge, or it falls outside their part of the decision.
+
+A neutral vote is set aside. It neither helps nor blocks. A condition needs at least two non-neutral votes to be resolved. If a condition has fewer than two non-neutral votes, it is unresolved, and the decision cannot pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.
+
+The binary rule still governs: two yes votes are required to pass. Neutral does not create a third outcome. It creates a "not yet settled" state that blocks the decision from passing on that condition. That is consistent with the witness principle — a condition must actually be decided, not assumed.
+
+Why two of three
+
+Scripture is plain that justice must be administered without partiality. You shall not be partial in judgment; you shall hear the small and the great alike (Deuteronomy 19:17; 2 Chronicles 19:7). The rule must treat every voice the same and both sides of a question the same.
+
+This is the biblical grounding for two of three. It is not an assumption or a convention. It is the pattern Scripture establishes for establishing a matter: on the evidence of two or three witnesses a matter is established (Numbers 35:30; Matthew 18:16; 2 Corinthians 13:1).
 
 Two witnesses establish; three confirm. The binary rule — two of three — is the minimal structure that satisfies the scriptural requirement and no more. It gives every voice equal weight, treats both sides symmetrically, and responds when a mind changes: if the one who dissented is persuaded, the matter is established.
 
@@ -57,29 +163,37 @@ It also tells you what is wrong with the alternatives. A supermajority threshold
 
 This is why unanimity is preferred in Triangle but not required. It is the strongest possible consensus signal — everyone agrees — and when it appears it is worth recording. But as a decision rule it is paralysing: one person can hold the whole group. The design prefers the outcome that moves, and records the dissent, to the outcome that does not move because one person objected.
 
-For questions with more than two options, Scripture does not prescribe a single aggregation rule, but it does instruct that matters be set before the whole and that counsel be sought from many. "In the multitude of people is the king's honour, but in the want of people is the destruction of the prince" (Proverbs 14:28). Triangle decomposes multi-option questions into a series of binary ones rather than asking a triad to rank alternatives, so that each binary choice can be judged by the witness principle.
+For questions with more than two options, Scripture does not prescribe a single aggregation rule, but it does instruct that matters be set before the whole and that counsel be sought from many. In the multitude of people is the king's honour, but in the want of people is the destruction of the prince (Proverbs 14:28). Triangle decomposes multi-option questions into a series of binary ones rather than asking a triad to rank alternatives, so that each binary choice can be judged by the witness principle.
 
-3 Aggregation
+—
+
+5 Recording and aggregation
+
+Positions are recorded per condition rather than on the decision as a whole. The record shows what each person voted on each condition, what the result was, and what was expected to follow.
+
+Why per condition
 
 Where a decision rests on multiple conditions, aggregating over the conditions and aggregating over the conclusion can yield opposite results from the same set of individual judgments. Three judges, each internally consistent, each voting on two premises and a conclusion, can produce a majority for each premise and a majority against the conclusion.
 
-Scripture recognises this danger. "There is a way that seems right to a man, but its end is the way of death" (Proverbs 14:12). A conclusion can appear sound while the conditions beneath it are unsound, and the soundness of the parts does not guarantee the soundness of the whole. The wise man examines the premises, not only the conclusion.
+Scripture recognises this danger. There is a way that seems right to a man, but its end is the way of death (Proverbs 14:12). A conclusion can appear sound while the conditions beneath it are unsound, and the soundness of the parts does not justify the whole. The wise man examines the premises, not only the conclusion.
 
-Tobit 4:18–19: "Blessed is the man who meditates on wisdom, and who reasons with understanding… For in the wisdom of the Lord, all things are ordered." The warning is not against reasoning — it is against reasoning badly, on conditions that have not been examined. The decision rests on what it rests on, and the record must show what that is.
+Blessed is the man who meditates on wisdom, and who reasons with understanding (Tobit 4:18–19). The warning is not against reasoning — it is against reasoning badly, on conditions that have not been examined. The decision rests on what it rests on, and the record must show what that is.
 
-Triangle's response is to make the choice explicit rather than accidental. The facilitator frames the conditions that the decision rests on. Positions are recorded per condition rather than on the decision as a whole, which also corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.
-
-The framing is presented to the triad for challenge before any position is recorded. If the conditions are contested, the facilitator reframes. The conditions are not imposed by the system — they are stated by a human who is also a voter, and can be outvoted on the outcome.
+Recording per condition corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants. Recording per condition reduces that bias, at the cost of being more permissive on decisions that should be blocked.
 
 Which error is cheaper depends on reversibility. We treat it as a parameter rather than pretending there is a neutral default.
 
-Related but distinct: aggregating verdicts across groups rather than individuals produces the referendum paradox, in which a minority of individuals can carry a majority of groups. This is why Triangle does not nest triads or aggregate their verdicts. See section four.
+Neutral votes are informative in themselves. A pattern of neutrals on a condition tells the organisation that the triad lacks the knowledge to judge it — which is a signal about who should be in the next triad, or whether the condition needs to be decomposed further. Recording neutrals is recording something real, not filling silence with a guess.
 
-Group agency. The wider scriptural principle is that for a group to bear responsibility — for "the organisation decided" to be coherent — its judgments must be consistent and closed under entailment. "If a kingdom is divided against itself, that kingdom cannot stand" (Mark 3:25). Consistency is not a natural property of people in a room; it must be engineered. That is the claim underlying our interest in institutional accountability, and it is a design problem rather than a gift of assembly.
+Group agency
 
-1 Maccabees 3:18–22: "Consult the Lord, for their works are his." The pattern is not merely human deliberation — it is deliberation that acknowledges a higher court. The organisation's record is its own accountability; the final judgment is not ours to claim.
+For a group to bear responsibility — for "the organisation decided" to be coherent — its judgments must be consistent and closed under entailment. If a kingdom is divided against itself, that kingdom cannot stand (Mark 3:25). Consistency is not a natural property of people in a room; it must be engineered. That is the claim underlying the interest in institutional accountability, and it is a design problem rather than a gift of assembly.
 
-4 Scaling: decomposition, not aggregation
+Consult the Lord, for their works are his (1 Maccabees 3:18–22). The pattern is not merely human deliberation — it is deliberation that acknowledges a higher court. The organisation's record is its own accountability; the final judgment is not ours to claim.
+
+—
+
+6 Scaling through decomposition
 
 Triangle does not add people to decisions or aggregate verdicts across triads. It decomposes decisions.
 
@@ -87,248 +201,79 @@ Each decision is a node. Edges record dependency: premise, constraint, or delega
 
 A triad ruling on a large question spawns the sub-decisions it does not own, each routed to its own triad, in parallel. A triad blocked for want of an input spawns the blocking question and routes it laterally to whoever owns it, rather than escalating to a less-informed authority.
 
-Scripture testifies to this pattern of delegation. When Jethro saw Moses judging all the people from morning until evening, he said: "This thing is too hard for you. You cannot alone bear it… Select capable men from all the land, men who fear God, who are trustworthy and hate a dishonest gain, and place such men over the people as rulers of thousands, of hundreds, of fifties, and of tens, and let them judge the people at all times" (Exodus 18:17–21). The large matter was decomposed into smaller matters, each entrusted to a smaller group, each accountable. The structure was not a hierarchy of aggregation but a network of delegated judgment.
+Scripture testifies to this pattern of delegation. When Jethro saw Moses judging all the people from morning until evening, he said: this thing is too hard for you. You cannot alone bear it. Select capable men from all the land, men who fear God, who are trustworthy and hate a dishonest gain, and place such men over the people as rulers of thousands, of hundreds, of fifties, and of tens, and let them judge the people at all times (Exodus 18:17–21). The large matter was decomposed into smaller matters, each entrusted to a smaller group, each accountable. The structure was not a hierarchy of aggregation but a network of delegated judgment.
 
-The body of Christ is likewise one body with many members, each with its own function: "If the foot should say, 'Because I am not a hand, I do not belong to the body,' that would not make it any less a part of the body. If the ear should say, 'Because I am not an eye, I do not belong to the body,' that would not make it any less a part of the body" (1 Corinthians 12:15–16). The whole depends on the parts, and each part on the whole, but no part aggregates the others — each serves its own function and is bound by the others.
+The body of Christ is likewise one body with many members, each with its own function: if the foot should say, because I am not a hand, I do not belong to the body, that would not make it any less a part of the body. If the ear should say, because I am not an eye, I do not belong to the body, that would not make it any less a part of the body (1 Corinthians 12:15–16). The whole depends on the parts, and each part on the whole, but no part aggregates the others — each serves its own function and is bound by the others.
 
-Consequences. The referendum paradox cannot arise, because no question is ever decided by more than one triad — a dissolution rather than a fix. Revisiting becomes a graph query: each decision records what it rested on, and when a parent is re-decided, descendants are flagged. Circular dependencies become detectable, and can be broken by identifying which decision must be made on a stated assumption.
+The referendum paradox cannot arise, because no question is ever decided by more than one triad — a dissolution rather than a fix. Revisiting becomes a graph query: each decision records what it rested on, and when a parent is re-decided, descendants are flagged. Circular dependencies become detectable, and can be broken by identifying which decision must be made on a stated assumption.
 
-This does not eliminate judgment aggregation — it relocates it.
+Where triad C's decision depends on rulings by triads A and B, C is bound by them, which is premise-based aggregation distributed across groups. C may therefore be pushed toward a conclusion its own members would not independently reach. The proposed resolution is that a bound triad may formally reopen a prior decision rather than override it: prior rulings cannot be ignored, but can be sent back to their owners. This is designed, not built, and not yet tested.
 
-Where triad C's decision depends on rulings by triads A and B, C is bound by them, which is premise-based aggregation distributed across groups. C may therefore be pushed toward a conclusion its own members would not independently reach. Our proposed resolution is that a bound triad may formally reopen a prior decision rather than override it: prior rulings cannot be ignored, but can be sent back to their owners. This is designed, not built, and not yet tested.
+Any decision spawning children should retain a closing decision reviewing the whole. This is specified and not yet implemented.
 
-Known vulnerability: decomposition permits salami-slicing — splitting a decision until each part is individually approvable. Any decision spawning children should retain a closing decision reviewing the whole. This is specified and not yet implemented.
+—
 
-The graph structure was reached from an interest in physical lattices, graphene in particular, as an analogy for three-coordinate social structures. We present that as the origin of the idea and not as a derivation. No claim in this document rests on materials science.
+7 Tracking outcomes
 
-5 Triad formation: the cold-start problem
+At the next meeting, check where you are with last week's outcomes. Any triad member can mark an outcome as complete.
 
-Triangle routes decisions to the people most likely to get them right. But routing requires competence data. At the start, there is none. You cannot route to the right people if you do not know who they are.
+If there is disagreement, that can be recorded as in the normal procedure. Dissent does not require a reason, although it is strongly recommended.
 
-This is the cold-start problem. Everything in the framework depends on it. If the first triads are wrong, the first competence data is wrong, and the routing builds on a bad foundation.
+This is the competence signal. Over time, the organisation can see who has been right, on what, and how often. That tells them who to route decisions to next time.
 
-The question is: how do you form triads before you have the data to form them well?
+Scripture testifies that the accumulation of wisdom is a reaching toward truth. The heart of the wise seeks knowledge, and the ear of the wise seeks wisdom (Proverbs 18:15). Wisdom is not given once; it is accumulated, tested, and refined through what comes to pass. The beginning of wisdom is this: get wisdom. Whatever you get, get insight (Proverbs 4:7). The accumulation — recording what was decided, what it rested on, and how it turned out — is the practice of that accumulation.
 
-The democratic bridge
+The way of the righteous is like the light of dawn, which shines brighter and brighter until full day (Proverbs 4:18). The light does not come from never stumbling. It comes from each step being recorded, examined, and corrected.
 
-The mechanism:
+—
 
-1. Anyone can instigate a meeting. This does not change. The meeting creator is the normal person who sees the decision that needs making.
+8 The amendment window
 
-2. The meeting creator asks the group: who would be the best three people for this decision?
+The amendment window stays open after the meeting. Each member of the triad can change their mind on something they said during the meeting. They must say what they would change about their own position and why. Not just "I disagree" — a reasoned case.
 
-3. The group nominates. Everyone who wants to be in the meeting, or is willing to take part, volunteers or is nominated.
+The closure period is determined by the Group. In many cases it may be a matter of minutes after the meeting. After that, the window closes and the decision stands — unless an outcome proves it wrong.
 
-4. The nominations form the pool. If the number is divisible by three, that is the number of triads that form. Nine nominees means three triads. Twelve means four.
+Two modes
 
-5. If the number is not divisible by three, the remainder is resolved by lot. If there is a tie for the final spot, the tie is broken randomly. Not by preference. Not by seniority. By lot.
+Correction mode: a triad member changes their position on a condition they voted on, and the decision outcome changes as a result.
 
-6. The triads form. Each triad takes one decision or one sub-decision from the decomposed agenda. The meeting runs.
+Reconsideration mode: a triad member says they were wrong to dissent, and the decision should have passed. The second is the harder one, because it requires someone to say "I got it wrong by saying no." It needs protection — procedural weight, not just a button.
 
-Why this works as a bridge: the group already knows who is capable, even without a system to record it. The nomination process surfaces the community's informal knowledge of who is good at what. That knowledge is the seed. The competence data that follows is the harvest.
+Do not withhold good from those to whom it is due, when it is in your power to do it (Proverbs 3:27). False rejection is withholding good. The structure should make it as easy to correct an error of exclusion as an error of commission.
 
-This is not a vote on the decision. It is a vote on the people. The decision is still made by the triad. The nomination is the group saying: these are the people we trust with this.
+An unresolved condition that later proves to have been the wrong condition to block is a form of false rejection — the condition was treated as unanswerable when it was answerable, and the decision was blocked as a result. The record should tag this too, because it is a distinct failure: the triad lacked the knowledge to resolve the condition, and the decision died on that lack. Correcting it means routing the decision to people who can resolve it, or decomposing the condition until it is answerable.
 
-What the Bible shows
+Dissent is the Gideon-like "I told you so." The record preserves the original decision and reasoning, so the person who was overruled is not erased but positioned to be proved right. The structure does not guarantee the righteous will be heard first. It guarantees that when they are proved right, the record will show it.
 
-The democratic bridge has direct biblical precedent. The pattern is consistent: the community identifies the qualified, the authority confirms, and the competence signal begins.
+Let us examine our ways and test them, and let us return to the Lord (Lamentations 3:40). Examining and returning are one act. The same mechanism that names the error is the mechanism that corrects it.
 
-Deuteronomy 1:13–15. Moses said to the people: "Choose wise and understanding men from your tribes, and I will appoint them as your heads." The people chose. Moses appointed. The nomination came from the community. The authority confirmed it. The people's knowledge of who was wise and understanding was the signal, and the appointment was the accountability.
+By their fruits you will know them (Matthew 7:15–20). The fruit does not just tell you the tree is bad. It tells you what kind of bad. When the outcome contradicts the expectation, the record should tag false acceptance versus false rejection. These are not the same failure, and correcting them requires different actions.
 
-Acts 6:3. The apostles said: "Pick out from among you seven men of good repute, full of the Spirit and of wisdom, whom we will appoint to this duty." The community picked. The apostles appointed. The people's knowledge of who had good repute was the signal. The apostles' confirmation was the authority.
+Which error is cheaper depends on reversibility. We treat it as a parameter rather than pretending there is a neutral default. But the deeper biblical answer is: neither error is the goal. The goal is to structure the decision so that whichever error you make, you can see it, name it, and correct it.
 
-Acts 15:22. "It seemed good to the apostles and the elders, with the whole church, to choose men from among them." The whole church was involved in the selection. Not the apostles alone. Not the elders alone. The whole body.
+—
 
-Numbers 11:16. God told Moses to gather seventy elders "whom you know to be the elders of the people and officers over them." The people's recognition of who the elders were was the signal. Moses knew who the community respected. The appointment followed the community's knowledge.
-
-2 Corinthians 8:19. Paul writes of a brother "who was appointed by the churches to travel with us." The churches chose their own representative. Not Paul. Not the apostles. The churches. The community nominated, and the apostle carried the nomination forward.
-
-The pattern is consistent. The community nominates. The authority confirms. The competence signal starts with the community's knowledge and is refined by the system over time.
-
-The lot resolves what the community cannot
-
-Proverbs 16:33. "The lot is cast into the lap, but its every decision is from the Lord."
-
-Acts 1:26. The apostles cast lots to choose between Matthias and Joseph called Barsabbas. They had nominated two. They could not decide between them. They cast lots. The Lord chose.
-
-The lot is the biblical mechanism for breaking a tie when human judgment cannot. It is not random in the sense of meaningless. It is random in the sense of surrendered — the decision is given to God when the community cannot make it.
-
-In the democratic bridge, random assignment of the remainder is the lot. It is not a failure to decide. It is a decision to surrender the tie to the Lord.
-
-The fast mode
-
-The person authorised to start a meeting simply chooses three people. No nomination. No group input. The authority selects.
-
-This also has biblical precedent, but it is a different pattern for a different context.
-
-Mark 3:13–14. Jesus "called to him those whom he desired, and they came to him." No nomination. No community input. He chose. This is the fast mode in its purest form.
-
-Numbers 27:18–21. God told Moses to lay his hand on Joshua, "a man in whom is the Spirit." Moses did not poll the people. God appointed. Moses confirmed.
-
-The fast mode is the fallback, not the default. It fits when the authority has better knowledge than the group, when speed matters more than participation, or when the decision is sufficiently specialised that only the authority knows who is competent. But it bypasses the community's knowledge, and that knowledge is the specific asset the cold start needs.
-
-The safeguard: the voice that was not chosen
-
-1 Samuel 16. God told Samuel to anoint one of Jesse's sons as king. The elder sons were brought in. Each looked the part. Samuel assumed the eldest, Eliab, was the one. God said no: "The Lord sees not as man sees. Man looks on the outward appearance, but the Lord looks on the heart." David was the youngest. He was not invited to the meeting. He was out keeping the sheep. He was not nominated. God chose him anyway.
-
-The democratic bridge captures the community's knowledge. But the community's knowledge is not God's knowledge. The community can nominate the obvious choice and miss the right one. David was the right one, and he was not nominated.
-
-This is what the amendment window is for. The amendment window is the standing invitation for the David — the person who should have been in the triad but was not nominated. The democratic bridge is the cold start. The amendment window is the correction. Together they form the complete pattern: the community nominates, the authority confirms, and the structure makes room for the voice that was missed.
-
-1 Kings 22. Micaiah was not on the agenda. He was summoned because a dissenting voice was needed. The democratic bridge forms the triad. The amendment window is the mechanism that says: is there a Micaiah we have not heard?
-
-The complete cold-start protocol
-
-1. The meeting creator identifies the decision that needs making.
-2. The meeting creator asks the group: who would be the best three people for this?
-3. The group nominates. Anyone who wants to be in the meeting volunteers. Anyone who is willing to take part is eligible.
-4. The nominations form the pool. If divisible by three, that is the number of triads.
-5. If not divisible by three, the remainder is resolved by lot. Random assignment. The tie is surrendered, not forced.
-6. The triads form. Each takes a decision or sub-decision from the decomposed agenda.
-7. The meeting runs. Decisions are made, recorded, and fed into the dependency graph.
-8. The amendment window stays open. If someone was missed, they can flag it. The David who was not nominated. The Micaiah who was not on the agenda.
-9. The competence data begins to build. Over time, routing replaces nomination. The democratic bridge is the cold start. The competence signal is the long run.
-10. The fast mode is available as a fallback. When the authority has better knowledge or speed requires it, the authorised person selects directly. But the default is the bridge.
-
-The principle: the community knows more than any individual about who is capable. The democratic bridge captures that knowledge and turns it into the first data point. The lot resolves what the community cannot. The amendment window catches what the community missed. The fast mode is the fallback when the community is not the best source.
-
-6 The agenda problem
-
-If Triangle routes different decisions to different triads based on competence, then a single agenda with five items might need five different triads. The traditional model — everyone in one room, go through items A to E — does not work. You need a different kind of meeting.
-
-The problem is not the triad. The problem is the agenda.
-
-The traditional agenda assumes one room, one group, sequential items. Triangle assumes the right people for each decision. Those two assumptions conflict. If the right people differ per item, the agenda is not a list — it is a routing problem.
-
-What the Bible shows
-
-Scripture does not show one model of meetings. It shows several, and the pattern is consistent: the structure follows the question, not the other way round.
-
-Jethro and Moses (Exodus 18). Moses sat from morning to evening, judging every case himself. One man, one room, one queue. Jethro said: decompose. Select capable men. Let them judge the small matters. Let only the hard cases come to you. The agenda was not flattened — it was decomposed. The meeting structure followed the work, not the other way round.
-
-The Jerusalem Council (Acts 15). One question: do Gentiles need circumcision? The agenda was set by the question. But the process was not one debate. Paul and Barnabas reported what God had done among the Gentiles. Peter spoke from his experience. James spoke from Scripture and gave the ruling. Different people spoke at different points. Not everyone spoke on everything. The right voice was brought in for each part, and the agenda was structured to surface those voices, not to flatten them.
-
-The seven (Acts 6). The apostles said: it is not right that we should give up preaching the word of God to serve tables. They delegated a specific task to specific people chosen for that task. The apostles did not attend to everything — they attended to what they were appointed for, and they appointed others for the rest.
-
-Micaiah (1 Kings 22). The court prophets all said go up, and the king's agenda was set. One voice said no. Micaiah was not on the agenda. He was summoned because a dissenting voice was needed. Without that room, the agenda would have produced a unanimous decision — and a wrong one.
-
-Nehemiah 8. The people gathered as one. But the Levites went among them, helping the people understand, each in their own group. The gathering was one body; the teaching was distributed. The meeting was not one voice addressing one room — it was one body learning through many voices, each in the right place.
-
-1 Corinthians 14:26. "When you come together, each one has a hymn, a lesson, a revelation, a tongue, or an interpretation. Let all things be done for building up." The meeting is not one person's agenda. It is structured participation. But the structure is for building up, not for noise. The order serves the purpose.
-
-The pattern across all of these: the agenda is not the starting point. The question is the starting point. The structure follows the question, and the right people are brought in for each part.
-
-The practical shift
-
-From the traditional model: one agenda, everyone in the room, go through items sequentially, decide each item, record.
-
-To the Triangle model: decompose the agenda, identify what decisions need to be made, identify what conditions each decision rests on, route each decision to a triad with the right competence, bring those people in for their item, record, feed the dependency graph, close with a review of the whole.
-
-The meeting becomes not a single-room walkthrough but a coordinated set of focused triad conversations. Different people come in for different parts. Some happen in parallel. Some happen in sequence where dependencies exist. The meeting is not one event — it is a coordinated set of conversations, each recorded, each feeding the graph.
-
-How the agenda is written
-
-Step 1: Surface the decisions. What needs deciding? Not what do we need to discuss — what do we need to decide? Discussion is the means. Decision is the end. The agenda is a list of decisions, not a list of topics.
-
-Step 2: Decompose each decision. What conditions does this decision rest on? What sub-questions need answering first? What inputs are missing? This is the dependency graph being built before the meeting, not after it.
-
-Step 3: Identify who needs to be in the room for each decision. Not who should be informed — who should be deciding. This is where competence signals matter. If you have them, route to the people who have been right before. If you do not, route to the people with the most relevant knowledge and the strongest case for independence.
-
-Step 4: Sequence the agenda by dependency, not by topic. If decision B depends on decision A, A comes first. If A and C are independent, they can happen in parallel. The agenda is a DAG, not a list.
-
-Step 5: Leave room for the voice that was not planned. Micaiah was not on the agenda. The amendment window is the standing invitation for the dissenting voice. But the agenda itself should include a standing item: is there a voice we have not heard? The structure makes room before the meeting, not only after it.
-
-Step 6: Close with a review of the whole. Every meeting that spawns sub-decisions should end with a closing decision that reviews the whole. This is the salami-slicing countermeasure from section four. The closing review is not a summary — it is a decision: does the whole hold, given what we decided in the parts?
-
-What this means for how meetings are organised
-
-1. Not everyone attends everything. People come in for their decisions and leave when their part is done. The meeting is more like a marketplace or a council than a boardroom.
-
-2. The facilitator's role changes. The facilitator is not the person who runs the meeting. The facilitator is the person who structures the agenda — decomposing decisions, identifying dependencies, routing to triads, and closing with a review. The facilitator designs the meeting, not chairs it.
-
-3. Parallel conversations are normal. If two decisions are independent, they can happen at the same time. The meeting is not one conversation but many, coordinated by the dependency graph.
-
-4. The record is the meeting. The meeting does not exist as an event that produces a record. The meeting exists as a set of decisions, each recorded, each connected. The record is the meeting. Without it, the conversations are just talk. With it, the conversations are a chain of accountable judgment.
-
-5. The agenda is alive. The agenda is not fixed before the meeting. It is revised as decisions spawn sub-decisions, as dependencies emerge, as the voice that was not planned is heard. The facilitator manages the agenda in real time, decomposing and routing as the meeting reveals what needs deciding.
-
-The principle: the meeting is not the container. The decision is the container. The meeting is the shape the decision takes when the right people are brought together for it.
-
-7 The role of the system
+9 The role of the system
 
 The AI transcribes discussion, identifies decisions and their conditions, and infers each participant's position. Every inference is presented for human confirmation and can be overwritten.
 
 This is a substantial role, and it creates a genuine tension with the principle that machine systems should not hold decision authority. Whoever frames the question exercises real influence over the answer, and here the model does part of the framing.
 
-Our response is measurement rather than assertion. Explicit voting is available and optional. Where participants vote, those votes serve as ground truth for the inference, and the resulting accuracy figure is published to the organisation. An organisation can begin with explicit voting and move to inference when the accuracy justifies it.
+The response is measurement rather than assertion. Explicit voting is available and optional. Where participants vote, those votes serve as ground truth for the inference, and the resulting accuracy figure is published to the organisation. An organisation can begin with explicit voting and move to inference when the accuracy justifies it.
 
-We note that participants who opt into explicit voting are not a random sample, so the accuracy estimate is biased. We report it as an indication, not a validated measure.
+Scripture instructs testing and verification. Test everything; hold fast what is good (1 Thessalonians 5:21). Test the spirits to see whether they are from God (1 John 4:1). The system's inferences are offered for testing, not for worship. They are presented to the triad, who may confirm or overwrite. The accuracy figure is published so the organisation can judge for itself whether the inference has earned trust.
 
-Scripture instructs testing and verification. "Test everything; hold fast what is good" (1 Thessalonians 5:21). "Test the spirits to see whether they are from God" (1 John 4:1). The system's inferences are offered for testing, not for worship. They are presented to the triad, who may confirm or overwrite. The accuracy figure is published so the organisation can judge for itself whether the inference has earned trust.
+Wisdom is also described as a quality to be sought and tested: if you cry for discernment and lift your voice for understanding, if you seek it like silver and search for it as for hidden treasures, then you will understand the fear of the Lord and find the knowledge of God (Proverbs 2:3–5). The system is a tool in the search; the triad is the seeker.
 
-Wisdom is also described as a quality to be sought and tested: "If you cry for discernment and lift your voice for understanding, if you seek it like silver and search for it as for hidden treasures, then you will understand the fear of the Lord and find the knowledge of God" (Proverbs 2:3–5). The system is a tool in the search; the triad is the seeker.
+Trust in thy friend, and let him not fail thee: and if thou knowest what he doeth, be thou like unto him (Sirach 6:5–6). The system, like any counsellor, earns trust by what it does, not by what it claims. Trust is placed in what is tested, not in what is asserted.
 
-Sirach 6:5–6: "Trust in thy friend, and let him not fail thee: and if thou knowest what he doeth, be thou like unto him." The system, like any counsellor, earns trust by what it does, not by what it claims. Trust is placed in what is tested, not in what is asserted.
-
-8 Limitations and open problems
-
-We would rather state these than have them found.
-
-The theory is an idealisation
-Scripture speaks of independent and wise counselors, but most organisational decisions are multi-option, path-dependent, and their counterfactuals are never observed. The biblical principles are a floor under the design, not the design's justification.
-
-Measurement requires time
-Meaningful competence signals need dozens of resolved decisions per participant. A thirty-day pilot produces a record and latency measurements. It does not produce validated competence scores.
-
-Correlation is unmeasured
-We assert that organisational judgments are substantially correlated. We cannot cite a measurement, because to our knowledge none exists. Triangle would generate the data required to make one — repeated individual positions on shared questions with verified outcomes. We regard this as a research opportunity rather than a settled claim.
-
-Transparency creates attack surface
-Three mechanisms by which the design undermines its own incentive properties: scores that affect standing give participants payoffs beyond accuracy; participants often control the outcomes they are assessed on; and where premises are recorded, they can be voted on strategically. Every mechanism that records more creates more that can be manipulated. Current defences are procedural rather than technical.
-
-Privacy claims are limited
-Small-group decision records are re-identifiable in principle. We describe visibility as a configured policy with an audit trail, not as anonymity, and not as a cryptographic guarantee.
-
-The public amendment window may under-serve quiet participants
-Amendment is public and reasoned, which prevents costless retrospective dissent. It may also deter exactly the participants whose views are hardest to capture. This is a live tension with the premise that small groups surface views large groups suppress. It is measurable in a pilot — who uses the window, and at what seniority — and we intend to measure it.
-
-9 Status
-
-Built: nothing beyond the protocol and record structure. A pilot runs on facilitated meetings and a structured record.
-
-Designed, not built: dependency graph traversal and revisit alerts, bound-with-challenge, cryptographic ledger, automated anti-gaming measures.
-
-Not claimed: validated competence measurement, calibration measurement, anonymity guarantees, any result derived from materials science.
-
-We are seeking pilot organisations, and collaborators with expertise in social choice theory, judgment aggregation, or the evaluation of AI-generated records of human deliberation.
+—
 
 10 The accountability structure
 
-The design does not pretend to prevent both errors. It makes both errors visible, classifiable, and survivable. That is the biblical posture — not innocence, but accountability. Not perfection, but the structure that makes correction possible when imperfection arrives, as it will.
+The structure does not prevent error. It prevents error from being permanent, invisible, or unnameable. That is what accountability means — not the absence of failure, but the presence of a path back.
 
-Which error is cheaper depends on reversibility. We treat it as a parameter rather than pretending there is a neutral default. But the deeper biblical answer is: neither error is the goal. The goal is to structure the decision so that whichever error you make, you can see it, name it, and correct it.
-
-See it
-Outcome tracking surfaces the mismatch between what was expected and what came to pass. Per-condition recording shows which condition failed, not just that the conclusion was wrong. A reversibility flag, set at decision-creation time, tells every future reader what kind of error would be costlier. The amendment window is the earliest sensor — it catches a decision going wrong before the outcome arrives. Revisit alerts flag descendants when a parent is re-decided, so the error is seen not just at its source but everywhere it landed.
-
-Name it
-The record structure names the error. A decision that was revisited and reversed is not silently overwritten — the original stands, marked as revisited, with the reasoning. Per-condition voting names the specific point of failure. The amendment window requires a reasoned case: you cannot just say "I disagree"; you have to state what was wrong and why. Competence tracking names a pattern of error over time, not just a one-off mistake.
-
-Error-type tagging is specified but not yet implemented. When the outcome contradicts the expectation, the record should tag false acceptance (we approved something that failed) versus false rejection (we blocked something that would have succeeded). These are not the same failure, and correcting them requires different actions. "By their fruits you will know them" (Matthew 7:15–20) — the fruit does not just tell you the tree is bad. It tells you what kind of bad.
-
-Correct it
-The reopening mechanism is the primary correction tool. A triad bound by a prior decision can send it back to the original triad rather than building on a flawed foundation. Revisiting as a graph query makes correction scalable: when a parent is corrected, all descendants are flagged for review. The amendment window is a correction path for decisions that have not yet produced an outcome — you do not have to wait for the failure to become measurable. Unanimity preferred but not required is itself correction-friendly: a decision that passed 2-1 can be revisited if the dissenter's reasoning later proves sound.
-
-Two amendment modes are specified. Correction mode: we approved something that should not have been approved. Reconsideration mode: we blocked something that should have been approved, and here's why we think so now. The second is the harder one, because it requires someone to say "the group got it wrong by excluding me." It needs protection — procedural weight, not just a button. "Do not withhold good from those to whom it is due, when it is in your power to do it" (Proverbs 3:27). False rejection is withholding good. The structure should make it as easy to correct an error of exclusion as an error of commission.
-
-The amendment window does double duty. It is the earliest sensor (see it) and the most direct path to reversing a decision (correct it). The same mechanism that names the error is the mechanism that corrects it. "Let us examine our ways and test them, and let us return to the Lord" (Lamentations 3:40). Examining and returning are one act.
-
-Dissent is the Gideon-like "I told you so." The record preserves the original decision and reasoning, so the person who was overruled is not erased but positioned to be proved right. The structure does not guarantee the righteous will be heard first. It guarantees that when they are proved right, the record will show it.
-
-The principle
-The structure does not prevent error. It prevents error from being permanent, invisible, or unnameable. That is what accountability means in the biblical sense — not the absence of failure, but the presence of a path back.
-
-"The way of the righteous is like the light of dawn, which shines brighter and brighter until full day" (Proverbs 4:18). The light does not come from never stumbling. It comes from each step being recorded, examined, and corrected.
+Each of us will give an account of himself to God (Romans 14:12). The record makes that account possible — not perfect, but present.
 
 | Principle | Triangle mechanism |
 |---|---|
@@ -336,41 +281,97 @@ The structure does not prevent error. It prevents error from being permanent, in
 | Name it | Record structure + per-condition voting + reasoned amendment + error-type tagging + competence tracking |
 | Correct it | Reopening mechanism + graph query revisit + amendment window + asymmetric modes + dissent as ready-made case |
 
-martin.beyst@gmail.com
+—
 
-References
+Scripture
 
-Proverbs 11:14; 15:22; 24:6
-Ecclesiastes 4:9–12
-Deuteronomy 19:15–17; Numbers 35:30; Matthew 18:16; 2 Corinthians 13:1
-Leviticus 19:15; 2 Chronicles 19:7
-Proverbs 14:12; 12:15; 18:15; 4:7
-Proverbs 3:5–6
-Exodus 18:17–21
-1 Corinthians 12:15–16
-Mark 3:25
-1 Thessalonians 5:21; 1 John 4:1
-Proverbs 2:3–5
-Sirach (Ecclesiasticus) 37:5–6
-Sirach 6:5–6
-Wisdom of Solomon 6:24
-1 Maccabees 3:18–22
-Tobit 4:18–19
-Deuteronomy 1:13–15
-Acts 6:3; 15:22
-Numbers 11:16
-2 Corinthians 8:19
-Proverbs 16:33
-Acts 1:26
-1 Samuel 16
-1 Kings 22
-Mark 3:13–14
-Numbers 27:18–21
-1 Corinthians 14:26
-Matthew 7:15–20
-Proverbs 3:27
-Lamentations 3:40
-Proverbs 4:18
+Proverbs 11:14 — Where there is no guidance, a people falls, but in an abundance of counselors there is safety.
+
+Proverbs 15:22 — Plans fail for lack of counsel, but with many advisers they succeed.
+
+Proverbs 24:6 — For by wise counsel you can wage your war, and in abundance of counselors there is victory.
+
+Ecclesiastes 4:9–12 — Two are better than one, because they have a good reward for their toil. For if they fall, one will lift up his fellow. But woe to him who is alone when he falls and has not another to lift him up… And a threefold cord is not quickly broken.
+
+Sirach (Ecclesiasticus) 37:5–6 — Before a matter, seek counsel, and turn not aside in any case.
+
+Wisdom of Solomon 6:24 — For wisdom is the voice of the Lord.
+
+Psalm 127:1 — Unless the Lord builds the house, those who build it labor in vain.
+
+Proverbs 3:5–6 — Trust in the Lord with all your heart and do not lean on your own understanding; in all your ways acknowledge him, and he will make straight your paths.
+
+Proverbs 12:15 — The way of a fool is right in his own eyes, but a wise man listens to advice.
+
+Deuteronomy 1:13–15 — Moses said to the people: Choose wise and understanding men from your tribes, and I will appoint them as your heads. The people chose. Moses appointed.
+
+Acts 6:3 — The apostles said: Pick out from among you seven men of good repute, full of the Spirit and of wisdom, whom we will appoint to this duty. The community picked. The apostles appointed.
+
+Acts 15:22 — It seemed good to the apostles and the elders, with the whole church, to choose men from among them.
+
+Numbers 11:16 — God told Moses to gather seventy elders whom you know to be the elders of the people and officers over them.
+
+2 Corinthians 8:19 — Paul writes of a brother who was appointed by the churches to travel with us.
+
+Mark 3:13–14 — Jesus called to him those whom he desired, and they came to him.
+
+Numbers 27:18–21 — God told Moses to lay his hand on Joshua, a man in whom is the Spirit. Moses did not poll the people. God appointed. Moses confirmed.
+
+1 Samuel 16 — God told Samuel to anoint one of Jesse's sons as king. The elder sons were brought in. Each looked the part. Samuel assumed the eldest was the one. God said no: the Lord sees not as man sees. Man looks on the outward appearance, but the Lord looks on the heart. David was the youngest. He was not invited to the meeting. He was out keeping the sheep. He was not nominated. God chose him anyway.
+
+1 Kings 22 — The court prophets all said go up, and the king's agenda was set. One voice said no. Micaiah was not on the agenda. He was summoned because a dissenting voice was needed.
+
+Exodus 18 — Moses sat from morning to evening, judging every case himself. Jethro said: this thing is too hard for you. You cannot alone bear it. Select capable men from all the land, men who fear God, who are trustworthy and hate a dishonest gain, and place such men over the people as rulers of thousands, of hundreds, of fifties, and of tens, and let them judge the people at all times.
+
+Acts 15 — One question: do Gentiles need circumcision? The agenda was set by the question. But the process was not one debate. Paul and Barnabas reported what God had done. Peter spoke from his experience. James spoke from Scripture and gave the ruling. Different people spoke at different points. Not everyone spoke on everything.
+
+Acts 6 — The apostles said: it is not right that we should give up preaching the word of God to serve tables. They delegated a specific task to specific people chosen for that task.
+
+Nehemiah 8 — The people gathered as one. But the Levites went among them, helping the people understand, each in their own group.
+
+1 Corinthians 14:26 — When you come together, each one has a hymn, a lesson, a revelation, a tongue, or an interpretation. Let all things be done for building up.
+
+Deuteronomy 19:17 — You shall not be partial in judgment; you shall hear the small and the great alike.
+
+2 Chronicles 19:7 — You shall not be partial in judgment; you shall hear the small and the great alike; you shall not be intimidated by a man, for the judgment is God's.
+
+Numbers 35:30 — On the evidence of two witnesses or of three witnesses the one who is to die shall be put to death; a person shall not be put to death on the evidence of one witness.
+
+Matthew 18:16 — By the mouth of two or three witnesses every charge may be established.
+
+2 Corinthians 13:1 — This is the third time I am ready to come to you. By the mouth of two or three witnesses every charge may be established.
+
+Proverbs 14:28 — In the multitude of people is the king's honour, but in the want of people is the destruction of the prince.
+
+Proverbs 14:12 — There is a way that seems right to a man, but its end is the way of death.
+
+Tobit 4:18–19 — Blessed is the man who meditates on wisdom, and who reasons with understanding… For in the wisdom of the Lord, all things are ordered.
+
+Mark 3:25 — If a kingdom is divided against itself, that kingdom cannot stand.
+
+1 Maccabees 3:18–22 — Consult the Lord, for their works are his.
+
+Proverbs 18:15 — The heart of the wise seeks knowledge, and the ear of the wise seeks wisdom.
+
+Proverbs 4:7 — The beginning of wisdom is this: Get wisdom. Whatever you get, get insight.
+
+Proverbs 4:18 — The way of the righteous is like the light of dawn, which shines brighter and brighter until full day.
+
+Proverbs 3:27 — Do not withhold good from those to whom it is due, when it is in your power to do it.
+
+Lamentations 3:40 — Let us examine our ways and test them, and let us return to the Lord.
+
+Matthew 7:15–20 — By their fruits you will know them.
+
+1 Thessalonians 5:21 — Test everything; hold fast what is good.
+
+1 John 4:1 — Test the spirits to see whether they are from God.
+
+Proverbs 2:3–5 — If you cry for discernment and lift your voice for understanding, if you seek it like silver and search for it as for hidden treasures, then you will understand the fear of the Lord and find the knowledge of God.
+
+Sirach 6:5–6 — Trust in thy friend, and let him not fail thee: and if thou knowest what he doeth, be thou like unto him.
+
+Romans 14:12 — Each of us will give an account of himself to God.
 
 ← Triangle for organisations · Biblical foundations
 

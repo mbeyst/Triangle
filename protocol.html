@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Protocol — Triangle</title>
+  <meta name="description" content="The Triangle protocol: a decision architecture for organisations. Three relevant people. One clear proposition. A record that remains.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Protocol — Triangle">
+  <meta property="og:description" content="Three relevant people decide. The minority position stays with the decision. A record that remains.">
+  <meta property="og:url" content="https://triangle.ceo/protocol.html">
+  <link rel="canonical" href="https://triangle.ceo/protocol.html">
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --fg: #16150f;
+      --muted: #5d5a4e;
+      --rule: #dedbd1;
+      --accent: #8c2f16;
+      --accent-dark: #6c2110;
+      --panel: #f3f0e8;
+      --dark: #201f1a;
+      --dark-fg: #fffdf9;
+      --dark-muted: #d7d2c8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141412;
+        --fg: #eeece4;
+        --muted: #aaa597;
+        --rule: #302f2a;
+        --accent: #ed9677;
+        --accent-dark: #f0a385;
+        --panel: #1e1d19;
+        --dark: #e9e5dc;
+        --dark-fg: #181714;
+        --dark-muted: #514d45;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 18px/1.62 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: none; }
+    .wrap { width: min(100% - 3rem, 48rem); margin: 0 auto; }
+
+    nav { border-bottom: 1px solid var(--rule); }
+    nav .wrap {
+      min-height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .mark {
+      color: var(--fg);
+      font-family: Arial, sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.2rem; }
+    .nav-link {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    header { padding: 5.8rem 0 4.7rem; }
+    .eyebrow, h2, .label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 1.2rem; }
+    h1 {
+      max-width: 17ch;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      font-weight: 600;
+      letter-spacing: -.035em;
+      line-height: 1.08;
+      margin: 0;
+    }
+    .standfirst {
+      color: var(--muted);
+      font-size: clamp(1.16rem, 2vw, 1.4rem);
+      line-height: 1.48;
+      margin: 2rem 0 0;
+      max-width: 42rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.3rem; }
+    .button {
+      align-items: center;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      display: inline-flex;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: .07em;
+      min-height: 3rem;
+      padding: .7rem 1.05rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .button:hover { background: var(--accent-dark); color: #fff; }
+    .button--quiet { background: transparent; color: var(--accent); }
+    .button--quiet:hover { background: var(--panel); color: var(--accent-dark); }
+
+    section { border-top: 1px solid var(--rule); padding: 5.25rem 0; }
+    h2 { margin: 0 0 1.5rem; }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -.018em;
+      line-height: 1.22;
+      margin: 0 0 .8rem;
+    }
+    p { margin: 0 0 1.15rem; }
+    p:last-child { margin-bottom: 0; }
+    .lead {
+      font-size: clamp(1.3rem, 2.4vw, 1.72rem);
+      letter-spacing: -.018em;
+      line-height: 1.36;
+    }
+    .muted { color: var(--muted); }
+
+    .statement {
+      border-left: 2px solid var(--accent);
+      margin: 2.3rem 0 0;
+      max-width: 42rem;
+      padding: .35rem 0 .35rem 1.45rem;
+    }
+    .statement p { font-size: 1.28rem; line-height: 1.42; margin: 0; }
+    .statement .label { display: block; margin-bottom: .6rem; }
+
+    ol.steps { counter-reset: steps; list-style: none; margin: 2.3rem 0 0; padding: 0; }
+    ol.steps li {
+      border-top: 1px solid var(--rule);
+      counter-increment: steps;
+      display: grid;
+      gap: 1.3rem;
+      grid-template-columns: 2.1rem 1fr;
+      padding: 1.35rem 0;
+    }
+    ol.steps li:last-child { border-bottom: 1px solid var(--rule); }
+    ol.steps li::before {
+      align-items: center;
+      border: 1px solid var(--rule);
+      color: var(--accent);
+      content: counter(steps);
+      display: flex;
+      font-family: Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      height: 1.7rem;
+      justify-content: center;
+      margin-top: .08rem;
+      width: 1.7rem;
+    }
+    ol.steps strong { display: block; font-weight: 600; margin-bottom: .22rem; }
+    ol.steps span { color: var(--muted); font-size: 1rem; line-height: 1.52; }
+
+    .record {
+      background: var(--panel);
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+      font-size: .92rem;
+      line-height: 1.6;
+      margin: 2rem 0;
+      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+      white-space: pre-wrap;
+      border-left: 2px solid var(--accent);
+    }
+
+    .two-col {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: minmax(0, 1fr) minmax(14rem, .5fr);
+    }
+    .two-col .section-intro { max-width: 42rem; }
+
+    footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; padding: 2.5rem 0 4rem; }
+    footer p { margin-bottom: .4rem; }
+
+    @media (max-width: 640px) {
+      body { font-size: 17px; }
+      .wrap { width: min(100% - 2.5rem, 48rem); }
+      header { padding: 4.25rem 0 3.4rem; }
+      section { padding: 3.85rem 0; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) {
+      nav .wrap { min-height: 4rem; }
+      .nav-links { gap: .8rem; }
+      .nav-link { font-size: .68rem; }
+      .actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="mark" href="index.html">Triangle</a>
+      <div class="nav-links">
+        <a class="nav-link" href="protocol.html">The protocol</a>
+        <a class="nav-link" href="our-story.html">Our story</a>
+        <a class="nav-link" href="biblical-foundations.html">Biblical foundations</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header>
+      <div class="wrap">
+        <p class="eyebrow">The Protocol</p>
+        <h1>How a Triangle decision works.</h1>
+        <p class="standfirst">
+          Three relevant people. One clear proposition. Two of three carries it.
+          The dissent stays with the decision. The record remains.
+        </p>
+        <div class="actions">
+          <a class="button" href="#process">Read the process</a>
+          <a class="button button--quiet" href="biblical-foundations.html">Biblical underpinnings</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <h2>What it is</h2>
+        <p class="lead">
+          Triangle is a way to make consequential decisions in a small group, record how they were reached, and keep that record intact.
+        </p>
+        <p>
+          It is a structure for decisions that matter enough to be wrong about.
+        </p>
+        <p>
+          The unit is a triad — three people, one decision. The decision is written as one sentence. Each person votes on each condition the decision rests on. Two of three carries it. The dissent is recorded. The record stays with the decision.
+        </p>
+        <blockquote class="statement">
+          <span class="label">The point</span>
+          <p>The majority decides. The minority survives.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <h2>The process</h2>
+        <p class="lead">Six steps. Paper and pen. Three people. One decision at a time.</p>
+
+        <ol class="steps">
+          <li>
+            <div><strong>Surface the decision.</strong><span>Write it as one sentence. If it has "and" in it, split it into two decisions.</span></div>
+          </li>
+          <li>
+            <div><strong>Choose a facilitator.</strong><span>The facilitator structures the agenda, frames the conditions, and closes with a review. They design the meeting. The facilitator is also a voter.</span></div>
+          </li>
+          <li>
+            <div><strong>Form the triad.</strong><span>Ask the group: who are the best three people for this decision? Anyone who wants to be in it volunteers. Anyone willing to take part is eligible.</span></div>
+          </li>
+          <li>
+            <div><strong>Frame the conditions.</strong><span>Before anyone votes, the facilitator names the conditions the decision rests on. Write each as a yes/no question. Keep it to two or three.</span></div>
+          </li>
+          <li>
+            <div><strong>Vote — two of three.</strong><span>Each person votes on each condition: yes, no, or neutral. Two out of three yes votes on any resolved condition means it passes. Zero yes votes means it fails.</span></div>
+          </li>
+          <li>
+            <div><strong>Leave the window open.</strong><span>The amendment window stays open after the meeting. Anyone who was in the triad can change their mind — with reasons.</span></div>
+          </li>
+          <li>
+            <div><strong>Track it over time.</strong><span>After the decision, write down what actually happened. Did the expected outcome appear? Did it contradict?</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Advanced options</h2>
+        <p class="lead">Most decisions follow the simple path. Some need more. The full protocol — dependency graphs, revisit alerts, delegated triads, and the amendment window — is described in the <a href="advanced-protocol.html">advanced protocol</a>.</p>
+        <p style="margin-top:1.5rem;font-size:.95rem;color:var(--muted);"><strong>Note:</strong> If a triad needs input from someone outside the three, they may summon an outsider to speak to a condition. The outsider gives input, not a vote. The summoning is recorded. The recommendation is to keep your decisions in the three.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col">
+        <div class="section-intro">
+          <h2>Step 1 — Surface the decision</h2>
+          <p class="lead">What needs deciding? What do we need to decide?</p>
+          <p>
+            Write it as one sentence. If it has "and" in it, split it into two decisions.
+          </p>
+          <p>
+            Bad: "Let's talk about the budget."
+          </p>
+          <p>
+            Good: "Do we approve the budget for the new project?"
+          </p>
+          <p>
+            If the sentence is clear enough to agree or disagree with, it is ready.
+          </p>
+        </div>
+        <div>
+          <h3>Example</h3>
+          <div class="record">Decision: Do we approve the budget for the new project?</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col">
+        <div class="section-intro">
+          <h2>Step 2 — Choose a facilitator</h2>
+          <p class="lead">The facilitator structures the agenda, frames the conditions, and closes with a review.</p>
+          <p>
+            They design the meeting. The facilitator is also a voter.
+          </p>
+          <p>
+            The person who surfaced the decision usually facilitates. If someone else is better suited to structure this particular decision, that person facilitates instead. If the group agrees, the authorised person selects.
+          </p>
+        </div>
+        <div>
+          <h3>The facilitator does</h3>
+          <ul class="list">
+            <li>List the decisions, not the topics.</li>
+            <li>Decompose each decision into its conditions.</li>
+            <li>Identify who should be in the room for each.</li>
+            <li>Sequence by dependency — if B depends on A, A goes first.</li>
+            <li>Frame each decision and its conditions.</li>
+            <li>Let the triad challenge the framing before voting.</li>
+            <li>Record the vote, the dissent, and the expected outcome.</li>
+            <li>Ask: is there a voice we have heard?</li>
+            <li>Keep the amendment window open.</li>
+            <li>Track the outcome.</li>
+            <li>Feed what you learned into the next meeting.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col">
+        <div class="section-intro">
+          <h2>Step 3 — Form the triad</h2>
+          <p class="lead">Ask the group: who are the best three people for this decision?</p>
+          <p>
+            Anyone who wants to be in it volunteers. Anyone willing to take part is eligible.
+          </p>
+          <ul class="list">
+            <li>Exactly three? You're set.</li>
+            <li>More than three and divisible by three (six, nine, twelve)? Form that many triads — each takes one decision.</li>
+            <li>Divisible by three? Draw lots for the remaining spots. Write names on paper, pull from a hat. This is surrendered.</li>
+            <li>No one volunteers? The authorised person picks three. Use this only when the group can't nominate.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Why three</h3>
+          <p>
+            Three is large enough for a minority position to exist. Small enough for responsibility to stay with the people who made it.
+          </p>
+          <p>
+            The group already knows who is capable, even without a system to record it. The nomination process surfaces the community's informal knowledge of who is good at what. That knowledge is the seed. The competence data that follows is the harvest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col">
+        <div class="section-intro">
+          <h2>Step 4 — Frame the conditions</h2>
+          <p class="lead">Before anyone votes, the facilitator names the conditions the decision rests on.</p>
+          <p>
+            "What has to be true for this to be the right call?"
+          </p>
+          <p>
+            Write each condition as a yes/no question. Keep it to two or three. If there are more, the decision needs splitting.
+          </p>
+          <p>
+            The triad can challenge the conditions before voting. If someone says the conditions are wrong, reframe them. The conditions are stated by a person who is also a voter.
+          </p>
+        </div>
+        <div>
+          <h3>Example</h3>
+          <div class="record">Decision: Do we approve the budget?
+Conditions:
+  1. Is the cost within our means?
+  2. Does the project serve our purpose?
+  3. Can we reverse this if it goes wrong?</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col">
+        <div class="section-intro">
+          <h2>Step 5 — Vote: two of three</h2>
+          <p class="lead">Each person votes on each condition: yes, no, or neutral.</p>
+          <p>
+            Two out of three yes votes on any resolved condition means it passes. Zero yes votes means it fails.
+          </p>
+          <p>
+            A neutral vote means "I do not have a position on this condition." It is an honest signal that the condition is answerable by this person — either they have the knowledge, or it falls within their part of the decision.
+          </p>
+          <p>
+            A neutral vote is set aside. It counts toward the two-of-three. A condition needs at least two non-neutral votes to be resolved. If a condition has two or more non-neutral votes, it is resolved, and the decision can pass on it.
+          </p>
+          <p>
+            If all three agree, record it as unanimous. That is the strongest signal. It is preferred.
+          </p>
+          <p>
+            The dissent is recorded. Who said no, and why.
+          </p>
+        </div>
+        <div>
+          <h3>The record</h3>
+          <div class="record">Decision: Do we approve the budget?
+Conditions:
+  1. Is the cost within our means?
+  2. Does the project serve our purpose?
+  3. Can we reverse this if it goes wrong?
+
+Vote per condition:
+  Condition 1: Yes / Yes / Neutral
+  Condition 2: Yes / No / Yes
+  Condition 3: Yes / Yes / Yes
+
+Result: Approved (2-1 on condition 2)
+Dissent: Person B — project serves our purpose
+Expected outcome: Project delivers within Q3
+Date: 2026-09-03
+Triad: Person A, Person B, Person C</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Step 6 — Leave the window open</h2>
+        <p class="lead">The amendment window stays open after the meeting.</p>
+        <p>
+          Each member of the triad can change their mind on something they said during the meeting. They must say what they would change about their own position and why. A reasoned case.
+        </p>
+        <p>
+          The closure period is determined by the Group. In many cases it may be a matter of minutes after the meeting. After that, the window closes and the decision stands — unless an outcome proves it wrong.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Step 7 — Track it over time</h2>
+        <p class="lead">At the next meeting, check where you are with last week's outcomes.</p>
+        <p>
+          Any triad member can mark an outcome as complete.
+        </p>
+        <p>
+          If there is disagreement, that can be recorded as in the normal procedure. Dissent requires a reason, and it is strongly recommended.
+        </p>
+        <p>
+          This is the competence signal. Over time, you see who has been right, on what, and how often. That tells you who to route decisions to next time.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The record</h2>
+        <p class="lead">Every decision is written down. The actual record.</p>
+        <p>
+          The record is preserved when a decision is revisited. The original stands, marked as revisited, with the reasoning and the correction. That is accountability — the presence of a path back.
+        </p>
+        <div class="record">Decision: Do we approve the budget for the new project?
+Conditions:
+  1. Is the cost within our means?
+  2. Does the project serve our purpose?
+  3. Can we reverse this if it goes wrong?
+Vote per condition:
+  Condition 1: Yes / Yes / Neutral
+  Condition 2: Yes / No / Yes
+  Condition 3: Yes / Yes / Yes
+Result: Approved (2-1 on condition 2)
+Dissent: Person B — project serves our purpose
+Expected outcome: Project delivers within Q3
+Date: 2026-09-03
+Triad: Person A, Person B, Person C
+---
+Outcome: Project delivered in Q4, not Q3. 20% over budget.
+Match: No
+Date checked: 2027-01-15
+Status: Revisited — condition 2 failed. Original dissent confirmed.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap two-col">
+        <div class="section-intro">
+          <h2>If it goes wrong</h2>
+          <p class="lead">Two kinds of error. Two paths back.</p>
+
+          <h3>False acceptance</h3>
+          <p>You approved something that failed.</p>
+          <p>
+            Flag it. Name what was wrong. Reopen the decision. Send it back to the triad that decided it. They can be asked to reconsider.
+          </p>
+
+          <h3>False rejection</h3>
+          <p>You blocked something that would have worked.</p>
+          <p>
+            This is harder. Someone has to say "we got it wrong by saying no." Give it procedural weight. Let them make the case. Let the triad reopen.
+          </p>
+
+          <p>
+            Either way: the original decision stays in the record. It is preserved. It is marked as revisited, with the reasoning and the correction.
+          </p>
+        </div>
+        <div>
+          <h3>The principle</h3>
+          <p>
+            The structure catches error. It keeps error from being permanent, invisible, or unnameable.
+          </p>
+          <p>
+            See it. Name it. Correct it.
+          </p>
+          <div class="record">See it — outcome tracking, per-condition recording,
+  reversibility flag, amendment window, revisit alerts.
+
+Name it — record structure, per-condition voting,
+  reasoned amendment, error-type tagging, competence tracking.
+
+Correct it — reopening mechanism, graph query revisit,
+  amendment window, asymmetric modes, dissent as ready-made case.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>For multiple decisions</h2>
+        <p class="lead">This guide covers one decision with one triad.</p>
+        <p>
+          When a meeting has several decisions, the agenda is a routing problem. Different decisions may need different triads. The facilitator decomposes the agenda, routes each decision to the right triad, and closes with a review of the whole.
+        </p>
+        <p>
+          Each decision is a node. Edges record dependency: premise, constraint, or delegation. The structure is a directed acyclic graph.
+        </p>
+        <p>
+          A triad ruling on a large question spawns the sub-decisions it owns, each routed to its own triad, in parallel. A triad blocked for want of an input spawns the blocking question and routes it laterally to whoever owns it, rather than escalating to a less-informed authority.
+        </p>
+        <p>
+          Any decision spawning children should retain a closing decision reviewing the whole. This is specified and being implemented.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Why it works</h2>
+        <p class="lead">Three people are better than one when each is more likely right than wrong.</p>
+        <p>
+          Below that line, adding more people makes the decision worse. The triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost.
+        </p>
+        <p>
+          Two of three is the minimal structure that treats every voice the same and both sides of a question the same. A supermajority threshold privileges the status quo. Unanimity lets one person hold the whole group. Two of three prefers the outcome that moves, and records the dissent, to the outcome that moves because one person objected.
+        </p>
+        <p>
+          Recording per condition corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants.
+        </p>
+        <p>
+          The amendment window catches a decision going wrong before the outcome arrives. Revisit alerts flag descendants when a parent is re-decided, so the error is seen at its source and everywhere it landed.
+        </p>
+        <p>
+          The structure catches error. It keeps error from being permanent, invisible, or unnameable.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Advanced options</h2>
+        <p class="lead">For when the simple path resolves. Most meetings will need them.</p>
+
+        <h3>Facilitator agreed</h3>
+        <p>If the group settles on a facilitator by discussion:</p>
+        <ol class="steps">
+          <li>
+            <div><strong>Vote.</strong><span>Each person names one facilitator. You can vote for yourself.</span></div>
+          </li>
+          <li>
+            <div><strong>The person with the most votes facilitates.</strong></div>
+          </li>
+          <li>
+            <div><strong>If there is a tie, draw lots.</strong><span>Write the tied names on paper, pull from a hat.</span></div>
+          </li>
+        </ol>
+        <p>
+          This is the same pattern as forming the triad: the community's knowledge of who is best suited is the signal. Voting surfaces it. Lots resolve what the community can.
+        </p>
+
+        <h3>Neutral votes — detail</h3>
+        <p>
+          A neutral vote means: I have a position on this condition.
+        </p>
+        <p>
+          It is "maybe." It is "I abstain." It is: this condition is one I can judge on the information I have, or it is relevant to my part in this decision.
+        </p>
+        <ul class="list">
+          <li>A neutral vote counts toward the two-of-three.</li>
+          <li>A condition needs at least two non-neutral votes to be resolved.</li>
+          <li>If a condition has two or more non-neutral votes, it is resolved. The decision can pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.</li>
+        </ul>
+        <p>
+          Why this exists: sometimes a condition genuinely applies to one member of the triad — they have the knowledge, or it falls within their part of the decision. Forcing a yes/no produces noise. Neutral produces a signal: this condition needs attention.
+        </p>
+        <p>
+          It creates a third outcome. The decision still passes or fails on each condition. Neutral just means the condition is yet settled.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Get started</h2>
+        <p class="lead">Three people. Paper and pen. A decision to make.</p>
+        <p>
+          That's it. You need software. You need a rollout. You need one decision that matters and three people who can decide it.
+        </p>
+        <div class="actions">
+          <a class="button" href="index.html#pilot">Start a pilot</a>
+          <a class="button button--quiet" href="biblical-foundations.html">Biblical underpinnings</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="index.html">Triangle for organisations</a> · <a href="protocol.html">The protocol</a> · <a href="our-story.html">Our story</a> · <a href="biblical-foundations.html">Biblical foundations</a></p>
+      <p>© 2026 Triangle</p>
+    </div>
+  </footer>
+</body>
+</html>

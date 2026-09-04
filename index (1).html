@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triangle — delegate decisions and keep the truth about how they were made</title>
+  <meta name="description" content="Triangle is a decision architecture for companies whose decisions have outgrown one person. Test it on real decisions in a paid 90-day evidence pilot.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Triangle — delegate decisions and keep the truth about how they were made">
+  <meta property="og:description" content="Three relevant people decide. The minority position stays with the decision. Test it on real decisions before wider adoption.">
+  <meta property="og:url" content="https://triangle.ceo/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Triangle — delegate decisions and keep the truth about how they were made">
+  <meta name="twitter:description" content="A measured way to test how your company makes consequential decisions.">
+
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --fg: #16150f;
+      --muted: #5d5a4e;
+      --rule: #dedbd1;
+      --accent: #8c2f16;
+      --accent-dark: #6c2110;
+      --panel: #f3f0e8;
+      --pilot-bg: #201f1a;
+      --pilot-fg: #fffdf9;
+      --pilot-muted: #d7d2c8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141412;
+        --fg: #eeece4;
+        --muted: #aaa597;
+        --rule: #302f2a;
+        --accent: #ed9677;
+        --accent-dark: #f0a385;
+        --panel: #1e1d19;
+        --pilot-bg: #e9e5dc;
+        --pilot-fg: #181714;
+        --pilot-muted: #514d45;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 18px/1.62 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: none; }
+    .wrap { width: min(100% - 3rem, 68rem); margin: 0 auto; }
+
+    nav { border-bottom: 1px solid var(--rule); }
+    nav .wrap {
+      min-height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .mark {
+      color: var(--fg);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.2rem; }
+    .nav-link {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    .hero { padding: 5.75rem 0 4.25rem; }
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, .58fr);
+    }
+    .hero-copy { max-width: 43rem; }
+    .hero-diagram {
+      justify-self: end;
+      margin: 0;
+      max-width: 20rem;
+      width: min(100%, 20rem);
+    }
+    .hero-diagram img { display: block; height: auto; width: 100%; }
+    .hero-diagram figcaption {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      line-height: 1.45;
+      margin-top: .75rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .eyebrow, h2, .label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 1.2rem; }
+    h1 {
+      max-width: 26ch;
+      font-size: clamp(1.55rem, 2.7vw, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.16;
+      margin: 0;
+    }
+    .standfirst {
+      color: var(--muted);
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      line-height: 1.48;
+      margin: 2rem 0 0;
+      max-width: 43rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.3rem; }
+    .button {
+      align-items: center;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      display: inline-flex;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: .07em;
+      min-height: 3rem;
+      padding: .7rem 1.05rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .button:hover { background: var(--accent-dark); color: #fff; }
+    .button--quiet { background: transparent; color: var(--accent); }
+    .button--quiet:hover { background: var(--panel); color: var(--accent-dark); }
+
+    section { border-top: 1px solid var(--rule); padding: 5.5rem 0; }
+    section .section-intro { max-width: 48rem; }
+    h2 { margin: 0 0 1.5rem; }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -.015em;
+      line-height: 1.23;
+      margin: 0 0 .75rem;
+    }
+    p { margin: 0 0 1.15rem; }
+    p:last-child { margin-bottom: 0; }
+    .lead {
+      font-size: clamp(1.32rem, 2.4vw, 1.72rem);
+      line-height: 1.36;
+      letter-spacing: -.018em;
+    }
+    .muted { color: var(--muted); }
+
+    .split {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(16rem, .85fr);
+    }
+    .statement {
+      align-self: start;
+      border-left: 2px solid var(--accent);
+      margin: 0;
+      padding: .35rem 0 .35rem 1.45rem;
+    }
+    .statement p {
+      font-size: 1.24rem;
+      line-height: 1.42;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 2.6rem;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .card { background: var(--bg); padding: 1.65rem 1.55rem 1.55rem; }
+    .card p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
+
+    .steps { counter-reset: steps; list-style: none; margin: 2.3rem 0 0; max-width: 52rem; padding: 0; }
+    .steps li {
+      border-top: 1px solid var(--rule);
+      counter-increment: steps;
+      display: grid;
+      gap: 1.3rem;
+      grid-template-columns: 2.1rem 1fr;
+      padding: 1.35rem 0;
+    }
+    .steps li:last-child { border-bottom: 1px solid var(--rule); }
+    .steps li::before {
+      align-items: center;
+      border: 1px solid var(--rule);
+      color: var(--accent);
+      content: counter(steps);
+      display: flex;
+      font-family: Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      height: 1.7rem;
+      justify-content: center;
+      margin-top: .08rem;
+      width: 1.7rem;
+    }
+    .steps strong { display: block; font-weight: 600; margin-bottom: .22rem; }
+    .steps span { color: var(--muted); font-size: 1rem; line-height: 1.52; }
+
+    .pilot { background: var(--pilot-bg); color: var(--pilot-fg); }
+    .pilot h2, .pilot .eyebrow { color: var(--pilot-muted); }
+    .pilot .lead { color: var(--pilot-fg); }
+    .pilot p { color: var(--pilot-muted); }
+    .pilot .pilot-grid {
+      display: grid;
+      gap: 1px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2.75rem;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+    .pilot-card { padding: 1.6rem; }
+    .pilot-card h3 { color: var(--pilot-fg); }
+    .pilot-card p { font-size: .98rem; line-height: 1.5; }
+    .pilot .pilot-end strong { color: var(--pilot-fg); }
+    .pilot-end {
+      border-top: 1px solid rgba(255,255,255,.22);
+      font-size: 1.18rem;
+      line-height: 1.4;
+      margin: 2.3rem 0 0;
+      padding-top: 1.65rem;
+    }
+
+    .list { list-style: none; margin: 2.1rem 0 0; max-width: 50rem; padding: 0; }
+    .list li {
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0 .85rem 1.6rem;
+      position: relative;
+    }
+    .list li::before { color: var(--accent); content: "—"; left: 0; position: absolute; }
+
+    .report-grid {
+      display: grid;
+      gap: 2.2rem 4rem;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 2.25rem;
+    }
+    .report-grid p { color: var(--muted); font-size: 1rem; }
+
+    .callout { background: var(--panel); margin-top: 2.25rem; padding: 1.7rem; }
+    .callout p:first-child { font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
+
+    .founder { background: var(--panel); }
+    .founder-grid {
+      align-items: center;
+      display: grid;
+      gap: 3.5rem;
+      grid-template-columns: minmax(0, .9fr) minmax(20rem, 1.1fr);
+    }
+    .founder-copy { max-width: 35rem; }
+    .video { margin: 0; }
+    .video__frame {
+      aspect-ratio: 16 / 9;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .video__frame iframe {
+      border: 0;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      width: 100%;
+    }
+    .video figcaption {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .07em;
+      line-height: 1.45;
+      margin-top: .75rem;
+      text-transform: uppercase;
+    }
+
+    .closing { padding-bottom: 6.5rem; }
+    .closing .wrap { max-width: 56rem; }
+    .closing h2 { margin-bottom: 1.35rem; }
+    .closing .lead { max-width: 42rem; }
+
+    footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; padding: 2.5rem 0 4rem; }
+    footer p { margin-bottom: .4rem; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .wrap { width: min(100% - 2.5rem, 68rem); }
+      .hero { padding: 4.25rem 0 3.25rem; }
+      .hero-grid, .split, .pilot .pilot-grid, .report-grid, .founder-grid { grid-template-columns: 1fr; }
+      .hero-diagram { justify-self: start; margin-top: .25rem; max-width: 14rem; }
+      .hero-diagram figcaption { text-align: left; }
+      section { padding: 3.85rem 0; }
+      .cards { grid-template-columns: 1fr; }
+      .pilot-card { padding: 1.5rem; }
+    }
+
+    @media (max-width: 420px) {
+      nav .wrap { min-height: 4rem; }
+      .nav-links { gap: .8rem; }
+      .nav-link { font-size: .68rem; }
+      .actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="mark" href="/">Triangle</a>
+      <div class="nav-links">
+        <a class="nav-link" href="protocol.html">The protocol</a>
+        <a class="nav-link" href="our-story.html">Our story</a>
+        <a class="nav-link" href="biblical-foundations.html">Biblical foundations</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">A decision architecture for organisations</p>
+        <h1>Delegate decisions and keep the truth about how they were made.</h1>
+        <p class="standfirst">
+          Triangle puts three relevant people around one clear proposition. Two can carry it.
+          The dissent stays with the decision. We test it on real decisions before wider adoption.
+        </p>
+        <div class="actions">
+          <a class="button" href="mailto:martin.beyst@gmail.com?subject=Triangle%20Evidence%20Pilot">Talk about a live decision</a>
+          <a class="button button--quiet" href="#how-it-works">See how it works</a>
+        </div>
+      </div>
+      <figure class="hero-diagram">
+        <img src="/triangle-decision-diagram.svg" alt="Three equal people connected around a shared decision record">
+        <figcaption>Three people. One decision. A record that remains.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>The problem</h2>
+          <p class="lead">
+            Nine people go into a room. Every one of them has a view. Ninety minutes later there is one view — the one everybody could live with.
+          </p>
+          <p>
+            The first person to speak sets the range everyone else argues inside. The fact known by only one person often goes unspoken. By the time a decision fails, the company has a deck, an outcome and a date — without the reasoning that led there.
+          </p>
+          <p>
+            That is why delegation feels risky. So the founder or chief executive stays in decisions they would rather delegate, simply because the organisation loses what it knew at the time.
+          </p>
+        </div>
+        <blockquote class="statement">
+          <span class="label">The point</span>
+          <p>The majority decides. The minority survives.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>What Triangle changes</h2>
+          <p class="lead">It is a small, visible structure for consequential decisions.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>One clear proposition</h3>
+            <p>The decision is written as one sentence someone can agree or disagree with before the room opens.</p>
+          </article>
+          <article class="card">
+            <h3>The right three people</h3>
+            <p>Participants are chosen for relevant knowledge and consequence — their insight and stake matter more than their place on the organisation chart.</p>
+          </article>
+          <article class="card">
+            <h3>A visible position</h3>
+            <p>Each person says Agree or Disagree. Nobody needs to manufacture consensus to get the meeting over with.</p>
+          </article>
+          <article class="card">
+            <h3>A decision that remembers</h3>
+            <p>The result, the minority view, the assumptions and the distribution list remain with the decision.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>How a Triangle decision works</h2>
+          <p class="lead">The argument remains human. The structure around it keeps the important part from disappearing.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <div><strong>Issue the proposition in advance.</strong><span>One sentence. Clear enough to agree with or reject.</span></div>
+          </li>
+          <li>
+            <div><strong>Name three people and say why.</strong><span>Choose the people who know something material and who will live with the consequence.</span></div>
+          </li>
+          <li>
+            <div><strong>Discuss in the triad.</strong><span>The three people discuss the case. The conversation stays unscripted. Disagreement stays intact.</span></div>
+          </li>
+          <li>
+            <div><strong>Let two of three carry it.</strong><span>The minority view stays beside the decision, in that person's own words.</span></div>
+          </li>
+          <li>
+            <div><strong>Keep the record intact.</strong><span>The proposition, the three people, their positions, the result and who may read it. Corrections are appended alongside the original record.</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="pilot" id="pilot">
+      <div class="wrap">
+        <h2>Start with evidence</h2>
+        <p class="lead">Test it on decisions the company already has to make.</p>
+        <p>Every company has a different decision culture. A pilot gives you evidence from your own people, your own decisions and your own operating constraints.</p>
+
+        <div class="pilot-grid">
+          <article class="pilot-card">
+            <h3>What you commit</h3>
+            <p>One executive sponsor. One decision domain. Four to six real decisions over ninety days. One internal coordinator. Explicit protection for dissent.</p>
+          </article>
+          <article class="pilot-card">
+            <h3>What happens</h3>
+            <p>We establish a baseline, facilitate the early decision rooms online, create the records, review the pattern and train an internal steward.</p>
+          </article>
+          <article class="pilot-card">
+            <h3>What we test</h3>
+            <p>Whether relevant dissent becomes visible, whether executive involvement becomes more selective, and whether the organisation can reconstruct why it decided.</p>
+          </article>
+        </div>
+
+        <p class="pilot-end"><strong>At the end of ninety days, you decide from evidence.</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>How the pilot is delivered</h2>
+          <p class="lead">Real decisions. Private online decision rooms. A record the company owns.</p>
+          <p>
+            The pilot begins with real decisions in a private Teams, Slack or other client-approved decision room. The proposition is issued in advance; the three people discuss it; final positions are submitted privately and revealed together.
+          </p>
+          <p>
+            The raw conversation remains the source record. Tools can help check completeness and prepare progress reports, and preserve what people said.
+          </p>
+        </div>
+        <div>
+          <h3>What comes out</h3>
+          <ul class="list">
+            <li>A baseline view of how decisions currently happen</li>
+            <li>One durable record for each live decision</li>
+            <li>Simple monthly progress reports</li>
+            <li>Measures of process integrity</li>
+            <li>One trained internal steward</li>
+            <li>A final recommendation about wider adoption</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>What we measure</h2>
+          <p class="lead">Whether the decision system is becoming more truthful, usable and less dependent on one person.</p>
+        </div>
+        <div class="report-grid">
+          <article>
+            <h3>Visibility of dissent</h3>
+            <p>Was a minority position expressed? Was it retained accurately? The record shows whether unanimity was real or assumed.</p>
+          </article>
+          <article>
+            <h3>Executive dependency</h3>
+            <p>Which eligible decisions still required the CEO? Which were delegated? When overruling decisions happened, the record shows why.</p>
+          </article>
+          <article>
+            <h3>Organisational memory</h3>
+            <p>Can somebody who was not in the room reconstruct the proposition, assumptions, participants, positions and authority from the record?</p>
+          </article>
+          <article>
+            <h3>Learning over time</h3>
+            <p>Were decisions reopened? Did the same arguments recur? When something changed, could the company see what it had known at the time?</p>
+          </article>
+        </div>
+        <div class="callout">
+          <p>Triangle promises visible disagreement, clear accountability and organisational memory.</p>
+          <p>Three people bring relevant knowledge and consequence to the decision. The relevant disagreement, judgement and accountability remain with the record.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>Who it is for</h2>
+          <p class="lead">Companies at the point where decisions have outgrown one person’s involvement.</p>
+          <p>
+            The founder or chief executive cannot attend every decision, and knows it. The question is whether they can delegate and stay sighted to the information, dissent and consequence around the decision.
+          </p>
+        </div>
+        <div>
+          <h3>What Triangle is</h3>
+          <ul class="list">
+            <li>It preserves authority. An overrule can still happen — visibly, beside what was known at the time.</li>
+            <li>It is separate from performance management. Dissent stays separate from any scorecard.</li>
+            <li>It is a targeted structure for consequential decisions.</li>
+            <li>It acknowledges that three people can still reach a wrong decision.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="founder">
+      <div class="wrap founder-grid">
+        <div class="founder-copy">
+          <h2>Who is behind Triangle</h2>
+          <p class="lead">Martin Beyst has spent years coaching senior people at Repsol, Santander, Acciona and Stellantis on how to object when objecting is expensive.</p>
+          <p>
+            Sentence construction under pressure: how to say the difficult thing in a shape that survives the room, and how to stop an objection collapsing into agreement the moment it leaves your mouth.
+          </p>
+          <p>
+            Triangle came from watching what happens when organisations hear and keep what their own people know. The framework is free. The work is helping a company test it honestly on real decisions.
+          </p>
+        </div>
+        <figure class="video">
+          <div class="video__frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/OSzXFAtV6CA?rel=0&amp;modestbranding=1"
+              title="Martin Beyst introduces Triangle"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption>Martin introduces the original Triangle idea · 1 minute 20 seconds</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Begin with a live decision.</h2>
+        <p class="lead">Bring one decision that exposed the problem and one decision coming up. We will see whether there is a credible ninety-day test.</p>
+        <div class="actions">
+          <a class="button" href="mailto:martin.beyst@gmail.com?subject=Triangle%20Evidence%20Pilot">Talk about a live decision</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Triangle · three decide, and the dissent is kept.</p>
+      <p><a href="mailto:martin.beyst@gmail.com">martin.beyst@gmail.com</a> · <a href="protocol.html">The protocol</a> · <a href="our-story.html">Our story</a> · <a href="biblical-foundations.html">Biblical foundations</a></p>
+    </div>
+  </footer>
+</body>
+</html>

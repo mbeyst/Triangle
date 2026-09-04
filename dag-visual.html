@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triangle Protocol — The DAG (Revised)</title>
+<style>
+  :root {
+    --fg: var(--foreground, #e0e0e0);
+    --muted: var(--muted-foreground, #a0a0a0);
+    --accent: var(--accent, #60a5fa);
+    --border: var(--border, #3a3a3a);
+    --card: var(--card, #1a1a1a);
+    --bg: transparent;
+    --font: var(--font-family, system-ui, sans-serif);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    color: var(--fg);
+    font-family: var(--font);
+    background: var(--bg);
+    line-height: 1.5;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Diagram container */
+  .diagram {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+
+  .diagram svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+
+  .legend-line {
+    width: 2rem;
+    height: 2px;
+  }
+
+  .legend-line.premise { background: #f59e0b; }
+  .legend-line.constraint { background: #10b981; }
+  .legend-line.delegation { background: #6366f1; }
+  .legend-line.lateral { background: #ec4899; stroke-dasharray: 4 2; }
+  .legend-line.closing { background: #ef4444; stroke-dasharray: 6 3; }
+
+  /* Explanation cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--accent);
+  }
+
+  .card p {
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+
+  .card code {
+    background: rgba(255,255,255,0.05);
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    color: var(--fg);
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+    body { padding: 1rem; }
+  }
+
+  .note {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-style: italic;
+    padding: 0.5rem 0;
+  }
+
+  .highlight {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .encryption-note {
+    color: #a78bfa;
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+
+  /* Node styling in SVG */
+  .node-rect {
+    fill: var(--card);
+    stroke: var(--border);
+    stroke-width: 1.5;
+    rx: 6;
+    ry: 6;
+  }
+
+  .node-triad {
+    fill: rgba(99, 102, 241, 0.15);
+    stroke: #6366f1;
+    stroke-width: 1;
+    rx: 4;
+    ry: 4;
+  }
+
+  .node-text {
+    fill: var(--fg);
+    font-size: 11px;
+    font-family: var(--font);
+  }
+
+  .node-subtext {
+    fill: var(--muted);
+    font-size: 9px;
+    font-family: var(--font);
+  }
+
+  .edge-path {
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+
+  .edge-label {
+    fill: var(--muted);
+    font-size: 9px;
+    font-family: var(--font);
+    text-anchor: middle;
+  }
+
+  .arrowhead {
+    fill: var(--muted);
+  }
+
+  .blocked-marker {
+    fill: #ef4444;
+    font-size: 14px;
+  }
+
+  .crypto-badge {
+    fill: #a78bfa;
+    font-size: 8px;
+    font-family: var(--font);
+    text-anchor: middle;
+  }
+</style>
+</head>
+<body>
+
+<h1>Triangle Protocol — The DAG</h1>
+<p class="subtitle">How multiple decisions route through triads when the agenda is not a list</p>
+
+<!-- THE ACCIDENT — moved to top, told as the real story -->
+<div class="section">
+  <h2>How it came about</h2>
+
+  <div class="card">
+    <h3>The accident</h3>
+    <p>I was describing an encryption technology. An AI misheard me and thought I was describing the protocol. But the structure it produced — a directed acyclic graph with threshold-based nodes, lateral routing, and immutable records — turned out to be exactly what the protocol needed.</p>
+    <p>The mishearing wasn't a failure. It was a productive collision. The encryption DAG and the protocol DAG share the same shape, and that isomorphism strengthens both.</p>
+  </div>
+
+  <div class="card">
+    <h3>Why it matters</h3>
+    <p>The protocol currently achieves certain properties <em>by convention</em> — the record stays with the decision, the original stands marked as revisited, dissent is recorded. The encryption framing gives those properties a structural basis. They're not just good practice; they're what the structure guarantees.</p>
+    <p class="encryption-note">The protocol works regardless of whether users know cryptography. The encryption layer is the architecture, not the user interface.</p>
+  </div>
+</div>
+
+<!-- MAIN DIAGRAM — dual layer: protocol on top, encryption underneath -->
+<div class="section">
+  <h2>The structure — two layers</h2>
+  <div class="diagram">
+    <svg viewBox="0 0 900 580" width="100%" height="auto">
+      <defs>
+        <marker id="arrow-premise" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#f59e0b"/>
+        </marker>
+        <marker id="arrow-constraint" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#10b981"/>
+        </marker>
+        <marker id="arrow-delegation" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#6366f1"/>
+        </marker>
+        <marker id="arrow-lateral" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#ec4899"/>
+        </marker>
+        <marker id="arrow-closing" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+        </marker>
+        <!-- Encryption arrows -->
+        <marker id="arrow-share" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#a78bfa"/>
+        </marker>
+        <marker id="arrow-hash" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+        </marker>
+      </defs>
+
+      <!-- ===== PROTOCOL LAYER (top, slightly transparent) ===== -->
+      <text x="450" y="18" text-anchor="middle" class="node-subtext" fill="#60a5fa" font-size="10px" font-weight="600">PROTOCOL LAYER</text>
+
+      <!-- D1: Parent decision -->
+      <rect x="325" y="25" width="250" height="56" class="node-rect"/>
+      <text x="450" y="45" text-anchor="middle" class="node-text" font-weight="600">D1: Do we expand to Europe?</text>
+      <text x="450" y="61" text-anchor="middle" class="node-subtext">Triad: [You, B, C]</text>
+
+      <!-- D1 → D2, D3, D4 (delegation) -->
+      <path d="M 400 81 L 400 105 L 200 105 L 200 135"
+            class="edge-path" stroke="#6366f1" marker-end="url(#arrow-delegation)"/>
+      <text x="300" y="100" text-anchor="middle" class="edge-label">delegation</text>
+
+      <path d="M 450 81 L 450 105 L 450 135"
+            class="edge-path" stroke="#6366f1" marker-end="url(#arrow-delegation)"/>
+      <text x="465" y="100" class="edge-label">delegation</text>
+
+      <path d="M 500 81 L 500 105 L 700 105 L 700 135"
+            class="edge-path" stroke="#6366f1" marker-end="url(#arrow-delegation)"/>
+      <text x="600" y="100" text-anchor="middle" class="edge-label">delegation</text>
+
+      <!-- D2, D3, D4 (middle row) -->
+      <rect x="60" y="135" width="280" height="56" class="node-rect"/>
+      <text x="200" y="155" text-anchor="middle" class="node-text" font-weight="600">D2: Can we afford it?</text>
+      <text x="200" y="171" text-anchor="middle" class="node-subtext">Triad: [CFO, B, C]</text>
+
+      <rect x="310" y="135" width="280" height="56" class="node-rect"/>
+      <text x="450" y="155" text-anchor="middle" class="node-text" font-weight="600">D3: Does the product fit?</text>
+      <text x="450" y="171" text-anchor="middle" class="node-subtext">Triad: [CTO, B, C]</text>
+
+      <rect x="560" y="135" width="280" height="56" class="node-rect"/>
+      <text x="700" y="155" text-anchor="middle" class="node-text" font-weight="600">D4: Is there a viable entity?</text>
+      <text x="700" y="171" text-anchor="middle" class="node-subtext">Triad: [CEO, B, C]</text>
+
+      <!-- Blocked markers -->
+      <circle cx="200" cy="200" r="8" fill="#ef4444"/>
+      <text x="200" y="205" text-anchor="middle" class="blocked-marker">!</text>
+      <circle cx="450" cy="200" r="8" fill="#ef4444"/>
+      <text x="450" y="205" text-anchor="middle" class="blocked-marker">!</text>
+      <circle cx="700" cy="200" r="8" fill="#ef4444"/>
+      <text x="700" y="205" text-anchor="middle" class="blocked-marker">!</text>
+
+      <!-- Lateral routes -->
+      <path d="M 200 191 L 200 225 L 200 265"
+            class="edge-path" stroke="#ec4899" stroke-dasharray="4 2" marker-end="url(#arrow-lateral)"/>
+      <text x="218" y="215" class="edge-label" fill="#ec4899">blocked — lateral route</text>
+
+      <path d="M 450 191 L 450 225 L 450 265"
+            class="edge-path" stroke="#ec4899" stroke-dasharray="4 2" marker-end="url(#arrow-lateral)"/>
+      <text x="468" y="215" class="edge-label" fill="#ec4899">blocked — lateral route</text>
+
+      <path d="M 700 191 L 700 225 L 700 265"
+            class="edge-path" stroke="#ec4899" stroke-dasharray="4 2" marker-end="url(#arrow-lateral)"/>
+      <text x="718" y="215" class="edge-label" fill="#ec4899">blocked — lateral route</text>
+
+      <!-- D5, D6, D7 (lateral routes) -->
+      <rect x="60" y="265" width="280" height="50" class="node-rect" stroke="#ec4899" stroke-width="1.5"/>
+      <text x="200" y="283" text-anchor="middle" class="node-text">D5: What's the actual cost?</text>
+      <text x="200" y="298" text-anchor="middle" class="node-subtext" fill="#ec4899">→ Routed to FP&amp;A (not escalated)</text>
+
+      <rect x="310" y="265" width="280" height="50" class="node-rect" stroke="#ec4899" stroke-width="1.5"/>
+      <text x="450" y="283" text-anchor="middle" class="node-text">D6: Can eng ship by Q3?</text>
+      <text x="450" y="298" text-anchor="middle" class="node-subtext" fill="#ec4899">→ Routed to Eng Lead (not escalated)</text>
+
+      <rect x="560" y="265" width="280" height="50" class="node-rect" stroke="#ec4899" stroke-width="1.5"/>
+      <text x="700" y="283" text-anchor="middle" class="node-text">D7: Is there a candidate?</text>
+      <text x="700" y="298" text-anchor="middle" class="node-subtext" fill="#ec4899">→ Routed to Recruiter (not escalated)</text>
+
+      <!-- Constraints feeding back -->
+      <path d="M 200 315 L 200 345 L 200 375"
+            class="edge-path" stroke="#10b981" marker-end="url(#arrow-constraint)"/>
+      <text x="218" y="335" class="edge-label" fill="#10b981">constraint</text>
+
+      <path d="M 450 315 L 450 345 L 450 375"
+            class="edge-path" stroke="#10b981" marker-end="url(#arrow-constraint)"/>
+      <text x="468" y="335" class="edge-label" fill="#10b981">constraint</text>
+
+      <path d="M 700 315 L 700 345 L 700 375"
+            class="edge-path" stroke="#10b981" marker-end="url(#arrow-constraint)"/>
+      <text x="718" y="335" class="edge-label" fill="#10b981">constraint</text>
+
+      <!-- D2, D3, D4 → D1 (premise) -->
+      <path d="M 200 191 L 200 405 L 300 405 L 300 435"
+            class="edge-path" stroke="#f59e0b" stroke-dasharray="3 2" marker-end="url(#arrow-premise)"/>
+      <path d="M 450 191 L 450 405 L 450 435"
+            class="edge-path" stroke="#f59e0b" stroke-dasharray="3 2" marker-end="url(#arrow-premise)"/>
+      <path d="M 700 191 L 700 405 L 600 405 L 600 435"
+            class="edge-path" stroke="#f59e0b" stroke-dasharray="3 2" marker-end="url(#arrow-premise)"/>
+
+      <text x="300" y="390" text-anchor="middle" class="edge-label" fill="#f59e0b">premise</text>
+      <text x="465" y="390" class="edge-label" fill="#f59e0b">premise</text>
+      <text x="600" y="390" text-anchor="middle" class="edge-label" fill="#f59e0b">premise</text>
+
+      <!-- D8: Closing review -->
+      <rect x="325" y="435" width="250" height="56" class="node-rect" stroke="#ef4444" stroke-width="2"/>
+      <text x="450" y="455" text-anchor="middle" class="node-text" font-weight="600" fill="#ef4444">D8: Closing review — proceed?</text>
+      <text x="450" y="471" text-anchor="middle" class="node-subtext" fill="#ef4444">Triad: [You, B, C] · Specified, not yet implemented</text>
+
+      <path d="M 450 405 L 450 435"
+            class="edge-path" stroke="#ef4444" stroke-dasharray="6 3" marker-end="url(#arrow-closing)"/>
+      <text x="470" y="425" class="edge-label" fill="#ef4444">closing review</text>
+
+      <!-- D2, D3, D4 outcomes → D8 -->
+      <path d="M 200 375 L 200 465 L 350 465"
+            class="edge-path" stroke="#f59e0b" stroke-dasharray="2 2" marker-end="url(#arrow-premise)"/>
+      <path d="M 450 375 L 450 465"
+            class="edge-path" stroke="#f59e0b" stroke-dasharray="2 2" marker-end="url(#arrow-premise)"/>
+      <path d="M 700 375 L 700 465 L 550 465"
+            class="edge-path" stroke="#f59e0b" stroke-dasharray="2 2" marker-end="url(#arrow-premise)"/>
+
+      <!-- ===== ENCRYPTION LAYER (bottom, different colour) ===== -->
+      <text x="450" y="510" text-anchor="middle" class="node-subtext" fill="#a78bfa" font-size="10px" font-weight="600">ENCRYPTION LAYER — what the structure guarantees</text>
+
+      <!-- Hash chain: each node hashes to the next -->
+      <path d="M 200 525 L 200 545 L 300 545 L 300 555"
+            class="edge-path" stroke="#34d399" stroke-dasharray="2 2" marker-end="url(#arrow-hash)"/>
+      <path d="M 450 525 L 450 545 L 450 555"
+            class="edge-path" stroke="#34d399" stroke-dasharray="2 2" marker-end="url(#arrow-hash)"/>
+      <path d="M 700 525 L 700 545 L 600 545 L 600 555"
+            class="edge-path" stroke="#34d399" stroke-dasharray="2 2" marker-end="url(#arrow-hash)"/>
+
+      <text x="200" y="540" text-anchor="middle" class="crypto-badge">hash</text>
+      <text x="450" y="540" text-anchor="middle" class="crypto-badge">hash</text>
+      <text x="600" y="540" text-anchor="middle" class="crypto-badge">hash</text>
+
+      <!-- Threshold: 2-of-3 shares per node -->
+      <circle cx="200" cy="555" r="4" fill="#a78bfa"/>
+      <circle cx="210" cy="555" r="4" fill="#a78bfa"/>
+      <circle cx="220" cy="555" r="4" fill="#a78bfa"/>
+      <text x="235" y="558" class="crypto-badge">2-of-3 threshold</text>
+
+      <circle cx="450" cy="555" r="4" fill="#a78bfa"/>
+      <circle cx="460" cy="555" r="4" fill="#a78bfa"/>
+      <circle cx="470" cy="555" r="4" fill="#a78bfa"/>
+      <text x="485" y="558" class="crypto-badge">2-of-3 threshold</text>
+
+      <circle cx="700" cy="555" r="4" fill="#a78bfa"/>
+      <circle cx="710" cy="555" r="4" fill="#a78bfa"/>
+      <circle cx="720" cy="555" r="4" fill="#a78bfa"/>
+      <text x="735" y="558" class="crypto-badge">2-of-3 threshold</text>
+
+      <!-- Tamper-evidence: original stands, revisited appended -->
+      <text x="450" y="572" text-anchor="middle" class="crypto-badge" fill="#34d399">original stands · revisited appended · any revision breaks the chain</text>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-line premise" style="height:2px"></div>
+      <span><strong>Premise</strong> — must resolve first (hard dependency)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-line constraint" style="height:2px"></div>
+      <span><strong>Constraint</strong> — bounds the option space (soft dependency)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-line delegation" style="height:2px"></div>
+      <span><strong>Delegation</strong> — this piece isn't ours to decide (ownership transfer)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-line lateral" style="height:2px"></div>
+      <span><strong>Lateral route</strong> — blocked, routed sideways to competence (not up)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-line closing" style="height:2px"></div>
+      <span><strong>Closing review</strong> — parent reconvenes after children resolve</span>
+    </div>
+    <div class="legend-item" style="margin-left:auto">
+      <div style="width:12px;height:12px;background:#a78bfa;border-radius:50%;display:inline-block"></div>
+      <span><strong>Encryption layer</strong> — structural guarantees underneath</span>
+    </div>
+  </div>
+</div>
+
+<!-- ISOMORPHISM TABLE -->
+<div class="section">
+  <h2>The isomorphism — protocol meets encryption</h2>
+
+  <div class="card">
+    <h3>What maps to what</h3>
+    <table style="width:100%;border-collapse:collapse;margin-top:0.5rem">
+      <thead>
+        <tr style="border-bottom:1px solid var(--border)">
+          <th style="text-align:left;font-size:0.75rem;color:var(--muted);padding:0.25rem 0.5rem">Encryption concept</th>
+          <th style="text-align:left;font-size:0.75rem;color:var(--muted);padding:0.25rem 0.5rem">Protocol equivalent</th>
+          <th style="text-align:left;font-size:0.75rem;color:var(--muted);padding:0.25rem 0.5rem">What it guarantees</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Ciphertext</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">The decision</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">An opaque object that only resolves with the right inputs</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Shares</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Triad members' votes</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">No single share reveals anything; collaboration required</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Threshold (2-of-3)</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Two yes votes to pass</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Minimal structure that treats every voice the same</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Neutral share</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Neutral vote</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">A share that doesn't contribute to decryption — honest signal, not abstention</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Merkle DAG</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Record chain (original stands, revisited appended)</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Tamper-evidence: any revision breaks the hash chain</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Authenticated node</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Who voted what, and why</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Non-repudiation: each node is authenticated by its author</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Forward secrecy</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Amendment window</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Revisions possible within the window; once closed, the decision stands independently</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Missing share fetched from holder</td>
+          <td style="font-size:0.8125rem;padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Lateral route to whoever owns the input</td>
+          <td style="font-size:0.75rem;color:var(--muted);padding:0.35rem 0.5rem;border-bottom:1px solid var(--border)">Blocked triad fetches the missing piece from competence, not authority</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- WHAT THE ENCRYPTION LAYER STRENGTHENS -->
+<div class="section">
+  <h2>What the encryption layer strengthens</h2>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Tamper-evidence</h3>
+      <p>The protocol says: "the original stands, marked as revisited, with the reasoning and the correction." That's currently a convention — people agree not to overwrite.</p>
+      <p>The encryption framing makes it structural: each decision node is hashed into the next. Any revision that overwrites rather than appends breaks the chain. The record <em>cannot</em> be silently altered. The protocol's accountability mechanism becomes a cryptographic guarantee.</p>
+      <p class="encryption-note">This is what the "the record stays with the decision" line actually means — not a promise, a property.</p>
+    </div>
+
+    <div class="card">
+      <h3>Non-repudiation</h3>
+      <p>The protocol records who voted what and why. That's currently a procedural requirement — people are asked to be honest.</p>
+      <p>The encryption framing makes each node authenticated by its author. You can't later claim you voted differently. The dissent record isn't just documentation — it's a signed statement. The competence tracking over time becomes verifiable, not just remembered.</p>
+    </div>
+
+    <div class="card">
+      <h3>Forward secrecy</h3>
+      <p>The amendment window lets triad members change their mind within a closure period. After that, the decision stands.</p>
+      <p>The encryption framing makes this a structural property: new keys derive from old ones, but compromise of a later key doesn't expose earlier ones. The window isn't just a courtesy — it's a cryptographic boundary. Once closed, the decision is independent of the deliberation that produced it.</p>
+    </div>
+
+    <div class="card">
+      <h3>Threshold trust</h3>
+      <p>Two of three is the minimal structure that treats every voice the same and both sides of a question the same. A supermajority privileges the status quo. Unanimity lets one person hold the group.</p>
+      <p>The encryption framing makes this a threshold scheme: no single participant can decrypt the message. No single triad member can force a decision. The 2-of-3 structure isn't just fair — it's the minimal threshold that prevents unilateral control while still allowing movement.</p>
+    </div>
+  </div>
+</div>
+
+<!-- THE CLOSING REVIEW — specified, not implemented -->
+<div class="section">
+  <h2>The closing review — and why the encryption layer helps</h2>
+
+  <div class="card">
+    <h3>The problem</h3>
+    <p>The protocol says: "Any decision spawning children should retain a closing decision reviewing the whole. This is specified and not yet implemented."</p>
+    <p>Without the closing review, the DAG is just decomposition — you break a big decision into small ones and never reconnect them. The children resolve, but the parent never reconvenes to integrate them.</p>
+  </div>
+
+  <div class="card">
+    <h3>How the encryption layer helps</h3>
+    <p>In a Merkle DAG, the parent node's hash incorporates the hashes of its children. The parent literally cannot be finalised until the children are. The closing review isn't an optional step — it's the convergence point that the structure demands.</p>
+    <p>The children's outcomes become conditions for the parent. The triad votes again on D1, now informed by everything below it. The hash chain enforces the dependency: D1's record can't be sealed until D2, D3, D4 are sealed and their hashes incorporated.</p>
+    <p class="encryption-note">This turns "specified, not implemented" into "specified by the structure." The closing review isn't a nice-to-have — it's what makes the DAG coherent.</p>
+  </div>
+</div>
+
+<!-- REVISIT ALERTS -->
+<div class="section">
+  <h2>Revisit alerts — error propagation</h2>
+
+  <div class="card">
+    <h3>The protocol's mechanism</h3>
+    <p>"If a parent is re-decided, revisit alerts flag descendants — so the error is seen not just at its source but everywhere it landed."</p>
+    <p>This is the accountability mechanism that makes the DAG more than a routing diagram. When D1 is flagged as wrong and reopened, D2, D3, D4 need to know — because they were decided in the context of a parent that may no longer hold.</p>
+  </div>
+
+  <div class="card">
+    <h3>The encryption framing</h3>
+    <p>In a hash chain, a parent revision invalidates every descendant's hash. The structure itself propagates the alert — not as a notification, but as a broken link. Any descendant that doesn't re-hash against the revised parent is visibly stale.</p>
+    <p>This is stronger than a procedural alert. It's structural invalidation. The error isn't just communicated — it's mathematically detectable.</p>
+  </div>
+</div>
+
+<!-- HOW IT FITS THE REST OF THE PROTOCOL -->
+<div class="section">
+  <h2>How the DAG fits the rest of the protocol</h2>
+
+  <div class="card">
+    <h3>The triad is the atom. The DAG is the molecule.</h3>
+    <p>Every node in the DAG runs the same surface → frame → vote → record flow. The DAG doesn't change any of the triad mechanics — two of three, per-condition voting, neutral votes, dissent recording, amendment window, outcome tracking. It just connects multiple triad decisions across time and ownership.</p>
+  </div>
+
+  <div class="card">
+    <h3>"The meeting is not the container. The decision is the container."</h3>
+    <p>The DAG extends this. The DAG is the container for multiple decisions. Meetings are just the moments when triads convene to process nodes. A single meeting might process D1's framing, while D2, D3, D4 are being processed by their own triads in parallel — possibly in different meetings, possibly asynchronously.</p>
+  </div>
+
+  <div class="card">
+    <h3>The protocol works without cryptography</h3>
+    <p>The encryption layer is the architecture, not the user interface. Users don't need to know about hash chains or threshold schemes. They vote, record dissent, track outcomes. The structural guarantees are there regardless — tamper-evidence, non-repudiation, forward secrecy — whether or not anyone thinks about them as cryptography.</p>
+    <p class="encryption-note">The AI mishearing encryption as protocol wasn't a bug. It was the structure revealing itself through the wrong lens — and the lens turned out to be right.</p>
+  </div>
+</div>
+
+<p class="note" style="text-align:center;margin-top:2rem">Triangle Protocol · triangle.ceo · © 2026</p>
+
+</body>
+</html>

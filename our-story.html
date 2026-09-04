@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Story — Triangle</title>
+  <meta name="description" content="How Triangle started: a quest for truth, an idea that arrived in 2004, and twenty years of carrying before it found its form.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Story — Triangle">
+  <meta property="og:description" content="A quest for truth led somewhere. An idea arrived in 2004. It took twenty years before it could become what it is now.">
+  <meta property="og:url" content="https://triangle.ceo/our-story.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Our Story — Triangle">
+  <meta name="twitter:description" content="The story behind the decision architecture.">
+
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --fg: #16150f;
+      --muted: #5d5a4e;
+      --rule: #dedbd1;
+      --accent: #8c2f16;
+      --accent-dark: #6c2110;
+      --panel: #f3f0e8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141412;
+        --fg: #eeece4;
+        --muted: #aaa597;
+        --rule: #302f2a;
+        --accent: #ed9677;
+        --accent-dark: #f0a385;
+        --panel: #1e1d19;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 18px/1.62 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: none; }
+    .wrap { width: min(100% - 3rem, 68rem); margin: 0 auto; }
+
+    nav { border-bottom: 1px solid var(--rule); }
+    nav .wrap {
+      min-height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .mark {
+      color: var(--fg);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .mark:hover { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.2rem; }
+    .nav-link {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    .hero { padding: 5.75rem 0 4.25rem; }
+    .hero-grid {
+      align-items: center;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, .58fr);
+    }
+    .hero-copy { max-width: 43rem; }
+    .eyebrow, h2, .label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: .73rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow { margin: 0 0 1.2rem; }
+    h1 {
+      max-width: 26ch;
+      font-size: clamp(1.55rem, 2.7vw, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+      line-height: 1.16;
+      margin: 0;
+    }
+    .standfirst {
+      color: var(--muted);
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      line-height: 1.48;
+      margin: 2rem 0 0;
+      max-width: 43rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.3rem; }
+    .button {
+      align-items: center;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #fff;
+      display: inline-flex;
+      font-family: Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      justify-content: center;
+      letter-spacing: .07em;
+      min-height: 3rem;
+      padding: .7rem 1.05rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .button:hover { background: var(--accent-dark); color: #fff; }
+    .button--quiet { background: transparent; color: var(--accent); }
+    .button--quiet:hover { background: var(--panel); color: var(--accent-dark); }
+
+    section { border-top: 1px solid var(--rule); padding: 5.5rem 0; }
+    section .section-intro { max-width: 48rem; }
+    h2 { margin: 0 0 1.5rem; }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -.015em;
+      line-height: 1.23;
+      margin: 0 0 .75rem;
+    }
+    p { margin: 0 0 1.15rem; }
+    p:last-child { margin-bottom: 0; }
+    .lead {
+      font-size: clamp(1.32rem, 2.4vw, 1.72rem);
+      line-height: 1.36;
+      letter-spacing: -.018em;
+    }
+    .muted { color: var(--muted); }
+
+    .split {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: minmax(0, 1.15fr) minmax(16rem, .85fr);
+    }
+    .statement {
+      align-self: start;
+      border-left: 2px solid var(--accent);
+      margin: 0;
+      padding: .35rem 0 .35rem 1.45rem;
+    }
+    .statement p {
+      font-size: 1.24rem;
+      line-height: 1.42;
+      margin: 0;
+    }
+
+    .timeline { list-style: none; margin: 2.3rem 0 0; max-width: 52rem; padding: 0; }
+    .timeline li {
+      border-top: 1px solid var(--rule);
+      padding: 1.35rem 0;
+    }
+    .timeline li:last-child { border-bottom: 1px solid var(--rule); }
+    .timeline time {
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .timeline h3 {
+      font-size: 1.15rem;
+      margin: .5rem 0 .35rem;
+    }
+    .timeline p { color: var(--muted); font-size: 1rem; line-height: 1.52; margin: 0; }
+
+    .callout { background: var(--panel); margin-top: 2.25rem; padding: 1.7rem; }
+    .callout p:first-child { font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
+
+    .closing { padding-bottom: 6.5rem; }
+    .closing .wrap { max-width: 56rem; }
+    .closing h2 { margin-bottom: 1.35rem; }
+    .closing .lead { max-width: 42rem; }
+
+    footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; padding: 2.5rem 0 4rem; }
+    footer p { margin-bottom: .4rem; }
+
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .wrap { width: min(100% - 2.5rem, 68rem); }
+      .hero { padding: 4.25rem 0 3.25rem; }
+      .hero-grid { grid-template-columns: 1fr; }
+      section { padding: 3.85rem 0; }
+      .split { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      nav .wrap { min-height: 4rem; }
+      .nav-links { gap: .8rem; }
+      .nav-link { font-size: .68rem; }
+      .actions { align-items: stretch; flex-direction: column; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="mark" href="/">Triangle</a>
+      <div class="nav-links">
+        <a class="nav-link" href="protocol.html">The protocol</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="biblical-foundations.html">Biblical foundations</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Where Triangle came from</p>
+          <h1>A quest for truth led somewhere. An idea arrived in 2004. It took twenty years before it could become what it is now.</h1>
+          <p class="standfirst">
+            Not a business idea that found its market. A conviction that arrived all at once, was carried quietly for two decades, and is only now becoming tangible.
+          </p>
+        </div>
+        <div class="hero-diagram">
+          <!-- placeholder — swap in a simple diagram or photo when ready -->
+          <div style="background:var(--panel);border:1px solid var(--rule);min-height:14rem;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:Arial,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:1.5rem;">
+            Diagram or photo goes here
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="the-quest">
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>The quest</h2>
+          <p class="lead">
+            The story begins with a search, not a conclusion.
+          </p>
+          <p>
+            Twenty years before Triangle, I was on a quest for truth. I didn't know Jesus at that time. I was looking for something real, and the search led me to him.
+          </p>
+          <p>
+            I was uncomfortable surrendering to him. So I pretty much ignored him for twenty years. The encounter didn't turn into a path. It turned into a silence. And that silence — the space between what I had found and what I had walked away from — is where the idea that became Triangle eventually took shape.
+          </p>
+        </div>
+        <blockquote class="statement">
+          <span class="label">Before the idea</span>
+          <p>A quest for truth. An encounter. Twenty years of silence.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="what-arrived">
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>What arrived</h2>
+          <p class="lead">
+            October 2004. Not a vision, exactly. More a realization — an epiphany, an aha moment amplified a few thousand times.
+          </p>
+          <p>
+            I drifted into what I can only call a greater state of knowing. New concepts and ideas became visible, but I couldn't name them clearly at the time. What I could feel was this: three people mattered. The triangle mattered. The Trinity was true, and something about that shape was not accidental.
+          </p>
+          <p>
+            I knew the conclusion before I knew the architecture. Certain things should be the way they are — in how decisions are made, in how people relate to one another in a room — and I could feel the shape of it without yet having the language to build it.
+          </p>
+        </div>
+        <blockquote class="statement">
+          <span class="label">What I knew</span>
+          <p>Three people. A shape. A truth I could feel but not yet build.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>The long carrying</h2>
+          <p class="lead">
+            Twenty years. The idea was buried — not on purpose, but because I could not see what to do with it.
+          </p>
+          <p>
+            I told some people about it. Suggested that a meeting with three people was the right shape for certain decisions. They listened. Some were interested. But interest is not a plan, and I had no plan.
+          </p>
+          <p>
+            The doubt was practical, not spiritual. What do you do with an idea like this? How does it make money? I could not see the path, so I set it down and went on with the life I had.
+          </p>
+          <p>
+            There is a parable in Matthew about a man who buries the gift he was given, afraid of what he cannot do with it. I did not mean to become that man. But for a long stretch, that is what happened. I was relying on handouts — waiting for the right moment, the right opening, the right someone to tell me what to do with it. And the gift stayed buried.
+          </p>
+          <p>
+            The thing about burying a gift is that you still know it's there. You can feel it under the soil. I knew the idea was real. I just couldn't see the path from here to there.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="the-coaching-years">
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>The coaching years</h2>
+          <p class="lead">
+            Years of coaching senior people at Repsol, Santander, Acciona and Stellantis on how to object when objecting is expensive.
+          </p>
+          <p>
+            Not confidence training. Not "be more assertive". Sentence construction under pressure: how to say the difficult thing in a shape that survives the room, and how to stop an objection collapsing into agreement the moment it leaves your mouth.
+          </p>
+          <p>
+            The coaching did something important. It kept confirming the instinct I had carried since 2004. Three people mattered. The shape mattered. But the coaching was about the individual — giving one person a form that held. The organisational problem was bigger than that, and I still did not have the architecture for it.
+          </p>
+        </div>
+        <blockquote class="statement">
+          <span class="label">What the coaching confirmed</span>
+          <p>The person who knew something material often could not make it stick. The person who could make it stick was often not the person who knew.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="the-interior-journey">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>The interior journey</h2>
+          <p class="lead">
+            Not every question about the idea was practical. Some of it was about whether the idea was even mine to carry.
+          </p>
+          <p>
+            I surrendered to God to show me the way. I was not always sure whether the voice I heard was His. I went for deliverance at one point, looking for clarity, and found nothing.
+          </p>
+          <p>
+            Someone in my community tried to frame me as a heretic over what I had seen. That same person later showed me something I needed: that God wants to be related to in silence — the way I had originally come to know Him. The idea had arrived in a noisy moment, but the ground it stood on was quiet.
+          </p>
+          <p>
+            I do not offer that as a theology lesson. It is the founder's story of discernment — the long work of learning whether something is from God or from the mind that wants it to be. The biblical foundations page goes further into the scripture that underpins the framework. This page is about how the idea survived its own origin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>The reorientation</h2>
+          <p class="lead">
+            Life reordered around what matters most.
+          </p>
+          <p>
+            The years since 2004 were not only a waiting period. They were a reorientation — a slow shift toward the things that actually matter, away from the things that only look like they matter. Living in accordance with what was known, even when it could not yet be named or built.
+          </p>
+          <p>
+            I had tried the other route first. Vision boards, goal-setting, the whole apparatus of self-directed ambition. They work — in the sense that they produce results. But the results were not the thing I wanted to leave with the world. Seeking my own dreams first left me empty, even when the boards delivered. Seeking the Kingdom first — the thing that matters, the thing I was actually made for — that is what began to fill the space.
+          </p>
+          <p>
+            There is one thing I wanted to leave with the world. This idea. Not a company, not a brand, not a clever framework with my name on it. The conviction that decisions can be made differently — that the disagreement can be kept, the record can remain, and the people who know something material can be heard without having to fight for it.
+          </p>
+          <p>
+            That is the one thing. Everything else — the pilot, the tooling, the business — is the shape that conviction finally found.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="the-emergence">
+      <div class="wrap split">
+        <div class="section-intro">
+          <h2>The emergence</h2>
+          <p class="lead">
+            Technology caught up to an old truth.
+          </p>
+          <p>
+            Doing Triangle on paper is possible. It has always been possible. But it is a lot of overhead, and overhead is what kills good ideas in organisations. The system only works if it is easy enough to use that people actually use it.
+          </p>
+          <p>
+            AI recording the various meeting aspects — the proposition, the positions, the minority view, the record — drastically reduces that overhead. What was a conviction in 2004 is now a system a company can test on real decisions without a team of people manually chasing records.
+          </p>
+          <p>
+            The more people I shared the idea with over the years, the more interest it generated. But interest without a form is just conversation. The technology is what turned the conversation into something a company can actually try.
+          </p>
+        </div>
+        <blockquote class="statement">
+          <span class="label">What changed</span>
+          <p>The idea was always there. The overhead was always the problem. The tooling finally caught up.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>The design conviction</h2>
+          <p class="lead">
+            Certain things should be the way they are. The architecture is not arbitrary.
+          </p>
+          <p>
+            Three people, because a group large enough to drown the minority is too large to keep the disagreement visible. A clear proposition, because a room cannot argue honestly against a sentence it cannot grasp. Private final positions, because the last speaker should not set the range. The minority view kept in the dissenter's own words, because softened disagreement is no disagreement at all.
+          </p>
+          <p>
+            These are not preferences. They are the shape of what arrived in 2004, finally built out. The framework is free. The work is helping a company test it honestly on real decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Begin with a live decision.</h2>
+        <p class="lead">Bring one decision that exposed the problem and one decision coming up. We will see whether there is a credible ninety-day test.</p>
+        <div class="actions">
+          <a class="button" href="mailto:martin.beyst@gmail.com?subject=Triangle%20Evidence%20Pilot">Talk about a live decision</a>
+          <a class="button button--quiet" href="/">Back to home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Triangle · three decide, and the dissent is kept.</p>
+      <p><a href="mailto:martin.beyst@gmail.com">martin.beyst@gmail.com</a> · <a href="/research">Research</a> · <a href="biblical-foundations.html">Biblical foundations</a></p>
+    </div>
+  </footer>
+</body>
+</html>
