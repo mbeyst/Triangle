@@ -1,4 +1,4 @@
-# Quick Start
+**Frame it. Vote. Record. Move.**
 
 ## For First-Time Users
 

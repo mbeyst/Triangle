@@ -76,7 +76,7 @@ Hi [Name],
 
 I've been following your work on [specific topic]. Your post on [specific post] shaped how we think about [specific insight].
 
-Quick context: we built a framework where 3-person groups decide with 2/3 agreement (dissent recorded, not blocked). AI facilitates, humans decide. Cuts decision time from weeks to <60 minutes.
+Quick context: we built a framework where 3-person groups decide with 2/3 agreement (dissent recorded, not blocked). AI facilitates, humans decide. Frame it. Vote. Record. Move.
 
 Would you be open to a conversation about this? I think your audience would find the [specific insight] piece valuable.
 
@@ -98,6 +98,8 @@ Triangle is a decision architecture where:
 - 2/3 agreement moves the decision forward (no veto power)
 - 1/3 dissent is recorded and published (not suppressed)
 - AI facilitates (tracks equity, summarizes, logs decisions) — but doesn't decide
+
+**Frame it. Vote. Record. Move.**
 
 We've seen this cut decision time from weeks to <60 minutes while preserving dissent (which actually improves execution).
 
@@ -135,6 +137,8 @@ Triangle is a decision architecture where:
 - 2/3 agreement moves the decision forward (no veto power)
 - 1/3 dissent is recorded and published (not suppressed)
 - AI facilitates (tracks equity, summarizes, logs decisions) — but doesn't decide
+
+**Frame it. Vote. Record. Move.**
 
 We've seen this cut decision time from weeks to <60 minutes while preserving dissent (which actually improves execution).
 
@@ -192,6 +196,8 @@ Martin
 ### Template 1: Insight Addition
 ```
 The consensus model you described is exactly what we're trying to solve with triads. 2/3 agreement moves faster, and dissent-on-record actually improves execution because objections aren't erased.
+
+Frame it. Vote. Record. Move.
 
 We're testing AI facilitation for this — tracks speaking time, ensures equity, publishes the decision log. Humans decide, AI facilitates.
 

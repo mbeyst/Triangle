@@ -66,6 +66,8 @@ These creators talk about AI, facilitation, or team dynamics:
 - Reference the concept without naming it
 - Build recognition over 3-5 interactions
 
+**The tagline:** Frame it. Vote. Record. Move.
+
 ### Comment Templates
 
 **Template 1: Add a Pattern**

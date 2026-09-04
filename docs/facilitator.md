@@ -1,5 +1,7 @@
 # Facilitator Guide
 
+**Frame it. Vote. Record. Move.**
+
 ## Human Facilitator Checklist
 
 If you're facilitating a triad session manually:

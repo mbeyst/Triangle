@@ -1,5 +1,7 @@
 # Core Concepts
 
+**Frame it. Vote. Record. Move.**
+
 ## Dyad vs. Triad
 
 ### Dyad (2 people)
