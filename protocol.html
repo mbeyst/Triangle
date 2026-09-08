@@ -266,7 +266,7 @@
     <section id="process">
       <div class="wrap">
         <h2>The process</h2>
-        <p class="lead">Six steps. Paper and pen. Three people. One decision at a time.</p>
+        <p class="lead">Seven steps. Paper and pen. Three people. One decision at a time.</p>
 
         <ol class="steps">
           <li>
@@ -336,7 +336,7 @@
             They design the meeting. The facilitator is also a voter.
           </p>
           <p>
-            The person who surfaced the decision usually facilitates. If someone else is better suited to structure this particular decision, that person facilitates instead. If the group agrees, the authorised person selects.
+            The person who surfaced the decision usually facilitates. If someone else is better suited to structure this particular decision, that person facilitates instead. If the group cannot agree, the authorised person selects.
           </p>
         </div>
         <div>
@@ -420,10 +420,10 @@ Conditions:
             Two out of three yes votes on any resolved condition means it passes. Zero yes votes means it fails.
           </p>
           <p>
-            A neutral vote means "I do not have a position on this condition." It is an honest signal that the condition is answerable by this person — either they have the knowledge, or it falls within their part of the decision.
+            A neutral vote means "I do not have a position on this condition." It is an honest signal that the condition is not answerable by this person — either they lack the knowledge, or it falls outside their part of the decision.
           </p>
           <p>
-            A neutral vote is set aside. It counts toward the two-of-three. A condition needs at least two non-neutral votes to be resolved. If a condition has two or more non-neutral votes, it is resolved, and the decision can pass on it.
+            A neutral vote is set aside. It does not count toward the two-of-three. A condition needs at least two non-neutral votes to be resolved. If a condition has fewer than two non-neutral votes, it is unresolved, and the decision cannot pass on it.
           </p>
           <p>
             If all three agree, record it as unanimous. That is the strongest signal. It is preferred.
@@ -459,7 +459,7 @@ Triad: Person A, Person B, Person C</div>
         <h2>Step 6 — Leave the window open</h2>
         <p class="lead">The amendment window stays open after the meeting.</p>
         <p>
-          Each member of the triad can change their mind on something they said during the meeting. They must say what they would change about their own position and why. A reasoned case.
+          Each member of the triad can change their mind on something they said during the meeting. They must say what they would change about their own position and why. A reasoned case. This is permitted but not standard practice — the expectation is that positions hold unless the outcome proves them wrong.
         </p>
         <p>
           The closure period is determined by the Group. In many cases it may be a matter of minutes after the meeting. After that, the window closes and the decision stands — unless an outcome proves it wrong.
@@ -565,7 +565,7 @@ Correct it — reopening mechanism, graph query revisit,
           Each decision is a node. Edges record dependency: premise, constraint, or delegation. The structure is a directed acyclic graph.
         </p>
         <p>
-          A triad ruling on a large question spawns the sub-decisions it owns, each routed to its own triad, in parallel. A triad blocked for want of an input spawns the blocking question and routes it laterally to whoever owns it, rather than escalating to a less-informed authority.
+          A triad ruling on a large question spawns the sub-decisions it does not own, each routed to its own triad, in parallel. A triad blocked for want of an input spawns the blocking question and routes it laterally to whoever owns it, rather than escalating to a less-informed authority.
         </p>
         <p>
           Any decision spawning children should retain a closing decision reviewing the whole. This is specified and being implemented.
@@ -598,13 +598,13 @@ Correct it — reopening mechanism, graph query revisit,
     <section>
       <div class="wrap">
         <h2>Advanced options</h2>
-        <p class="lead">For when the simple path resolves. Most meetings will need them.</p>
+        <p class="lead">For when the simple path doesn't resolve. Most meetings won't need them.</p>
 
         <h3>Facilitator agreed</h3>
         <p>If the group settles on a facilitator by discussion:</p>
         <ol class="steps">
           <li>
-            <div><strong>Vote.</strong><span>Each person names one facilitator. You can vote for yourself.</span></div>
+            <div><strong>Vote.</strong><span>Each person names one facilitator. You cannot vote for yourself.</span></div>
           </li>
           <li>
             <div><strong>The person with the most votes facilitates.</strong></div>
@@ -619,18 +619,18 @@ Correct it — reopening mechanism, graph query revisit,
 
         <h3>Neutral votes — detail</h3>
         <p>
-          A neutral vote means: I have a position on this condition.
+          A neutral vote means: I do not have a position on this condition.
         </p>
         <p>
-          It is "maybe." It is "I abstain." It is: this condition is one I can judge on the information I have, or it is relevant to my part in this decision.
+          It is not "maybe." It is not "I abstain." It is: this condition is not one I can judge on the information I have, or it is not relevant to my part in this decision.
         </p>
         <ul class="list">
-          <li>A neutral vote counts toward the two-of-three.</li>
+          <li>A neutral vote does not count toward the two-of-three.</li>
           <li>A condition needs at least two non-neutral votes to be resolved.</li>
-          <li>If a condition has two or more non-neutral votes, it is resolved. The decision can pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.</li>
+          <li>If a condition has fewer than two non-neutral votes, it is unresolved. The decision cannot pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.</li>
         </ul>
         <p>
-          Why this exists: sometimes a condition genuinely applies to one member of the triad — they have the knowledge, or it falls within their part of the decision. Forcing a yes/no produces noise. Neutral produces a signal: this condition needs attention.
+          Why this exists: sometimes a condition genuinely does not apply to one member of the triad — they lack the knowledge, or it falls outside their part of the decision. Forcing a yes/no produces noise. Neutral produces a signal: this condition needs attention.
         </p>
         <p>
           It creates a third outcome. The decision still passes or fails on each condition. Neutral just means the condition is yet settled.
@@ -643,7 +643,7 @@ Correct it — reopening mechanism, graph query revisit,
         <h2>Get started</h2>
         <p class="lead">Three people. Paper and pen. A decision to make.</p>
         <p>
-          That's it. You need software. You need a rollout. You need one decision that matters and three people who can decide it.
+          That's it. You do not need software. You do not need a rollout. You need one decision that matters and three people who can decide it.
         </p>
         <div class="actions">
           <a class="button" href="index.html#pilot">Start a pilot</a>
