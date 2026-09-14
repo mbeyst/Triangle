@@ -9,7 +9,7 @@
 | Francis Pedraza | — | Tools for thought, decision-making | Already thinks about decision architecture | "The dyad/triad distinction matters here..." |
 | Nathan Barry | ConvertKit | Creator business, team scaling | Makes team decisions publicly | "Curious: how did you handle the person who disagreed?" |
 | Justin Welsh | — | Solopreneur frameworks | Decision fatigue is a core topic | "This reminds me of a pattern I've seen..." |
-| David Perell | Write of Passage | Writing, thinking, decision quality | Explores how decisions shape outcomes | "2/3 agreement moves faster than consensus..." |
+| David Perell | Write of Passage | Writing, thinking, decision quality | Explores how decisions shape outcomes | "Majority decides faster than consensus..." |
 
 ### LinkedIn
 
@@ -29,7 +29,7 @@
 | HBR IdeaCast | Various | Leadership decisions | "AI facilitates, humans decide — what we learned" |
 | a16z Podcast | Various | Tech decisions, scaling | "Decision architecture for startups" |
 | Indie Hackers | Courtland Allen | Founder decisions | "How 3-person decisions cut time from weeks to hours" |
-| Tim Ferriss Show | Tim Ferriss | Tools, tactics | "The 2/3 rule for significant decisions" |
+| Tim Ferriss Show | Tim Ferriss | Tools, tactics | "The majority rule for significant decisions" |
 
 ---
 

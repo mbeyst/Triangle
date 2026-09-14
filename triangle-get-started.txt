@@ -21,7 +21,7 @@ Write it as one sentence. If it has "and" in it, split it into two decisions.
 
 Example: "Do we approve the budget for the new project?" — not "Let's talk about the budget."
 
-The goal: Frame it. Vote. Record. Move.
+The goal: Vote. Record. Move.
 
 
 2. CHOOSE A FACILITATOR
@@ -60,12 +60,15 @@ Before anyone votes, the facilitator names the conditions the decision rests on.
 
 "What has to be true for this to be the right call?"
 
-Write each condition as a yes/no question. Keep it to two or three. If there are more, the decision needs splitting.
+For each condition, state the options. These can be yes/no, or they can be multiple choices — whatever fits the condition. Keep it to two or three conditions. If there are more, the decision needs splitting.
 
 Example: "Do we approve the budget?" rests on —
   Condition 1: Is the cost within our means?
-  Condition 2: Does the project serve our purpose?
+     Options: yes / no
+  Condition 2: Which approach best serves our purpose?
+     Options: A / B / neither
   Condition 3: Can we reverse this if it goes wrong?
+     Options: yes / no
 
 The triad can challenge the conditions before voting. If someone says the conditions are wrong, reframe them. The conditions are not imposed — they are stated by a person who is also a voter.
 
@@ -74,21 +77,21 @@ You can also mark a condition neutral — you don't have a position on it. A neu
 
 5. VOTE — TWO OF THREE
 
-Each person votes on each condition. Yes, no, or neutral.
+Each person votes on each condition by choosing one option.
 
-Two out of three yes votes on any condition means it passes. One out of three means it fails.
+The option with the most votes wins that condition. Two of three must vote (not abstain) for a condition to be resolved.
 
-A neutral vote is set aside. It neither helps nor blocks. But if only one person votes yes and the other two are neutral, the condition is unresolved — the decision cannot pass on it.
+A neutral vote is set aside. It neither helps nor blocks. But if only one person votes for an option and the other two are neutral, the condition is unresolved — the decision cannot pass on it.
 
 If all three agree, record it as unanimous. That is the strongest signal. But it is not required.
 
-The dissent is recorded. Who said no, and why. "By the mouth of two or three witnesses every charge may be established" (Matthew 18:16).
+The dissent is recorded. Who dissented, and why. For multi-option votes, this means recording who voted for a different option and why they preferred it.
 
 Write it down:
 
   Decision: [one sentence]
-  Conditions: [list]
-  Vote per condition: [who voted what — yes, no, or neutral]
+  Conditions: [list with options]
+  Vote per condition: [who voted which option, or neutral]
   Result: [approved / not approved / unresolved]
   Dissent: [who dissented, and why]
   Expected outcome: [what we expect to happen if we're right]
@@ -166,11 +169,11 @@ The meeting is not the container. The decision is the container. The meeting is 
 
 ONE-PAGE SUMMARY
 
-  1. Surface the decision — one sentence, yes or no.
+  1. Surface the decision — one sentence someone can agree with or reject.
   2. Choose a facilitator — usually the person who surfaced it; if not, someone better suited; if the group can't agree, the authorised person selects.
   3. Form the triad — nominate from the group, draw lots if needed.
-  4. Frame the conditions — what has to be true? Two or three, yes/no each. Mark neutral if you have no position.
-  5. Vote — two of three. Record the dissent. Neutral votes are set aside.
+  4. Frame the conditions — what has to be true? State the options for each condition (yes/no or multiple choices). Mark neutral if you have no position.
+  5. Vote — two of three. Choose one option per condition. The option with the most votes wins. Record the dissent. Neutral votes are set aside.
   6. Leave the window open — anyone can flag a bad decision, with reasons.
 
   Track outcomes. Route to the competent. Correct what fails.

@@ -1,4 +1,4 @@
-**Frame it. Vote. Record. Move.**
+**Vote. Record. Move.**
 
 ## For First-Time Users
 
@@ -31,7 +31,7 @@ Choose:
 2. Each person speaks uninterrupted (2-3 minutes each)
 3. Open discussion (AI tracks equity)
 4. AI surfaces agreement/disagreement
-5. Decision called when 2/3 aligned
+5. Decision called when the majority is clear
 
 ### Step 5: Publish the decision
 
@@ -98,8 +98,8 @@ A: Use a dyad. If stuck, bring in a third person specifically for tiebreaking.
 **Q: Can the AI facilitator be one of the three voices?**
 A: No. AI facilitates, humans decide. The triad must be three humans.
 
-**Q: What if 2/3 agreement is reached but feels wrong?**
-A: Either dissenter can call for a reconvene with new information. The 2/3 rule moves decisions, it doesn't prevent review.
+**Q: What if the majority decision feels wrong?**
+A: Either dissenter can call for a reconvene with new information. The majority rule moves decisions, it doesn't prevent review.
 
 **Q: Do we need to use the AI facilitator?**
 A: No. Human facilitation works. AI adds equity tracking, automatic summarization, and decision logging.

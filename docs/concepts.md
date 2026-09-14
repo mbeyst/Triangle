@@ -1,6 +1,6 @@
 # Core Concepts
 
-**Frame it. Vote. Record. Move.**
+**Vote. Record. Move.**
 
 ## Dyad vs. Triad
 
@@ -27,7 +27,7 @@
 - Conflict resolution
 
 **Dynamics:**
-- Built-in tiebreaker (2/3 moves)
+- Built-in tiebreaker (majority decides)
 - Dissent recorded, not blocked
 - Prevents both autocracy and gridlock
 
@@ -46,13 +46,13 @@ Not every choice needs a triad. Ask:
 
 ---
 
-## The 2/3 Rule
+## The Majority Rule
 
-**2 agree = decision moves**
+**Most votes win**
 - Majority sufficient for action
 - Prevents veto-by-one paralysis
 
-**1 dissents = recorded, published**
+**Dissent recorded, published**
 - Objection documented in decision log
 - Not suppressed, not debated to death
 - Creates audit trail for future review

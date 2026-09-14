@@ -35,7 +35,7 @@ Team had been building in React. CTO wanted to switch to Svelte for performance.
 
 ### Decision
 
-**2/3 Agreement:** Stay with React, but allocate 2 weeks for CTO to prototype Svelte and prove performance gains justify hiring risk.
+**Majority Agreement:** Stay with React, but allocate 2 weeks for CTO to prototype Svelte and prove performance gains justify hiring risk.
 
 **Dissent Recorded:**
 > CTO: "I believe this is technical debt. We're optimizing for hiring convenience over user experience. I'll prototype, but I'm on record that this is the wrong call."
@@ -72,7 +72,7 @@ Unexpected tax refund created €50k surplus. Three competing priorities:
 
 ### Decision
 
-**2/3 Agreement:** €30k reserve, €20k tools + training (Creative + Finance)
+**Majority Agreement:** €30k reserve, €20k tools + training (Creative + Finance)
 
 **Dissent Recorded:**
 > CEO: "I dissent. We have capacity to take on 30% more clients but no account management bandwidth. This is leaving revenue on the table. I'll revisit in Q2 if pipeline converts."
@@ -106,7 +106,7 @@ Founder burned out on 1:1. Wanted to shift to group model. Operations worried ab
 
 ### Decision
 
-**2/3 Agreement:** (all three aligned)
+**Majority Agreement:** (all three aligned)
 - Launch group programme in 90 days
 - Sunset 1:1 over 6 months
 - Existing 1:1 clients grandfathered
@@ -125,7 +125,7 @@ Founder burned out on 1:1. Wanted to shift to group model. Operations worried ab
 
 ## Patterns Observed
 
-1. **Dissent is often right** — in 2/3 cases, the dissenter's concern materialized within 6 months
+1. **Dissent is often right** — in the majority of cases, the dissenter's concern materialized within 6 months
 2. **Speaking time predicts satisfaction** — when AI ensured equity, all three rated the process higher
 3. **Triads dissolve naturally** — once decision made, no need to maintain the group
 4. **Decision logs become institutional memory** — "What did we decide about X?" is a common query

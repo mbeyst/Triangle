@@ -10,7 +10,7 @@ It is not a committee. It is not a vote for everything. It is a structure for de
 
 The unit is a triad — three people, one decision. The decision is written as one sentence. Each person votes on each condition the decision rests on. Two of three carries it. The dissent is recorded. The record stays with the decision.
 
-Frame it. Vote. Record. Move.
+Vote. Record. Move.
 
 —
 
@@ -54,34 +54,28 @@ Before anyone votes, the facilitator names the conditions the decision rests on.
 
 "What has to be true for this to be the right call?"
 
-Write each condition as a yes/no question. Keep it to two or three. If there are more, the decision needs splitting.
+For each condition, state the options. These can be yes/no, or they can be multiple choices — whatever fits the condition. Keep it to two or three conditions. If there are more, the decision needs splitting.
 
 Example: "Do we approve the budget?" rests on —
-  Condition 1: Is the cost within our means?
-  Condition 2: Does the project serve our purpose?
-  Condition 3: Can we reverse this if it goes wrong?
+  Condition 1: Is the cost within our means? Options: yes / no
+  Condition 2: Which approach best serves our purpose? Options: A / B / neither
+  Condition 3: Can we reverse this if it goes wrong? Options: yes / no
 
 The triad can challenge the conditions before voting. If someone says the conditions are wrong, reframe them. The conditions are not imposed — they are stated by a person who is also a voter.
 
-Summoning an outsider
-
-The triad may summon an outsider to speak to a condition. The outsider gives input, not a vote. The triad then decides as normal. The summoning is recorded: who was summoned, why, and what they said.
-
-The recommendation is to keep your decisions in the three.
-
 5. Vote — two of three
 
-Each person votes on each condition: yes, no, or neutral.
+Each person votes on each condition, choosing one option. The option with the most votes wins that condition.
 
-Two out of three yes votes on any resolved condition means it passes. Zero yes votes means it fails.
+Two non-neutral votes are needed for a condition to be resolved. If a condition has fewer than two non-neutral votes, it is unresolved, and the decision cannot pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.
 
 A neutral vote means "I do not have a position on this condition." It is not maybe. It is not abstention. It is an honest signal that the condition is not answerable by this person — either they lack the knowledge, or it falls outside their part of the decision.
 
-A neutral vote is set aside. It neither helps nor blocks. A condition needs at least two non-neutral votes to be resolved. If a condition has fewer than two non-neutral votes, it is unresolved, and the decision cannot pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.
+A neutral vote is set aside. It neither helps nor blocks. But it counts toward the two-of-three requirement: you need at least two people who actually voted for an option for that condition to be resolved.
 
 If all three agree, record it as unanimous. That is the strongest signal. But it is not required.
 
-The dissent is recorded. Who said no, and why.
+The dissent is recorded. Who dissented, and why. For multi-option votes, this means recording who voted for a different option and why they preferred it.
 
 6. Leave the window open
 
@@ -106,8 +100,8 @@ The record
 Every decision is written down. Not a summary. The actual record.
 
   Decision: [one sentence]
-  Conditions: [list]
-  Vote per condition: [who voted what — yes, no, or neutral]
+  Conditions: [list with options]
+  Vote per condition: [who voted which option, or neutral]
   Result: [approved / not approved / unresolved]
   Dissent: [who dissented, and why]
   Expected outcome: [what we expect to happen if we're right]
@@ -143,12 +137,12 @@ You do not chair the meeting. You design it.
 
 Before the meeting:
   - List the decisions, not the topics.
-  - Decompose each decision into its conditions.
+  - Decompose each condition into its options.
   - Identify who should be in the room for each.
   - Sequence by dependency — if B depends on A, A goes first.
 
 During the meeting:
-  - Frame each decision and its conditions.
+  - Frame each condition and its options.
   - Let the triad challenge the framing before voting.
   - Record the vote, the dissent, and the expected outcome.
   - Ask: is there a voice we have not heard?
@@ -180,7 +174,7 @@ Why it works
 
 Three people are better than one when each is more likely right than wrong. Below that line, adding more people makes the decision worse. The triad captures most of the available gain before the assumptions underwriting it break down, at a fraction of the cost.
 
-Two of three is the minimal structure that treats every voice the same and both sides of a question the same. A supermajority threshold privileges the status quo. Unanimity lets one person hold the whole group. Two of three prefers the outcome that moves, and records the dissent, to the outcome that does not move because one person objected.
+Two of three is the minimal structure that treats every voice the same. A supermajority threshold privileges the status quo. Unanimity lets one person hold the whole group. Two of three prefers the outcome that moves, and records the dissent, to the outcome that does not move because one person objected.
 
 Recording per condition corrects a measurable bias: because concluding "yes" on a conjunctive decision requires being right about every condition, conclusion-level voting rejects sound multi-condition proposals at a higher rate than the evidence warrants.
 
@@ -215,7 +209,7 @@ Rules:
 - A condition needs at least two non-neutral votes to be resolved.
 - If a condition has fewer than two non-neutral votes, it is unresolved. The decision cannot pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.
 
-Why this exists: sometimes a condition genuinely does not apply to one member of the triad — they lack the knowledge, or it falls outside their part of the decision. Forcing a yes/no produces noise. Neutral produces a signal: this condition needs attention.
+Why this exists: sometimes a condition genuinely does not apply to one member of the triad — they lack the knowledge, or it falls outside their part of the decision. Forcing a choice produces noise. Neutral produces a signal: this condition needs attention.
 
 It does not create a third outcome. The decision still passes or fails on each condition. Neutral just means the condition is not yet settled.
 

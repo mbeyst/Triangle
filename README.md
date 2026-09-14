@@ -2,7 +2,7 @@
 
 **Three people. One decision. Every voice heard.**
 
-Triangle is a decision architecture for significant choices. It uses triads (three-person groups) with AI facilitation to reach decisions that preserve both speed and integrity.
+Triangle is a decision architecture for significant choices. It uses triads (three-person groups) to reach decisions that preserve both speed and integrity.
 
 ---
 
@@ -13,7 +13,7 @@ Most organisations oscillate between two dysfunctional modes:
 1. **Speed over inclusion** — one person decides, others resist during execution
 2. **Inclusion over speed** — everyone must agree, nothing moves
 
-Triangle offers a third way: structured triadic decision-making that moves on 2/3 agreement while recording (not blocking) dissent.
+Triangle offers a third way: structured triadic decision-making that moves on majority vote while recording (not blocking) dissent.
 
 ---
 
@@ -28,10 +28,11 @@ Not every choice needs three people. Use:
 
 **Threshold:** If the decision affects more than the decider's own work, it's triad territory.
 
-### 2. 2/3 moves, 1/3 records
+### 2. Majority vote, dissent recorded
 
-- **2 agree** — decision moves forward
-- **1 dissents** — objection is recorded, published, not blocked
+- **Most votes win** — the option with the most votes carries the condition
+- **Two of three must vote** — a condition needs at least two non-neutral votes to be resolved
+- **Dissent recorded** — the minority view is logged with the decision
 
 This prevents both tyranny of the majority and tyranny of the veto.
 
@@ -80,9 +81,10 @@ This is not faith branding. It's intellectual honesty about the source.
 1. **Identify the decision** — is it significant enough for a triad?
 2. **Gather three people** — diverse perspectives, relevant competence
 3. **Set a timebox** — 30-60 minutes max for most decisions
-4. **AI facilitator joins** — records, tracks, summarizes
-5. **Decision emerges** — 2/3 agreement moves it forward
-6. **Dissent published** — objections documented, not suppressed
+4. **Frame the conditions** — state the options for each condition
+5. **Vote** — most votes win; two of three must vote for the condition to be resolved
+6. **Dissent recorded** — the minority view stays with the decision
+7. **Record it** — the decision and who voted how stay in the log
 
 ---
 

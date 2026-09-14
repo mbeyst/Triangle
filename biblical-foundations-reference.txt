@@ -17,7 +17,7 @@ Limitations and project status are documented separately.
 
 1 The triad
 
-A triad is three people making one decision. The decision is recorded per condition, with each person voting yes, no, or neutral.
+A triad is three people making one decision. The decision is recorded per condition, with each person voting for one option or neutral.
 
 The competence condition
 
@@ -109,7 +109,7 @@ Before anyone votes, the facilitator names the conditions the decision rests on.
 
 "What has to be true for this to be the right call?"
 
-Each condition is written as a yes/no question. Keep it to two or three. If there are more, the decision needs splitting.
+Each condition is stated with options — these can be yes/no, or they can be multiple choices. Keep it to two or three conditions. If there are more, the decision needs splitting.
 
 The triad can challenge the conditions before voting. If someone says the conditions are wrong, the facilitator reframes. The conditions are not imposed by the system — they are stated by a human who is also a voter, and can be outvoted on the outcome.
 
@@ -139,9 +139,9 @@ Close with a review of the whole. Every meeting that spawns sub-decisions should
 
 4 Voting — two of three
 
-Each person votes on each condition: yes, no, or neutral.
+Each person votes on each condition by choosing one option, or neutral.
 
-Two out of three yes votes on any resolved condition means it passes. Zero yes votes means it fails.
+The option with the most votes wins that condition. Two of three must vote (not abstain) for a condition to be resolved.
 
 Neutral
 
@@ -149,21 +149,21 @@ A neutral vote means "I do not have a position on this condition." It is not may
 
 A neutral vote is set aside. It neither helps nor blocks. A condition needs at least two non-neutral votes to be resolved. If a condition has fewer than two non-neutral votes, it is unresolved, and the decision cannot pass on it. The facilitator should ask whether the condition needs reframing, more information, or a different triad.
 
-The binary rule still governs: two yes votes are required to pass. Neutral does not create a third outcome. It creates a "not yet settled" state that blocks the decision from passing on that condition. That is consistent with the witness principle — a condition must actually be decided, not assumed.
+The majority rule still governs: two non-neutral votes are required to resolve a condition. Neutral does not create a third outcome. It creates a "not yet settled" state that blocks the decision from passing on that condition. That is consistent with the witness principle — a condition must actually be decided, not assumed.
 
 Why two of three
 
-Scripture is plain that justice must be administered without partiality. You shall not be partial in judgment; you shall hear the small and the great alike (Deuteronomy 19:17; 2 Chronicles 19:7). The rule must treat every voice the same and both sides of a question the same.
+Scripture is plain that justice must be administered without partiality. You shall not be partial in judgment; you shall hear the small and the great alike (Deuteronomy 19:17; 2 Chronicles 19:7). The rule must treat every voice the same and all options the same.
 
 This is the biblical grounding for two of three. It is not an assumption or a convention. It is the pattern Scripture establishes for establishing a matter: on the evidence of two or three witnesses a matter is established (Numbers 35:30; Matthew 18:16; 2 Corinthians 13:1).
 
-Two witnesses establish; three confirm. The binary rule — two of three — is the minimal structure that satisfies the scriptural requirement and no more. It gives every voice equal weight, treats both sides symmetrically, and responds when a mind changes: if the one who dissented is persuaded, the matter is established.
+Two witnesses establish; three confirm. The majority rule — two of three must vote — is the minimal structure that satisfies the scriptural requirement and no more. It gives every voice equal weight, treats all options symmetrically, and responds when a mind changes: if the one who dissented is persuaded, the matter is established.
 
 It also tells you what is wrong with the alternatives. A supermajority threshold — requiring two-thirds or three-quarters to decide — violates the principle of equal treatment by privileging the status quo. The rule makes it harder to change a decision than to leave it where it is, which means the option that was there first has an advantage the other does not. Unanimity does the same thing more extremely: a single dissenter blocks the decision, and the status quo prevails by default.
 
 This is why unanimity is preferred in Triangle but not required. It is the strongest possible consensus signal — everyone agrees — and when it appears it is worth recording. But as a decision rule it is paralysing: one person can hold the whole group. The design prefers the outcome that moves, and records the dissent, to the outcome that does not move because one person objected.
 
-For questions with more than two options, Scripture does not prescribe a single aggregation rule, but it does instruct that matters be set before the whole and that counsel be sought from many. In the multitude of people is the king's honour, but in the want of people is the destruction of the prince (Proverbs 14:28). Triangle decomposes multi-option questions into a series of binary ones rather than asking a triad to rank alternatives, so that each binary choice can be judged by the witness principle.
+For questions with more than two options, Scripture does not prescribe a single aggregation rule, but it does instruct that matters be set before the whole and that counsel be sought from many. In the multitude of people is the king's honour, but in the want of people is the destruction of the prince (Proverbs 14:28). Triangle allows multi-option conditions rather than forcing a series of binary ones, so that the triad can decide on the options as they actually arise.
 
 —
 

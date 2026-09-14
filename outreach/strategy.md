@@ -66,15 +66,15 @@ These creators talk about AI, facilitation, or team dynamics:
 - Reference the concept without naming it
 - Build recognition over 3-5 interactions
 
-**The tagline:** Frame it. Vote. Record. Move.
+**The tagline:** Vote. Record. Move.
 
 ### Comment Templates
 
 **Template 1: Add a Pattern**
-> "This reminds me of a pattern I've seen: when [X] is the decision, 2/3 agreement moves faster than consensus, but you need the dissent recorded. Otherwise the veto person blocks execution later."
+> "This reminds me of a pattern I've seen: when [X] is the decision, the majority decides faster than consensus, but you need the dissent recorded. Otherwise the veto person blocks execution later."
 
 **Template 2: Ask a Question**
-> "Curious: how did you handle the person who disagreed? In triads we use '2/3 moves, 1/3 records' — dissent is documented but doesn't block. Did you try something similar?"
+> "Curious: how did you handle the person who disagreed? In triads we use 'majority decides, dissent recorded' — dissent is documented but doesn't block. Did you try something similar?"
 
 **Template 3: Share a Result**
 > "We tested this with a tech stack decision. 45 minutes, 3 people, one dissenter on record. Ship date hit because the dissenter's concern was tracked, not debated to death. Interesting dynamic."
@@ -107,7 +107,7 @@ These creators talk about AI, facilitation, or team dynamics:
 
 **DO pitch:**
 - "Humans decide, AI facilitates — we built a tool that does this"
-- "3-person triads with 2/3 agreement move faster than consensus, preserve integrity better than autocracy"
+- "3-person triads with the majority deciding move faster than consensus, preserve integrity better than autocracy"
 - "We've seen dissent recorded (not blocked) actually improve execution because objections are tracked"
 
 ### Pitch Templates
@@ -125,8 +125,8 @@ I'm reaching out because we've built something that fits your audience:
 
 Triangle is a decision architecture where:
 - 3-person triads make significant decisions (not individuals, not whole teams)
-- 2/3 agreement moves the decision forward (no veto power)
-- 1/3 dissent is recorded and published (not suppressed)
+- The majority decides (no veto power)
+- Dissent is recorded and published (not suppressed)
 - AI facilitates (tracks equity, summarizes, logs decisions) — but doesn't decide
 
 We've seen this cut decision time from weeks to <60 minutes while preserving dissent (which actually improves execution).
@@ -153,7 +153,7 @@ Hi [Name],
 
 Loved your post on [topic]. The point about [specific insight] resonates — we've seen this in triad decision-making.
 
-Quick context: we built a framework where 3-person groups decide with 2/3 agreement (dissent recorded, not blocked). AI facilitates, humans decide. Cuts decision time dramatically.
+Quick context: we built a framework where 3-person groups decide with the majority deciding (dissent recorded, not blocked). AI facilitates, humans decide. Cuts decision time dramatically.
 
 Would you be open to a 30-min chat about this for [Podcast Name]? No pitch — just the pattern and what we're learning.
 
@@ -192,7 +192,7 @@ Why? Their objection is on the record. If they're right, they're vindicated late
 
 Both outcomes improve execution.
 
-2/3 moves. 1/3 records.
+Majority decides. Dissent recorded.
 ```
 
 **Post Type 2: Case Study**
@@ -238,11 +238,11 @@ The framework works for believers and non-believers alike. But I won't pretend t
 
 **Example:**
 ```
-The consensus model you described is exactly what we're trying to solve with triads. 2/3 agreement moves faster, and dissent-on-record actually improves execution because objections aren't erased.
+The consensus model you described is exactly what we're trying to solve with triads. The majority decides faster, and dissent-on-record actually improves execution because objections aren't erased.
 
 We're testing AI facilitation for this — tracks speaking time, ensures equity, publishes the decision log. Humans decide, AI facilitates.
 
-Curious: have you seen teams try the 2/3 rule vs. full consensus?
+Curious: have you seen teams try the majority rule vs. full consensus?
 ```
 
 ---

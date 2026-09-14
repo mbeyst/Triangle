@@ -4,7 +4,7 @@
 
 ### Template 1: Pattern Addition
 ```
-This reminds me of a pattern I've seen: when [X] is the decision, 2/3 agreement moves faster than consensus, but you need the dissent recorded. Otherwise the veto person blocks execution later.
+This reminds me of a pattern I've seen: when [X] is the decision, the majority decides faster than consensus, but you need the dissent recorded. Otherwise the veto person blocks execution later.
 
 We've been testing this with triads — 3 people, significant decisions, AI facilitation. The dissenter executes better when their objection is on record (they're either vindicated later or the record shows why they were wrong).
 
@@ -15,7 +15,7 @@ Curious if you've seen this dynamic.
 ```
 Curious: how did you handle the person who disagreed? 
 
-In triads we use "2/3 moves, 1/3 records" — dissent is documented but doesn't block. Found it actually improves execution because objections aren't erased, they're tracked.
+In triads we use "majority decides, dissent recorded" — dissent is documented but doesn't block. Found it actually improves execution because objections aren't erased, they're tracked.
 
 Did you try something similar or go full consensus?
 ```
@@ -26,7 +26,7 @@ We tested this with a tech stack decision. 45 minutes, 3 people, one dissenter o
 
 Interesting dynamic: the dissenter executed better *because* their objection was recorded. They had skin in the game to prove they were right (or learn why they were wrong).
 
-This is the 2/3 rule in action.
+This is the majority rule in action.
 ```
 
 ### Template 4: Dyad/Triad Distinction
@@ -43,7 +43,7 @@ When in doubt, ask: "Does this affect more than my own work?" If yes, triad terr
 ```
 We're testing AI facilitation for this — tracks speaking time, ensures equity, publishes the decision log. Key constraint: AI doesn't decide, only facilitates.
 
-Humans decide, AI facilitates. Found it prevents dominant personalities from monopolizing while still getting to 2/3 agreement quickly.
+Humans decide, AI facilitates. Found it prevents dominant personalities from monopolizing while still getting to a decision quickly.
 
 Happy to share what we're learning if useful.
 ```
@@ -60,7 +60,7 @@ We've interacted a few times on [topic] — I'm the one who [specific comment yo
 
 I'm reaching out because we've built something that fits your audience: Triangle, a decision framework using triads with AI facilitation.
 
-Core idea: 3-person groups make significant decisions with 2/3 agreement (dissent recorded, not blocked). AI facilitates (tracks equity, summarizes, logs), but humans decide.
+Core idea: 3-person groups make significant decisions with the majority deciding (dissent recorded, not blocked). AI facilitates (tracks equity, summarizes, logs), but humans decide.
 
 Would you be open to a 30-min chat about this? No pitch — just the pattern and what we're learning. I think your audience would find the [specific insight relevant to their work] piece valuable.
 
@@ -76,7 +76,7 @@ Hi [Name],
 
 I've been following your work on [specific topic]. Your post on [specific post] shaped how we think about [specific insight].
 
-Quick context: we built a framework where 3-person groups decide with 2/3 agreement (dissent recorded, not blocked). AI facilitates, humans decide. Frame it. Vote. Record. Move.
+Quick context: we built a framework where 3-person groups decide with the majority deciding (dissent recorded, not blocked). AI facilitates, humans decide. Vote. Record. Move.
 
 Would you be open to a conversation about this? I think your audience would find the [specific insight] piece valuable.
 
@@ -95,11 +95,11 @@ I'm reaching out because we've built something that fits [Podcast Name]'s audien
 
 Triangle is a decision architecture where:
 - 3-person triads make significant decisions (not individuals, not whole teams)
-- 2/3 agreement moves the decision forward (no veto power)
-- 1/3 dissent is recorded and published (not suppressed)
+- The majority decides (no veto power)
+- Dissent is recorded and published (not suppressed)
 - AI facilitates (tracks equity, summarizes, logs decisions) — but doesn't decide
 
-**Frame it. Vote. Record. Move.**
+**Vote. Record. Move.**
 
 We've seen this cut decision time from weeks to <60 minutes while preserving dissent (which actually improves execution).
 
@@ -134,11 +134,11 @@ I'm reaching out because we've built something that fits your audience:
 
 Triangle is a decision architecture where:
 - 3-person triads make significant decisions (not individuals, not whole teams)
-- 2/3 agreement moves the decision forward (no veto power)
-- 1/3 dissent is recorded and published (not suppressed)
+- The majority decides (no veto power)
+- Dissent is recorded and published (not suppressed)
 - AI facilitates (tracks equity, summarizes, logs decisions) — but doesn't decide
 
-**Frame it. Vote. Record. Move.**
+**Vote. Record. Move.**
 
 We've seen this cut decision time from weeks to <60 minutes while preserving dissent (which actually improves execution).
 
@@ -172,7 +172,7 @@ I've been following your work on [topic]. Specifically loved [specific piece of 
 
 I'm reaching out because there's potential overlap between what you do and what we've built:
 
-Triangle is a decision framework using 3-person triads with AI facilitation. Core rule: 2/3 agreement moves, 1/3 dissent records. We're seeing decision time drop from weeks to <60 minutes.
+Triangle is a decision framework using 3-person triads with AI facilitation. Core rule: majority decides, dissent recorded. We're seeing decision time drop from weeks to <60 minutes.
 
 Potential collaborations:
 - Co-authored piece on [topic you both cover]
@@ -195,13 +195,13 @@ Martin
 
 ### Template 1: Insight Addition
 ```
-The consensus model you described is exactly what we're trying to solve with triads. 2/3 agreement moves faster, and dissent-on-record actually improves execution because objections aren't erased.
+The consensus model you described is exactly what we're trying to solve with triads. The majority decides faster, and dissent-on-record actually improves execution because objections aren't erased.
 
-Frame it. Vote. Record. Move.
+Vote. Record. Move.
 
 We're testing AI facilitation for this — tracks speaking time, ensures equity, publishes the decision log. Humans decide, AI facilitates.
 
-Curious: have you seen teams try the 2/3 rule vs. full consensus?
+Curious: have you seen teams try the majority rule vs. full consensus?
 ```
 
 ### Template 2: Question-Based

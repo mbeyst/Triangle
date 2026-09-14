@@ -1,6 +1,6 @@
 # Facilitator Guide
 
-**Frame it. Vote. Record. Move.**
+**Vote. Record. Move.**
 
 ## Human Facilitator Checklist
 
@@ -20,7 +20,7 @@ If you're facilitating a triad session manually:
 - [ ] Track speaking time (alert if one person exceeds 50% of airtime)
 - [ ] Surface areas of agreement
 - [ ] Surface areas of disagreement
-- [ ] Call the decision when 2/3 agreement is clear
+- [ ] Call the decision when the majority is clear
 
 ### After the Session
 
@@ -50,7 +50,7 @@ The AI facilitator automates the above. It:
 > "I'm noticing we've spent 15 minutes on this topic. [NAME], you've spoken 3 times; [NAME], you've spoken once. Before we move forward, I'd like to hear from [QUIET PERSON]."
 
 **Closing:**
-> "Here's what I'm hearing: [SUMMARY OF AGREEMENT]. [NAME] and [NAME] are aligned on [X]. [NAME] has concerns about [Y]. By the Triangle rule, 2/3 agreement moves the decision forward. The dissent is recorded as: [VERBATIM OBJECTION]. Shall I publish this summary?"
+> "Here's what I'm hearing: [SUMMARY OF AGREEMENT]. [NAME] and [NAME] are aligned on [X]. [NAME] has concerns about [Y]. By the Triangle rule, the majority decides. The dissent is recorded as: [VERBATIM OBJECTION]. Shall I publish this summary?"
 
 ---
 
@@ -64,7 +64,7 @@ The AI facilitator automates the above. It:
 **Facilitator:** [Human/AI name]
 
 ### Consensus
-[What 2/3 agreed on]
+[What the majority agreed on]
 
 ### Dissent
 [Name]'s objection:
